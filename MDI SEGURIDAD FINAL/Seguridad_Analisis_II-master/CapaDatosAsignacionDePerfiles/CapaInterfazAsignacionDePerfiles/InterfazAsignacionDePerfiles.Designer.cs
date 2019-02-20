@@ -53,7 +53,7 @@
             this.Lbl_usuario.AutoSize = true;
             this.Lbl_usuario.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_usuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_usuario.Location = new System.Drawing.Point(108, 116);
+            this.Lbl_usuario.Location = new System.Drawing.Point(193, 122);
             this.Lbl_usuario.Name = "Lbl_usuario";
             this.Lbl_usuario.Size = new System.Drawing.Size(75, 23);
             this.Lbl_usuario.TabIndex = 52;
@@ -65,7 +65,7 @@
             this.Cbo_usuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbo_usuarios.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbo_usuarios.FormattingEnabled = true;
-            this.Cbo_usuarios.Location = new System.Drawing.Point(273, 116);
+            this.Cbo_usuarios.Location = new System.Drawing.Point(358, 122);
             this.Cbo_usuarios.Name = "Cbo_usuarios";
             this.Cbo_usuarios.Size = new System.Drawing.Size(407, 27);
             this.Cbo_usuarios.TabIndex = 50;
@@ -101,7 +101,7 @@
             this.Dgv_asignacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_asignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_asignacion.EnableHeadersVisualStyles = false;
-            this.Dgv_asignacion.Location = new System.Drawing.Point(120, 200);
+            this.Dgv_asignacion.Location = new System.Drawing.Point(205, 206);
             this.Dgv_asignacion.Name = "Dgv_asignacion";
             this.Dgv_asignacion.RowHeadersVisible = false;
             this.Dgv_asignacion.Size = new System.Drawing.Size(250, 300);
@@ -128,7 +128,7 @@
             this.Dgv_asignacion2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_asignacion2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_asignacion2.EnableHeadersVisualStyles = false;
-            this.Dgv_asignacion2.Location = new System.Drawing.Point(442, 200);
+            this.Dgv_asignacion2.Location = new System.Drawing.Point(527, 206);
             this.Dgv_asignacion2.Name = "Dgv_asignacion2";
             this.Dgv_asignacion2.RowHeadersVisible = false;
             this.Dgv_asignacion2.Size = new System.Drawing.Size(250, 300);
@@ -143,7 +143,7 @@
             this.Btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_agregar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_agregar.Location = new System.Drawing.Point(376, 253);
+            this.Btn_agregar.Location = new System.Drawing.Point(461, 259);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(60, 60);
             this.Btn_agregar.TabIndex = 55;
@@ -159,7 +159,7 @@
             this.Btn_quitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_quitar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_quitar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_quitar.Location = new System.Drawing.Point(376, 327);
+            this.Btn_quitar.Location = new System.Drawing.Point(461, 333);
             this.Btn_quitar.Name = "Btn_quitar";
             this.Btn_quitar.Size = new System.Drawing.Size(60, 60);
             this.Btn_quitar.TabIndex = 56;
@@ -170,7 +170,7 @@
             // Txt_usuario
             // 
             this.Txt_usuario.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_usuario.Location = new System.Drawing.Point(189, 116);
+            this.Txt_usuario.Location = new System.Drawing.Point(274, 122);
             this.Txt_usuario.Name = "Txt_usuario";
             this.Txt_usuario.ReadOnly = true;
             this.Txt_usuario.Size = new System.Drawing.Size(80, 27);
@@ -186,7 +186,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 30);
+            this.panel1.Size = new System.Drawing.Size(950, 30);
             this.panel1.TabIndex = 58;
             // 
             // btn_minimizar
@@ -197,7 +197,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_minimizar.Location = new System.Drawing.Point(790, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(890, 0);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(30, 30);
             this.btn_minimizar.TabIndex = 5;
@@ -213,7 +213,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_cerrar.Location = new System.Drawing.Point(820, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(920, 0);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(30, 30);
             this.btn_cerrar.TabIndex = 4;
@@ -227,15 +227,15 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 620);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(850, 30);
+            this.panel2.Size = new System.Drawing.Size(950, 30);
             this.panel2.TabIndex = 59;
             // 
             // InterfazAsignacionDePerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(850, 650);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Txt_usuario);

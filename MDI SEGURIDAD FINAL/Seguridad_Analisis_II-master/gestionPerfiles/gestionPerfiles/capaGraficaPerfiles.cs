@@ -73,11 +73,11 @@ namespace gestionPerfiles
 
 
         //GET MODULOS
-        /*public DataTable getModulos()
+        public DataTable getModulos()
         {
             return cpl.getModulos();
 
-        }*/
+        }
 
 
         //GET APPNAME
@@ -88,10 +88,10 @@ namespace gestionPerfiles
 
 
         //SEARCH COD_MODULO
-        /*public int searchCodModulo(string nomModulo)
+        public int searchCodModulo(string nomModulo)
         {
             return cpl.searchCodModulo(nomModulo);
-        }*/
+        }
 
 
         //GET CORRELATIVO
@@ -109,9 +109,9 @@ namespace gestionPerfiles
 
 
         //GET APLICACION_MODULO
-        public DataTable getAllApisI()
+        public DataTable getApiModulo(int codModulo)
         {
-            return cpl.getAllApisL();
+            return cpl.getApiModulo(codModulo);
         }
 
 

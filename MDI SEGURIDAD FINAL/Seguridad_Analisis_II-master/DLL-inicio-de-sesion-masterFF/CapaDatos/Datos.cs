@@ -163,7 +163,7 @@ namespace CapaDatos
 
                     using (var cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = "select * from tbl_usuario where usu_nickname='" + usuario + "' and usu_password='" + contrasena + "'";
+                        cmd.CommandText = "select * from tbl_usuario where usu_nickname='" + usuario + "' and usu_password='" + contrasena + "';";
                         cmd.ExecuteNonQuery();
 
                         reader = cmd.ExecuteReader();

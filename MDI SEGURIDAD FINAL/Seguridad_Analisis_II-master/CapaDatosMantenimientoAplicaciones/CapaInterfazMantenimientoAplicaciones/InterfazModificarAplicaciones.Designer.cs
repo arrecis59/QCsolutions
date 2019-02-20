@@ -33,6 +33,9 @@
             this.Lbl_Nombre_a_modificar = new System.Windows.Forms.Label();
             this.Cbo_App_Modificar = new System.Windows.Forms.ComboBox();
             this.Btn_limpiar = new System.Windows.Forms.Button();
+            this.Txt_Nombre_Modulo = new System.Windows.Forms.TextBox();
+            this.Lbl_Nombre_Modulo = new System.Windows.Forms.Label();
+            this.Cbo_Nombre_Modulo = new System.Windows.Forms.ComboBox();
             this.Txt_NombreApp = new System.Windows.Forms.TextBox();
             this.Lbl_NombreApp = new System.Windows.Forms.Label();
             this.Txt_CodigoApp = new System.Windows.Forms.TextBox();
@@ -50,7 +53,7 @@
             // Txt_Nombre_App_Modificar
             // 
             this.Txt_Nombre_App_Modificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Nombre_App_Modificar.Location = new System.Drawing.Point(291, 179);
+            this.Txt_Nombre_App_Modificar.Location = new System.Drawing.Point(293, 218);
             this.Txt_Nombre_App_Modificar.Name = "Txt_Nombre_App_Modificar";
             this.Txt_Nombre_App_Modificar.ReadOnly = true;
             this.Txt_Nombre_App_Modificar.Size = new System.Drawing.Size(82, 27);
@@ -60,9 +63,9 @@
             // Lbl_Nombre_a_modificar
             // 
             this.Lbl_Nombre_a_modificar.AutoSize = true;
-            this.Lbl_Nombre_a_modificar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Nombre_a_modificar.Font = new System.Drawing.Font("Calibri", 14F);
             this.Lbl_Nombre_a_modificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_Nombre_a_modificar.Location = new System.Drawing.Point(12, 179);
+            this.Lbl_Nombre_a_modificar.Location = new System.Drawing.Point(13, 218);
             this.Lbl_Nombre_a_modificar.Name = "Lbl_Nombre_a_modificar";
             this.Lbl_Nombre_a_modificar.Size = new System.Drawing.Size(274, 23);
             this.Lbl_Nombre_a_modificar.TabIndex = 75;
@@ -74,9 +77,9 @@
             this.Cbo_App_Modificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbo_App_Modificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbo_App_Modificar.FormattingEnabled = true;
-            this.Cbo_App_Modificar.Location = new System.Drawing.Point(379, 179);
+            this.Cbo_App_Modificar.Location = new System.Drawing.Point(381, 218);
             this.Cbo_App_Modificar.Name = "Cbo_App_Modificar";
-            this.Cbo_App_Modificar.Size = new System.Drawing.Size(441, 27);
+            this.Cbo_App_Modificar.Size = new System.Drawing.Size(509, 27);
             this.Cbo_App_Modificar.TabIndex = 74;
             this.Cbo_App_Modificar.SelectedIndexChanged += new System.EventHandler(this.Cbo_App_Modificar_SelectedIndexChanged);
             // 
@@ -89,7 +92,7 @@
             this.Btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_limpiar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_limpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Btn_limpiar.Location = new System.Drawing.Point(750, 337);
+            this.Btn_limpiar.Location = new System.Drawing.Point(820, 421);
             this.Btn_limpiar.Name = "Btn_limpiar";
             this.Btn_limpiar.Size = new System.Drawing.Size(70, 70);
             this.Btn_limpiar.TabIndex = 73;
@@ -98,20 +101,52 @@
             this.Btn_limpiar.UseVisualStyleBackColor = false;
             this.Btn_limpiar.Click += new System.EventHandler(this.Btn_limpiar_Click);
             // 
+            // Txt_Nombre_Modulo
+            // 
+            this.Txt_Nombre_Modulo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Nombre_Modulo.Location = new System.Drawing.Point(293, 371);
+            this.Txt_Nombre_Modulo.Name = "Txt_Nombre_Modulo";
+            this.Txt_Nombre_Modulo.ReadOnly = true;
+            this.Txt_Nombre_Modulo.Size = new System.Drawing.Size(82, 27);
+            this.Txt_Nombre_Modulo.TabIndex = 90;
+            // 
+            // Lbl_Nombre_Modulo
+            // 
+            this.Lbl_Nombre_Modulo.AutoSize = true;
+            this.Lbl_Nombre_Modulo.Font = new System.Drawing.Font("Calibri", 14F);
+            this.Lbl_Nombre_Modulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Lbl_Nombre_Modulo.Location = new System.Drawing.Point(118, 369);
+            this.Lbl_Nombre_Modulo.Name = "Lbl_Nombre_Modulo";
+            this.Lbl_Nombre_Modulo.Size = new System.Drawing.Size(169, 23);
+            this.Lbl_Nombre_Modulo.TabIndex = 89;
+            this.Lbl_Nombre_Modulo.Text = "Nombre del Modulo:";
+            this.Lbl_Nombre_Modulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Cbo_Nombre_Modulo
+            // 
+            this.Cbo_Nombre_Modulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbo_Nombre_Modulo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbo_Nombre_Modulo.FormattingEnabled = true;
+            this.Cbo_Nombre_Modulo.Location = new System.Drawing.Point(381, 371);
+            this.Cbo_Nombre_Modulo.Name = "Cbo_Nombre_Modulo";
+            this.Cbo_Nombre_Modulo.Size = new System.Drawing.Size(509, 27);
+            this.Cbo_Nombre_Modulo.TabIndex = 88;
+            this.Cbo_Nombre_Modulo.SelectedIndexChanged += new System.EventHandler(this.Cbo_Nombre_Modulo_SelectedIndexChanged);
+            // 
             // Txt_NombreApp
             // 
             this.Txt_NombreApp.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_NombreApp.Location = new System.Drawing.Point(291, 289);
+            this.Txt_NombreApp.Location = new System.Drawing.Point(293, 323);
             this.Txt_NombreApp.Name = "Txt_NombreApp";
-            this.Txt_NombreApp.Size = new System.Drawing.Size(529, 27);
+            this.Txt_NombreApp.Size = new System.Drawing.Size(597, 27);
             this.Txt_NombreApp.TabIndex = 87;
             // 
             // Lbl_NombreApp
             // 
             this.Lbl_NombreApp.AutoSize = true;
-            this.Lbl_NombreApp.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_NombreApp.Font = new System.Drawing.Font("Calibri", 14F);
             this.Lbl_NombreApp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_NombreApp.Location = new System.Drawing.Point(102, 289);
+            this.Lbl_NombreApp.Location = new System.Drawing.Point(105, 323);
             this.Lbl_NombreApp.Name = "Lbl_NombreApp";
             this.Lbl_NombreApp.Size = new System.Drawing.Size(183, 23);
             this.Lbl_NombreApp.TabIndex = 86;
@@ -121,17 +156,17 @@
             // Txt_CodigoApp
             // 
             this.Txt_CodigoApp.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_CodigoApp.Location = new System.Drawing.Point(291, 233);
+            this.Txt_CodigoApp.Location = new System.Drawing.Point(293, 272);
             this.Txt_CodigoApp.Name = "Txt_CodigoApp";
-            this.Txt_CodigoApp.Size = new System.Drawing.Size(529, 27);
+            this.Txt_CodigoApp.Size = new System.Drawing.Size(597, 27);
             this.Txt_CodigoApp.TabIndex = 85;
             // 
             // Lbl_codigoApp
             // 
             this.Lbl_codigoApp.AutoSize = true;
-            this.Lbl_codigoApp.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoApp.Font = new System.Drawing.Font("Calibri", 14F);
             this.Lbl_codigoApp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_codigoApp.Location = new System.Drawing.Point(112, 233);
+            this.Lbl_codigoApp.Location = new System.Drawing.Point(114, 272);
             this.Lbl_codigoApp.Name = "Lbl_codigoApp";
             this.Lbl_codigoApp.Size = new System.Drawing.Size(173, 23);
             this.Lbl_codigoApp.TabIndex = 84;
@@ -148,7 +183,7 @@
             this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_eliminar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_eliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Btn_eliminar.Location = new System.Drawing.Point(665, 337);
+            this.Btn_eliminar.Location = new System.Drawing.Point(728, 421);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(70, 70);
             this.Btn_eliminar.TabIndex = 80;
@@ -167,7 +202,7 @@
             this.Btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_modificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_modificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Btn_modificar.Location = new System.Drawing.Point(578, 337);
+            this.Btn_modificar.Location = new System.Drawing.Point(634, 421);
             this.Btn_modificar.Name = "Btn_modificar";
             this.Btn_modificar.Size = new System.Drawing.Size(70, 70);
             this.Btn_modificar.TabIndex = 72;
@@ -182,7 +217,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 620);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(850, 30);
+            this.panel2.Size = new System.Drawing.Size(950, 30);
             this.panel2.TabIndex = 92;
             // 
             // panel1
@@ -194,7 +229,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 30);
+            this.panel1.Size = new System.Drawing.Size(950, 30);
             this.panel1.TabIndex = 91;
             // 
             // btn_minimizar
@@ -205,7 +240,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_minimizar.Location = new System.Drawing.Point(790, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(890, 0);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(30, 30);
             this.btn_minimizar.TabIndex = 5;
@@ -221,7 +256,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_cerrar.Location = new System.Drawing.Point(820, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(920, 0);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(30, 30);
             this.btn_cerrar.TabIndex = 4;
@@ -236,18 +271,21 @@
             this.Lbl_asignacionPerfiles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(10, 6);
             this.Lbl_asignacionPerfiles.Name = "Lbl_asignacionPerfiles";
-            this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(215, 19);
+            this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(158, 19);
             this.Lbl_asignacionPerfiles.TabIndex = 48;
-            this.Lbl_asignacionPerfiles.Text = "Modificar datos de aplicaciones";
+            this.Lbl_asignacionPerfiles.Text = "Asignacion  De Perfiles";
             // 
             // InterfazModificarAplicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(850, 650);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Txt_Nombre_Modulo);
+            this.Controls.Add(this.Lbl_Nombre_Modulo);
+            this.Controls.Add(this.Cbo_Nombre_Modulo);
             this.Controls.Add(this.Txt_NombreApp);
             this.Controls.Add(this.Lbl_NombreApp);
             this.Controls.Add(this.Txt_CodigoApp);
@@ -279,6 +317,9 @@
         private System.Windows.Forms.ComboBox Cbo_App_Modificar;
         private System.Windows.Forms.Button Btn_limpiar;
         private System.Windows.Forms.Button Btn_modificar;
+        private System.Windows.Forms.TextBox Txt_Nombre_Modulo;
+        private System.Windows.Forms.Label Lbl_Nombre_Modulo;
+        private System.Windows.Forms.ComboBox Cbo_Nombre_Modulo;
         private System.Windows.Forms.TextBox Txt_NombreApp;
         private System.Windows.Forms.Label Lbl_NombreApp;
         private System.Windows.Forms.TextBox Txt_CodigoApp;

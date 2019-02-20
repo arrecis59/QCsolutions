@@ -30,8 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaDatosMantenimientoAplicaciones, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="CapaDatosMantenimientoAplicaciones">
       <HintPath>..\CapaDatosMantenimientoAplicaciones\bin\Debug\CapaDatosMantenimientoAplicaciones.dll</HintPath>
     </Reference>
     <Reference Include="System" />

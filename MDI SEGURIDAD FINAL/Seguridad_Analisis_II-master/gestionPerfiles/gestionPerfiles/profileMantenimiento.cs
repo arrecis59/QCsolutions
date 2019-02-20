@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using RetornoCadenaDeConexion;
 
 namespace gestionPerfiles
 {
@@ -27,9 +28,9 @@ namespace gestionPerfiles
         {
             Txt_CodPerfil.Text = "";
             Txt_NombrePerfil.Text = "";
-            /*Txt_CodModulo.Text = "";
+            Txt_CodModulo.Text = "";
             comboBox1.SelectedIndex = -1;
-            Txt_CodModulo.Text = "";*/
+            Txt_CodModulo.Text = "";
             dataGridView4.DataSource = null;
             dataGridView4.Rows.Clear();
             dataGridView3.DataSource = null;
@@ -143,10 +144,10 @@ namespace gestionPerfiles
         }
 
 
-        void cargarAplicacioes2()
+        void cargarAplicacioes2(int codModulo)
         {
             dataGridView4.DataSource = null;
-            dataGridView4.DataSource = dt.getAllApisI();
+            dataGridView4.DataSource = dt.getApiModulo(codModulo);
 
         }
 
@@ -639,23 +640,24 @@ namespace gestionPerfiles
             dataGridView3.Rows.Clear();
         }
 
-        /*void setCodModulo2(string nomModulo)
+        void setCodModulo2(string nomModulo)
         {
             Txt_CodModulo.Text = dt.searchCodModulo(nomModulo).ToString();
-        }*/
+        }
 
-       /* void cargarModulos2()
+        void cargarModulos2()
         {
             comboBox1.DisplayMember = "name";
             comboBox1.ValueMember = "name";
             comboBox1.DataSource = dt.getModulos();
-        }*/
+        }
 
 
         //GET APPS PERFIL
         private void getAppsPerfil(int code)
         {
-            
+
+            CadenaDeConexion cdc = new CadenaDeConexion();
             int refCode = 0;
 
             try
@@ -778,7 +780,8 @@ namespace gestionPerfiles
         //GET APPS PERFIL
         private void getAppsPerfil2(int code)
         {
-            
+
+            CadenaDeConexion cdc = new CadenaDeConexion();
             int refCode = 0;
 
             try
@@ -920,15 +923,15 @@ namespace gestionPerfiles
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //setCodModulo2(this.comboBox1.Text.ToString());
+            setCodModulo2(this.comboBox1.Text.ToString());
+            cargarAplicacioes2(Convert.ToInt32(Txt_CodModulo.Text.ToString()));
         }
 
         private void profileMantenimiento_Load(object sender, EventArgs e)
         {
-
-            cargarAplicacioes2();
-            //cargarModulos2();
-
+            
+            cargarModulos2();
+          
             encabezadoDataGrid2();
             encabezadoDataGrid3();
         }
@@ -979,16 +982,6 @@ namespace gestionPerfiles
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Txt_CodPerfil_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Txt_NombrePerfil_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,7 +10,7 @@ namespace CapaLogicaMantenimientoAplicaciones
 {
     public class LogicaMantenimientoAplicaciones
     {
-        public void ValidarInsertarDatosAplicaiones(string codigoapli, string nombreapi)
+        public void ValidarInsertarDatosAplicaiones(string codigoapli, string nombreapi, string codigomodulo)
         {
             DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
             if (codigoapli == "" || nombreapi == "")
@@ -19,7 +19,7 @@ namespace CapaLogicaMantenimientoAplicaciones
             }
             else
             {
-                dmm.InsertarDatosAplicaciones(codigoapli, nombreapi);
+                dmm.InsertarDatosAplicaciones(codigoapli, nombreapi, codigomodulo);
             }
         }
         public void ValidarInsertarDatosDocumento(string codigodoc, string nombredoc, string rutadoc, string codigoapli)
@@ -47,7 +47,7 @@ namespace CapaLogicaMantenimientoAplicaciones
             }
         }
 
-        public void ValidarModificarDatosAplicaciones(string codigoapliactual, string codigoapli, string nombreapi)
+        public void ValidarModificarDatosAplicaciones(string codigoapliactual, string codigoapli, string nombreapi, string codigomodulo)
         {
             DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
             if (codigoapli == "" || nombreapi == "")
@@ -56,7 +56,7 @@ namespace CapaLogicaMantenimientoAplicaciones
             }
             else
             {
-                dmm.ModificarDatosModulo(codigoapliactual,codigoapli,nombreapi);
+                dmm.ModificarDatosModulo(codigoapliactual,codigoapli,nombreapi,codigomodulo);
             }
         }
     }

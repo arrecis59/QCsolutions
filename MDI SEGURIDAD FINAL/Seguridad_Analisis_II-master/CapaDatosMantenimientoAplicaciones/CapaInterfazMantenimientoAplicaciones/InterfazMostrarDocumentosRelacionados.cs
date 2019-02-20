@@ -48,5 +48,15 @@ namespace CapaInterfazMantenimientoAplicaciones
             ds = dmm.ConsultarDatosDocumentos();
             Dgv_aplicaciones.DataSource = ds.Tables[0];
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

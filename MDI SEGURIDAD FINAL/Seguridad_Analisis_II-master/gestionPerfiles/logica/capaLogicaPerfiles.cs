@@ -73,11 +73,11 @@ namespace logica
 
 
         //GET MODULOS
-        /*public DataTable getModulos()
+        public DataTable getModulos()
         {
             return cpd.getModulos();
 
-        }*/
+        }
 
 
         //GET APPNAME
@@ -88,10 +88,10 @@ namespace logica
 
 
         //SEARCH COD_MODULO
-        /*public int searchCodModulo(string nomModulo)
+        public int searchCodModulo(string nomModulo)
         {
             return cpd.searchCodModulo(nomModulo);
-        }*/
+        }
 
 
         //GET CORRELATIVO
@@ -109,9 +109,9 @@ namespace logica
 
 
         //GET APLICACION_MODULO
-        public DataTable getAllApisL()
+        public DataTable getApiModulo(int codModulo)
         {
-            return cpd.getAllApis();
+            return cpd.getApiModulo(codModulo);
         }
 
 

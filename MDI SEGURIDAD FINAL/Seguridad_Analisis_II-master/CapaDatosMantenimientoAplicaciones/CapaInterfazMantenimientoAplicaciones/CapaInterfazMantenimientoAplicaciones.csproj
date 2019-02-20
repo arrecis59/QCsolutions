@@ -30,12 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaDatosMantenimientoAplicaciones, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="CapaDatosMantenimientoAplicaciones">
       <HintPath>..\CapaDatosMantenimientoAplicaciones\bin\Debug\CapaDatosMantenimientoAplicaciones.dll</HintPath>
     </Reference>
-    <Reference Include="CapaLogicaMantenimientoAplicaciones, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="CapaLogicaMantenimientoAplicaciones">
       <HintPath>..\CapaLogicaMantenimientoAplicaciones\bin\Debug\CapaLogicaMantenimientoAplicaciones.dll</HintPath>
     </Reference>
     <Reference Include="RetornoCadenaDeConexion">
@@ -113,10 +111,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\savve.png" />
+    <None Include="Resources\Save_32x32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\undo.png" />
+    <None Include="Resources\Refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trashes_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

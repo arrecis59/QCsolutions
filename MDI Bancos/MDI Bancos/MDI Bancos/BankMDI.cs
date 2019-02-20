@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InicioSesion;
+using DiseñoTipoTransferencia;
+using MantenimientoAgencias;
 
 namespace MDI_Bancos
 {
@@ -90,6 +92,22 @@ namespace MDI_Bancos
             {
                 item.Close();
             }
+        }
+
+        private void almacenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaAgencias frm = new ConsultaAgencias();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void tiposDeTransferenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaTipotransferencia frm = new ConsultaTipotransferencia();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
         }
 
         /*----------------EJEMPLO PARA ABRIR UN FORM

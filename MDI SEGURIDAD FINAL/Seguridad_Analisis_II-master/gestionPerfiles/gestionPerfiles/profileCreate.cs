@@ -26,25 +26,25 @@ namespace gestionPerfiles
 
         void limpiar()
         {
-            txt_CodPerfil.Text = "";
-            txt_NPerfil.Text = "";
-            /*textBox6.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
             comboBox2.SelectedIndex = -1;
-            textBox6.Text = "";*/
+            textBox6.Text = "";
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
             dataGridView2.DataSource = null;
             dataGridView2.Rows.Clear();
-            txt_CodPerfil.Focus();
+            textBox4.Focus();
 
         }
 
-        /*void cargarModulos()
+        void cargarModulos()
         {
             comboBox2.DisplayMember = "name";
             comboBox2.ValueMember = "name";
             comboBox2.DataSource = dt.getModulos();
-        }*/
+        }
 
 
         void encabezadoDataGrid()
@@ -95,10 +95,10 @@ namespace gestionPerfiles
         }
 
 
-        void cargarAplicacioes()
+        void cargarAplicacioes(int codModulo)
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = dt.getAllApisI();
+            dataGridView1.DataSource = dt.getApiModulo(codModulo);
 
         }
 
@@ -186,10 +186,10 @@ namespace gestionPerfiles
 
 
 
-        /*void setCodModulo(string nomModulo)
+        void setCodModulo(string nomModulo)
         {
             textBox6.Text = dt.searchCodModulo(nomModulo).ToString();
-        }*/
+        }
 
 
         void deleteAllRows()
@@ -346,11 +346,11 @@ namespace gestionPerfiles
 
         void ClearFrm()
         {
-            txt_CodPerfil.Text = "";
-            txt_NPerfil.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
             dataGridView2.DataSource = null;
             dataGridView2.Rows.Clear();
-            txt_CodPerfil.Focus();
+            textBox4.Focus();
         }
 
 
@@ -360,9 +360,8 @@ namespace gestionPerfiles
         private void profileCreate_Load(object sender, EventArgs e)
         {
 
-            //cargarModulos();
+            cargarModulos();
             encabezadoDataGrid();
-            cargarAplicacioes();
         }
 
         private void comboBox2_TextChanged(object sender, EventArgs e)
@@ -372,7 +371,8 @@ namespace gestionPerfiles
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*setCodModulo(this.comboBox2.Text.ToString());*/
+            setCodModulo(this.comboBox2.Text.ToString());
+            cargarAplicacioes(Convert.ToInt32(textBox6.Text.ToString()));
         }
 
         private void Btn_Agregartodas_Click(object sender, EventArgs e)
@@ -400,8 +400,8 @@ namespace gestionPerfiles
             int perCode = 0;
             string name = "";
 
-            perCode = Convert.ToInt32(txt_CodPerfil.Text.ToString());
-            name = txt_NPerfil.Text.ToString();
+            perCode = Convert.ToInt32(textBox4.Text.ToString());
+            name = textBox5.Text.ToString();
 
             if (dt.verifyEncaPerf(perCode, name) == 1)
             {
@@ -435,11 +435,6 @@ namespace gestionPerfiles
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

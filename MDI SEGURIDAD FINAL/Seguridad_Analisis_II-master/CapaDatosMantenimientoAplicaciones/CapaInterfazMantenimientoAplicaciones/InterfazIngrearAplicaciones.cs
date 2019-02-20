@@ -30,8 +30,7 @@ namespace CapaInterfazMantenimientoAplicaciones
             {
                 //Guardar
                 LogicaMantenimientoAplicaciones lma = new LogicaMantenimientoAplicaciones();
-                lma.ValidarInsertarDatosAplicaiones(Txt_CodigoApp.Text, Txt_NombreApp.Text);
-                clean();
+                lma.ValidarInsertarDatosAplicaiones(Txt_CodigoApp.Text, Txt_NombreApp.Text, Txt_nombre_Modulo.Text);
             }
             else
             {
@@ -43,10 +42,42 @@ namespace CapaInterfazMantenimientoAplicaciones
 
         private void InterfazIngrearAplicaciones_Load(object sender, EventArgs e)
         {
+            cargarDatosaTxt_nombre_Modulo();
+        }
+        public void cargarDatosaTxt_nombre_Modulo()
+        {
+            CadenaDeConexion cdc = new CadenaDeConexion();
+            try
+            {
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
+                {
+                    OdbcDataReader Reader;
+                    conn.Open();
+                    {
+                        using (var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = "SELECT modulo_nombre FROM tbl_modulo";
+                            Reader = cmd.ExecuteReader();
+                            while (Reader.Read())
+                            {
+                                Cbo_nombre_modulo.Items.Add(Reader["modulo_nombre"].ToString());
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+                Cbo_nombre_modulo.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
+            }
         }
 
         private void Cbo_nombre_modulo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
+            Txt_nombre_Modulo.Text = dmm.ExtraerCodigoDeModulo(Cbo_nombre_modulo.Text);
         }
 
         private void Txt_CodigoApp_TextChanged(object sender, EventArgs e)
@@ -68,6 +99,7 @@ namespace CapaInterfazMantenimientoAplicaciones
         {
             Txt_CodigoApp.Text = "";
             Txt_NombreApp.Text = "";
+            Cbo_nombre_modulo.SelectedIndex = 0;
         }
 
         private void Btn_limpiar_Click(object sender, EventArgs e)

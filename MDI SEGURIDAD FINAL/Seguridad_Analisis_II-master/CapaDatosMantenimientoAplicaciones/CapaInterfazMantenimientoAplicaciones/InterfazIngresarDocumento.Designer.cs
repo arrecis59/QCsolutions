@@ -53,20 +53,20 @@
             // Txt_codigoAppi
             // 
             this.Txt_codigoAppi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_codigoAppi.Location = new System.Drawing.Point(239, 341);
+            this.Txt_codigoAppi.Location = new System.Drawing.Point(279, 328);
             this.Txt_codigoAppi.Name = "Txt_codigoAppi";
             this.Txt_codigoAppi.ReadOnly = true;
-            this.Txt_codigoAppi.Size = new System.Drawing.Size(158, 27);
+            this.Txt_codigoAppi.Size = new System.Drawing.Size(82, 27);
             this.Txt_codigoAppi.TabIndex = 94;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(31, 341);
+            this.label1.Location = new System.Drawing.Point(75, 327);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.Size = new System.Drawing.Size(198, 23);
             this.label1.TabIndex = 93;
             this.label1.Text = "Nombre de la aplicacion:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -76,9 +76,9 @@
             this.Cbo_nombre_appi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbo_nombre_appi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbo_nombre_appi.FormattingEnabled = true;
-            this.Cbo_nombre_appi.Location = new System.Drawing.Point(403, 341);
+            this.Cbo_nombre_appi.Location = new System.Drawing.Point(367, 328);
             this.Cbo_nombre_appi.Name = "Cbo_nombre_appi";
-            this.Cbo_nombre_appi.Size = new System.Drawing.Size(381, 27);
+            this.Cbo_nombre_appi.Size = new System.Drawing.Size(508, 27);
             this.Cbo_nombre_appi.TabIndex = 92;
             this.Cbo_nombre_appi.SelectedIndexChanged += new System.EventHandler(this.Cbo_nombre_modulo_SelectedIndexChanged);
             // 
@@ -91,7 +91,7 @@
             this.Btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_limpiar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_limpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Btn_limpiar.Location = new System.Drawing.Point(714, 393);
+            this.Btn_limpiar.Location = new System.Drawing.Point(805, 389);
             this.Btn_limpiar.Name = "Btn_limpiar";
             this.Btn_limpiar.Size = new System.Drawing.Size(70, 70);
             this.Btn_limpiar.TabIndex = 91;
@@ -109,7 +109,7 @@
             this.Btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_guardar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_guardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Btn_guardar.Location = new System.Drawing.Point(625, 393);
+            this.Btn_guardar.Location = new System.Drawing.Point(703, 389);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(70, 70);
             this.Btn_guardar.TabIndex = 90;
@@ -121,19 +121,19 @@
             // Txt_NombreDoc
             // 
             this.Txt_NombreDoc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_NombreDoc.Location = new System.Drawing.Point(238, 239);
+            this.Txt_NombreDoc.Location = new System.Drawing.Point(278, 226);
             this.Txt_NombreDoc.Name = "Txt_NombreDoc";
-            this.Txt_NombreDoc.Size = new System.Drawing.Size(546, 27);
+            this.Txt_NombreDoc.Size = new System.Drawing.Size(597, 27);
             this.Txt_NombreDoc.TabIndex = 89;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Calibri", 14F);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(36, 239);
+            this.label6.Location = new System.Drawing.Point(77, 226);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 23);
+            this.label6.Size = new System.Drawing.Size(195, 23);
             this.label6.TabIndex = 88;
             this.label6.Text = "Nombre de Documento:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,19 +141,19 @@
             // Txt_CodigoDoc
             // 
             this.Txt_CodigoDoc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_CodigoDoc.Location = new System.Drawing.Point(238, 183);
+            this.Txt_CodigoDoc.Location = new System.Drawing.Point(278, 170);
             this.Txt_CodigoDoc.Name = "Txt_CodigoDoc";
-            this.Txt_CodigoDoc.Size = new System.Drawing.Size(546, 27);
+            this.Txt_CodigoDoc.Size = new System.Drawing.Size(597, 27);
             this.Txt_CodigoDoc.TabIndex = 87;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Calibri", 14F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(47, 183);
+            this.label5.Location = new System.Drawing.Point(87, 170);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 23);
+            this.label5.Size = new System.Drawing.Size(185, 23);
             this.label5.TabIndex = 86;
             this.label5.Text = "Codigo de Documento:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,19 +161,19 @@
             // Txt_Ruta
             // 
             this.Txt_Ruta.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Ruta.Location = new System.Drawing.Point(239, 291);
+            this.Txt_Ruta.Location = new System.Drawing.Point(279, 278);
             this.Txt_Ruta.Name = "Txt_Ruta";
-            this.Txt_Ruta.Size = new System.Drawing.Size(511, 27);
+            this.Txt_Ruta.Size = new System.Drawing.Size(562, 27);
             this.Txt_Ruta.TabIndex = 96;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Calibri", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(61, 291);
+            this.label3.Location = new System.Drawing.Point(104, 278);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 23);
+            this.label3.Size = new System.Drawing.Size(169, 23);
             this.label3.TabIndex = 95;
             this.label3.Text = "Ruta del documento:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,7 +186,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(756, 291);
+            this.button1.Location = new System.Drawing.Point(848, 278);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 27);
             this.button1.TabIndex = 97;
@@ -205,7 +205,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 620);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(850, 30);
+            this.panel2.Size = new System.Drawing.Size(950, 30);
             this.panel2.TabIndex = 99;
             // 
             // panel1
@@ -217,7 +217,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 30);
+            this.panel1.Size = new System.Drawing.Size(950, 30);
             this.panel1.TabIndex = 98;
             // 
             // btn_minimizar
@@ -228,12 +228,13 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_minimizar.Location = new System.Drawing.Point(790, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(890, 0);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(30, 30);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.Text = "_";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_cerrar
             // 
@@ -243,12 +244,13 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_cerrar.Location = new System.Drawing.Point(820, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(920, 0);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(30, 30);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // Lbl_asignacionPerfiles
             // 
@@ -257,16 +259,16 @@
             this.Lbl_asignacionPerfiles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(10, 6);
             this.Lbl_asignacionPerfiles.Name = "Lbl_asignacionPerfiles";
-            this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(160, 19);
+            this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(215, 19);
             this.Lbl_asignacionPerfiles.TabIndex = 48;
-            this.Lbl_asignacionPerfiles.Text = "Ingreso de documentos";
+            this.Lbl_asignacionPerfiles.Text = "Ingreso de documento asociado";
             // 
             // InterfazIngresarDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(850, 650);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -284,6 +286,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InterfazIngresarDocumento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InterfazIngresarDocumento";
             this.Load += new System.EventHandler(this.InterfazIngresarDocumento_Load);
             this.panel1.ResumeLayout(false);

@@ -148,7 +148,7 @@ namespace datos
 
 
         //GET MODULOS
-        /*public DataTable getModulos()
+        public DataTable getModulos()
         {
 
             CadenaDeConexion cdc = new CadenaDeConexion();
@@ -187,7 +187,7 @@ namespace datos
             {
                 return dt;
             }
-        }*/
+        }
 
 
 
@@ -232,7 +232,7 @@ namespace datos
 
 
         //SEARCH COD_MODULO
-        /*public int searchCodModulo(string nomModulo)
+        public int searchCodModulo(string nomModulo)
         {
 
             CadenaDeConexion cdc = new CadenaDeConexion();
@@ -267,7 +267,7 @@ namespace datos
                 return -1;
             }
 
-        }*/
+        }
 
 
 
@@ -340,8 +340,8 @@ namespace datos
         }
 
 
-        //GET APLICACION_MODULO--------------------------------------------------(Modificado)
-        /*public DataTable getApiModulo(int codModulo)
+        //GET APLICACION_MODULO
+        public DataTable getApiModulo(int codModulo)
         {
 
             CadenaDeConexion cdc = new CadenaDeConexion();
@@ -359,49 +359,7 @@ namespace datos
                     {
                         dt.Columns.Add("codigo");
                         dt.Columns.Add("nombre");
-                        cmd.CommandText = "SELECT * FROM TBL_aplicacion WHERE codigo_modulo = '" + codModulo + "'";
-                        dr = cmd.ExecuteReader();
-
-                        while (dr.Read())
-                        {
-                            DataRow row = dt.NewRow();
-
-                            row["codigo"] = dr["PK_Api_codigo"];
-                            row["nombre"] = dr["api_descripcion"];
-                            dt.Rows.Add(row);
-                        }
-
-
-                        dr.Read();
-                        conn.Close();
-                        return dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                return dt;
-            }
-        }*/
-        public DataTable getAllApis()
-        {
-
-            CadenaDeConexion cdc = new CadenaDeConexion();
-            OdbcDataReader dr = null;
-            DataTable dt = new DataTable();
-
-            try
-            {
-                using (var conn = new OdbcConnection("dsn=colchoneria"))
-                {
-
-                    conn.Open();
-
-                    using (var cmd = conn.CreateCommand())
-                    {
-                        dt.Columns.Add("codigo");
-                        dt.Columns.Add("nombre");
-                        cmd.CommandText = "SELECT * FROM TBL_aplicacion";
+                        cmd.CommandText = "SELECT * FROM TBL_aplicacion WHERE FK_Codigo_modulo = '" + codModulo + "'";
                         dr = cmd.ExecuteReader();
 
                         while (dr.Read())

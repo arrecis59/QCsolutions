@@ -72,15 +72,5 @@ namespace gestionPerfiles
         {
             getCurrentRow();
         }
-
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btn_minimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
     }
 }

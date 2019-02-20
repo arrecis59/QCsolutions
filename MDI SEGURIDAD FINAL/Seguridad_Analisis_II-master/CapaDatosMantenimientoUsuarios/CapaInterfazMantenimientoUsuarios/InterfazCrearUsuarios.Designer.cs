@@ -53,7 +53,7 @@
             this.Txt_contra.Location = new System.Drawing.Point(206, 296);
             this.Txt_contra.Name = "Txt_contra";
             this.Txt_contra.PasswordChar = '*';
-            this.Txt_contra.Size = new System.Drawing.Size(564, 27);
+            this.Txt_contra.Size = new System.Drawing.Size(659, 27);
             this.Txt_contra.TabIndex = 27;
             this.Txt_contra.TextChanged += new System.EventHandler(this.Txt_contra_TextChanged);
             // 
@@ -72,9 +72,9 @@
             // Txt_Nombre
             // 
             this.Txt_Nombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Nombre.Location = new System.Drawing.Point(206, 246);
+            this.Txt_Nombre.Location = new System.Drawing.Point(206, 252);
             this.Txt_Nombre.Name = "Txt_Nombre";
-            this.Txt_Nombre.Size = new System.Drawing.Size(597, 27);
+            this.Txt_Nombre.Size = new System.Drawing.Size(692, 27);
             this.Txt_Nombre.TabIndex = 25;
             this.Txt_Nombre.TextChanged += new System.EventHandler(this.Txt_Nombre_TextChanged);
             // 
@@ -83,7 +83,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(31, 246);
+            this.label5.Location = new System.Drawing.Point(31, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 23);
             this.label5.TabIndex = 24;
@@ -109,7 +109,7 @@
             this.txt_confirmar.Location = new System.Drawing.Point(205, 343);
             this.txt_confirmar.Name = "txt_confirmar";
             this.txt_confirmar.PasswordChar = '*';
-            this.txt_confirmar.Size = new System.Drawing.Size(565, 27);
+            this.txt_confirmar.Size = new System.Drawing.Size(660, 27);
             this.txt_confirmar.TabIndex = 33;
             // 
             // button4
@@ -121,7 +121,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(776, 295);
+            this.button4.Location = new System.Drawing.Point(871, 297);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(27, 27);
             this.button4.TabIndex = 31;
@@ -137,7 +137,7 @@
             this.Btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_limpiar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_limpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Btn_limpiar.Location = new System.Drawing.Point(733, 396);
+            this.Btn_limpiar.Location = new System.Drawing.Point(828, 393);
             this.Btn_limpiar.Name = "Btn_limpiar";
             this.Btn_limpiar.Size = new System.Drawing.Size(70, 70);
             this.Btn_limpiar.TabIndex = 29;
@@ -156,7 +156,7 @@
             this.Btn_guardar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_guardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_guardar.Location = new System.Drawing.Point(638, 396);
+            this.Btn_guardar.Location = new System.Drawing.Point(733, 393);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(70, 70);
             this.Btn_guardar.TabIndex = 28;
@@ -175,7 +175,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(776, 342);
+            this.button1.Location = new System.Drawing.Point(871, 344);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 27);
             this.button1.TabIndex = 34;
@@ -188,7 +188,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 620);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(850, 30);
+            this.panel2.Size = new System.Drawing.Size(950, 30);
             this.panel2.TabIndex = 96;
             // 
             // panel1
@@ -200,7 +200,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 30);
+            this.panel1.Size = new System.Drawing.Size(950, 30);
             this.panel1.TabIndex = 95;
             // 
             // btn_minimizar
@@ -211,7 +211,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_minimizar.Location = new System.Drawing.Point(790, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(890, 0);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(30, 30);
             this.btn_minimizar.TabIndex = 5;
@@ -227,7 +227,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_cerrar.Location = new System.Drawing.Point(820, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(920, 0);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(30, 30);
             this.btn_cerrar.TabIndex = 4;
@@ -250,8 +250,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(850, 650);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(60)))), ((int)(((byte)(78)))));
+            this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);

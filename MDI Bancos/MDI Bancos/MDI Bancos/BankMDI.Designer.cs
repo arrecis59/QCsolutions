@@ -56,6 +56,8 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeTransferenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,6 +119,9 @@
             // 
             // catalogosToolStripMenuItem
             // 
+            this.catalogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.almacenesToolStripMenuItem,
+            this.tiposDeTransferenciaToolStripMenuItem});
             this.catalogosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
@@ -334,6 +339,20 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // almacenesToolStripMenuItem
+            // 
+            this.almacenesToolStripMenuItem.Name = "almacenesToolStripMenuItem";
+            this.almacenesToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.almacenesToolStripMenuItem.Text = "Agencias";
+            this.almacenesToolStripMenuItem.Click += new System.EventHandler(this.almacenesToolStripMenuItem_Click);
+            // 
+            // tiposDeTransferenciaToolStripMenuItem
+            // 
+            this.tiposDeTransferenciaToolStripMenuItem.Name = "tiposDeTransferenciaToolStripMenuItem";
+            this.tiposDeTransferenciaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.tiposDeTransferenciaToolStripMenuItem.Text = "Tipos de Transferencia";
+            this.tiposDeTransferenciaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeTransferenciaToolStripMenuItem_Click);
+            // 
             // BankMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +418,8 @@
         private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem almacenesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeTransferenciaToolStripMenuItem;
     }
 }
 

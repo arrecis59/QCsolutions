@@ -26,8 +26,37 @@ namespace CapaInterfazMantenimientoAplicaciones
 
         private void InterfazModificarAplicaciones_Load(object sender, EventArgs e)
         {
-           // cargarDatosaTxt_Nombre_App_Modificar();
+            cargarDatosaTxt_Nombre_App_Modificar();
             cargarDatosaTextBox2();
+        }
+        public void cargarDatosaTxt_Nombre_App_Modificar()
+        {
+            CadenaDeConexion cdc = new CadenaDeConexion();
+            try
+            {
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
+                {
+                    OdbcDataReader Reader;
+                    conn.Open();
+                    {
+                        using (var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = "SELECT modulo_nombre FROM tbl_modulo";
+                            Reader = cmd.ExecuteReader();
+                            while (Reader.Read())
+                            {
+                                Cbo_Nombre_Modulo.Items.Add(Reader["modulo_nombre"].ToString());
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+                Cbo_Nombre_Modulo.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
+            }
         }
 
         public void cargarDatosaTextBox2()
@@ -76,6 +105,7 @@ namespace CapaInterfazMantenimientoAplicaciones
             h = dmm.cargarDatos1(Txt_Nombre_App_Modificar.Text);
             Txt_CodigoApp.Text = h[0];
             Txt_NombreApp.Text = h[1];
+            Cbo_Nombre_Modulo.Text = h[2];
             if (Txt_Nombre_App_Modificar.Text != "")
             {
                 Btn_modificar.Enabled = true;
@@ -85,6 +115,8 @@ namespace CapaInterfazMantenimientoAplicaciones
 
         private void Cbo_Nombre_Modulo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
+            Txt_Nombre_Modulo.Text = dmm.ExtraerCodigoDeModulo(Cbo_Nombre_Modulo.Text);
         }
 
         private void Cbo_App_Modificar_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,7 +134,7 @@ namespace CapaInterfazMantenimientoAplicaciones
             {
                 //Guardar
                 LogicaMantenimientoAplicaciones lmm = new LogicaMantenimientoAplicaciones();
-                lmm.ValidarModificarDatosAplicaciones(Txt_Nombre_App_Modificar.Text, Txt_CodigoApp.Text, Txt_NombreApp.Text);
+                lmm.ValidarModificarDatosAplicaciones(Txt_Nombre_App_Modificar.Text, Txt_CodigoApp.Text, Txt_NombreApp.Text, Txt_Nombre_Modulo.Text);
                 cargarDatosaTextBox2();
             }
             else

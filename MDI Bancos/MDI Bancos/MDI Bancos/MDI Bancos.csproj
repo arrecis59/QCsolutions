@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="InicioSesion">
+    <Reference Include="DiseñoTipoTransferencia">
+      <HintPath>..\..\..\..\..\..\Desktop\TipoTransferencia\DiseñoTipoTransferencia\DiseñoTipoTransferencia\bin\Debug\DiseñoTipoTransferencia.dll</HintPath>
+    </Reference>
+    <Reference Include="InicioSesion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\DLL-inicio-de-sesion-masterFF\InicioSesion\bin\Debug\InicioSesion.dll</HintPath>
+    </Reference>
+    <Reference Include="MantenimientoAgencias">
+      <HintPath>..\..\..\..\..\..\Desktop\Agencias\MantenimientoAgencias\MantenimientoAgencias\bin\Debug\MantenimientoAgencias.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
