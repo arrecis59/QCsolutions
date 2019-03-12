@@ -33,9 +33,21 @@
     <Reference Include="BITACORA">
       <HintPath>..\..\BITACORA\BITACORA\bin\Debug\BITACORA.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDatos">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatos.dll</HintPath>
+    </Reference>
     <Reference Include="CapaDatosMantenimientoUsuarios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaDatosMantenimientoUsuarios\bin\Debug\CapaDatosMantenimientoUsuarios.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDatosOpciones">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseno">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseñoOpciones">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
     </Reference>
     <Reference Include="CapaLogicaMantenimientoUsuarios">
       <HintPath>..\CapaLogicaMantenimientoUsuarios\bin\Debug\CapaLogicaMantenimientoUsuarios.dll</HintPath>

@@ -12,14 +12,21 @@ using CapaDatosMantenimientoAplicaciones;
 using CapaLogicaMantenimientoAplicaciones;
 using RetornoCadenaDeConexion;
 using System.Data.Odbc;
+using CapaDiseno;               // LLamada a capa del navegador   
+using CapaDatosOpciones;                // LLamada a la capa de datos para exportar el objeto colores
+using CapaDiseñoOpciones;               // LLamada a la capa de diseño para exportar funciones
 
 namespace CapaInterfazMantenimientoAplicaciones
 {
     public partial class InterfazIngrearAplicaciones : Form
     {
-        public InterfazIngrearAplicaciones()
+        Navegador nv = new Navegador();
+        public InterfazIngrearAplicaciones(DataGridView dgv)
         {
             InitializeComponent();
+            nv.nombreForm(this);
+            nv.dgv_datos(dgv);
+            nv.ingresarTabla("tbl_aplicacion");
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
@@ -42,7 +49,22 @@ namespace CapaInterfazMantenimientoAplicaciones
 
         private void InterfazIngrearAplicaciones_Load(object sender, EventArgs e)
         {
+            CapaDiseño_Opciones cd = new CapaDiseño_Opciones();
+            Colores cl = cd.obtenerColores();
+            try
+            {
+                if (cl.ID.ToString() != "")
+                {
+                    pnl_Titulo.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    pnl_Inferior.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    this.BackColor = Color.FromArgb(Convert.ToInt32(cl.FondoAplicaciones));
+                    //Lbl_asignacionPerfiles.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto4));
+                }
+            }
+            catch (Exception ex) { }
             cargarDatosaTxt_nombre_Modulo();
+            DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
+            Txt_nombre_Modulo.Text = dmm.ExtraerCodigoDeModulo(Cbo_nombre_modulo.Text);
         }
         public void cargarDatosaTxt_nombre_Modulo()
         {
@@ -92,7 +114,11 @@ namespace CapaInterfazMantenimientoAplicaciones
 
         private void Txt_nombre_Modulo_TextChanged(object sender, EventArgs e)
         {
-
+            if(Txt_nombre_Modulo.Text == "")
+            {
+                DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
+                Txt_nombre_Modulo.Text = dmm.ExtraerCodigoDeModulo(Cbo_nombre_modulo.Text);
+            }
         }
 
         public void clean()
@@ -115,6 +141,10 @@ namespace CapaInterfazMantenimientoAplicaciones
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

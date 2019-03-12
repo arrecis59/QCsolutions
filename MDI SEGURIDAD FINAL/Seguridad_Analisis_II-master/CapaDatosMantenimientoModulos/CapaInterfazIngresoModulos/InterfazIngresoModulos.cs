@@ -9,20 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using CapaLogicaMantenimientoModulos;
+using CapaDiseñoOpciones;       // LLamada a la capa de diseño
+using CapaDatosOpciones;        // LLamada a capa de datos para importar la clase de colores
+using CapaDiseno;               // LLamada a capa del navegador   
 
 namespace CapaInterfazIngresoModulos
 {
     public partial class InterfazIngresoModulos : Form
     {
-        public InterfazIngresoModulos()
+        Navegador nv = new Navegador();
+        public InterfazIngresoModulos(DataGridView dgv)
         {
             InitializeComponent();
+            nv.nombreForm(this);
+            nv.dgv_datos(dgv);
+            nv.ingresarTabla("tbl_modulo");
         }
 
         public void clear()
         {
-            textBox4.Text = "";
-            textBox5.Text = "";
+            txt_Codigo.Text = "";
+            txt_Nombre.Text = "";
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
@@ -31,17 +38,17 @@ namespace CapaInterfazIngresoModulos
 
             //Validar solo numeros
             Regex Val = new Regex(@"[0-9]{1,9}(\.[0-9]{0,2})?$");
-            if (Val.IsMatch(textBox4.Text))
+            if (Val.IsMatch(txt_Codigo.Text))
             {
                 //Guardar
                 LogicaMantenimientoModulos lmm = new LogicaMantenimientoModulos();
-                lmm.ValidarInsertarDatosModulos(textBox4.Text, textBox5.Text);
+                lmm.ValidarInsertarDatosModulos(txt_Codigo.Text, txt_Nombre.Text);
                 clear();
             }
             else
             {
                 MessageBox.Show("Codigo solo debe llevar numeros", "Error de Sintaxis", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox4.Focus();
+                txt_Codigo.Focus();
             }
             
         }
@@ -84,6 +91,28 @@ namespace CapaInterfazIngresoModulos
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            txt_status.Text = "1";
+        }
+
+        private void InterfazIngresoModulos_Load(object sender, EventArgs e)
+        {
+            CapaDiseño_Opciones cd = new CapaDiseño_Opciones();
+            Colores cl = cd.obtenerColores();
+            try
+            {
+                if (cl.ID.ToString() != "")
+                {
+                    pnl_Titulo.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    pnl_Inferior.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    this.BackColor = Color.FromArgb(Convert.ToInt32(cl.FondoAplicaciones));
+                    //Lbl_asignacionPerfiles.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto4));
+                }
+            }
+            catch (Exception ex) { }
         }
     }
 }

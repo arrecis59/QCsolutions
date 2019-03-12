@@ -9,24 +9,47 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatosMantenimientoAplicaciones;
 using CapaLogicaMantenimientoAplicaciones;
+using CapaDatosOpciones;                // LLamada a la capa de datos para exportar el objeto colores
+using CapaDiseñoOpciones;               // LLamada a la capa de diseño para exportar funciones
+using CapaDiseno;                       // LLamada a la capa del navegador
+
 
 namespace CapaInterfazMantenimientoAplicaciones
 {
     public partial class InterfazMostrarDocumentosRelacionados : Form
     {
-        public InterfazMostrarDocumentosRelacionados()
+        Navegador nv = new Navegador();
+        DataTable dt;
+        public Form frm;
+        public InterfazMostrarDocumentosRelacionados(Form frm2)
         {
             InitializeComponent();
+            frm = frm2;
         }
 
         string Id_reference = "";
 
         private void InterfazMostrarDocumentosRelacionados_Load(object sender, EventArgs e)
         {
-            DataSet ds;
+            CapaDiseño_Opciones cd = new CapaDiseño_Opciones();
+            Colores cl = cd.obtenerColores();
+            try
+            {
+                if (cl.ID.ToString() != "")
+                {
+                    pnl_Titulo.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    pnl_Inferior.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    this.BackColor = Color.FromArgb(Convert.ToInt32(cl.FondoAplicaciones));
+                    //Lbl_asignacionPerfiles.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto4));
+                }
+            }
+            catch (Exception ex) { }
+            dt = nv.cargarDatos("tbl_doc_asociado");
+            Dgv_aplicaciones.DataSource = dt;
+            /*DataSet ds;
             DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
             ds = dmm.ConsultarDatosDocumentos();
-            Dgv_aplicaciones.DataSource = ds.Tables[0];
+            Dgv_aplicaciones.DataSource = ds.Tables[0];*/
         }
 
         private void Dgv_aplicaciones_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -57,6 +80,19 @@ namespace CapaInterfazMantenimientoAplicaciones
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Dgv_aplicaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Dgv_aplicaciones_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            InterfazIngresarDocumento frm3 = new InterfazIngresarDocumento(Dgv_aplicaciones);
+            frm3.MdiParent = frm;
+            frm3.Show();
+            Application.DoEvents();
         }
     }
 }

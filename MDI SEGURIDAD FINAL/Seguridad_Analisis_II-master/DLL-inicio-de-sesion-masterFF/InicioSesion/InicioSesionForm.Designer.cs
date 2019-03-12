@@ -1,6 +1,6 @@
 ﻿namespace InicioSesion
 {
-    partial class InicioSesionForm
+    partial class pnl_Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesionForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pnl_Menu));
             this.Btn_Aceptar = new System.Windows.Forms.Button();
             this.Btn_loginAyuda = new System.Windows.Forms.Button();
             this.Lbl_loginPass = new System.Windows.Forms.Label();
@@ -36,8 +36,8 @@
             this.Txt_loginPass = new System.Windows.Forms.TextBox();
             this.Txt_loginUser = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.pnl_Inicio = new System.Windows.Forms.Panel();
+            this.pnl_Inicio.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Aceptar
@@ -137,26 +137,26 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel1
+            // pnl_Inicio
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Btn_loginAyuda);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 500);
-            this.panel1.TabIndex = 57;
+            this.pnl_Inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.pnl_Inicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_Inicio.BackgroundImage")));
+            this.pnl_Inicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl_Inicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Inicio.Controls.Add(this.Btn_loginAyuda);
+            this.pnl_Inicio.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Inicio.Name = "pnl_Inicio";
+            this.pnl_Inicio.Size = new System.Drawing.Size(400, 500);
+            this.pnl_Inicio.TabIndex = 57;
             // 
-            // InicioSesionForm
+            // pnl_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(850, 500);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_Inicio);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_Aceptar);
             this.Controls.Add(this.Lbl_loginPass);
@@ -164,11 +164,12 @@
             this.Controls.Add(this.Txt_loginPass);
             this.Controls.Add(this.Txt_loginUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InicioSesionForm";
+            this.Name = "pnl_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesion";
+            this.Load += new System.EventHandler(this.InicioSesionForm_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.InicioSesionForm_HelpRequested);
-            this.panel1.ResumeLayout(false);
+            this.pnl_Inicio.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +184,6 @@
         private System.Windows.Forms.TextBox Txt_loginPass;
         private System.Windows.Forms.TextBox Txt_loginUser;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Inicio;
     }
 }

@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BIT;
 using CapaLogicaInicioSesion;
+using CapaDatosOpciones;
+using CapaDiseñoOpciones;
 
 namespace InicioSesion
 {
-    public partial class InicioSesionForm : Form
+    public partial class pnl_Menu : Form
     {
         graphicLayer bitcara = new graphicLayer();
-        public InicioSesionForm()
+        public pnl_Menu()
         {
             InitializeComponent();            
         }
@@ -68,6 +70,24 @@ namespace InicioSesion
         {
             Logica l = new Logica();
             l.obtenerPermisos(usu, app);
+        }
+
+        private void InicioSesionForm_Load(object sender, EventArgs e)
+        {
+            CapaDiseño_Opciones cd = new CapaDiseño_Opciones();
+            Colores cl = cd.obtenerColores();
+            try
+            {
+                if (cl.ID.ToString() != "")
+                {
+                    pnl_Inicio.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTitulo));
+                    this.BackColor = Color.FromArgb(Convert.ToInt32(cl.FondoAplicaciones));
+                    Lbl_loginPass.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto1));
+                    Lbl_loginUser.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto1));
+                    //Lbl_asignacionPerfiles.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto4));
+                }
+            }
+            catch (Exception ex) { }
         }
     }
 }

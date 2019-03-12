@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDatosOpciones">
+      <HintPath>..\..\..\..\..\..\PNComp\Esc\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseñoOpciones">
+      <HintPath>..\..\..\..\..\..\PNComp\Esc\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
+    </Reference>
     <Reference Include="logica">
       <HintPath>..\logica\bin\Debug\logica.dll</HintPath>
     </Reference>

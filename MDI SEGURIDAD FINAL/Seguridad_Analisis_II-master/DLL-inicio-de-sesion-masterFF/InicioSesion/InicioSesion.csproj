@@ -37,6 +37,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaDatos\bin\Debug\CapaDatosInicioSesion.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDatosOpciones">
+      <HintPath>..\..\..\..\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseñoOpciones">
+      <HintPath>..\..\..\..\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
+    </Reference>
     <Reference Include="CapaLogicaInicioSesion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaLogica\bin\Debug\CapaLogicaInicioSesion.dll</HintPath>

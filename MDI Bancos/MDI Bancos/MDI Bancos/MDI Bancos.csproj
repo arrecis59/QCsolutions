@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDatosOpciones">
+      <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseñoOpciones">
+      <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
+    </Reference>
     <Reference Include="DiseñoTipoTransferencia">
       <HintPath>..\..\..\..\..\..\Desktop\TipoTransferencia\DiseñoTipoTransferencia\DiseñoTipoTransferencia\bin\Debug\DiseñoTipoTransferencia.dll</HintPath>
     </Reference>

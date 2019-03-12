@@ -13,19 +13,41 @@ using System.Text.RegularExpressions;
 using CapaDatosMantenimientoAplicaciones;
 using RetornoCadenaDeConexion;
 using System.Data.Odbc;
+using CapaDiseñoOpciones;       // LLamada a la capa de diseño
+using CapaDatosOpciones;        // LLamada a capa de datos para importar la clase de colores
+using CapaDiseno;               // LLamada a capa del navegador        
 
 namespace CapaInterfazMantenimientoAplicaciones
 {
     public partial class InterfazIngresarDocumento : Form
     {
-        public InterfazIngresarDocumento()
+        Navegador nv = new Navegador();
+        public InterfazIngresarDocumento(DataGridView dgv)
         {
             InitializeComponent();
+            nv.nombreForm(this);
+            nv.dgv_datos(dgv);
+            nv.ingresarTabla("tbl_doc_asociado");
         }
 
         private void InterfazIngresarDocumento_Load(object sender, EventArgs e)
         {
+            CapaDiseño_Opciones cd = new CapaDiseño_Opciones();
+            Colores cl = cd.obtenerColores();
+            try
+            {
+                if (cl.ID.ToString() != "")
+                {
+                    pnl_Titulo.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    pnl_Inferior.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    this.BackColor = Color.FromArgb(Convert.ToInt32(cl.FondoAplicaciones));
+                    //Lbl_asignacionPerfiles.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto4));
+                }
+            }
+            catch (Exception ex) { }
             cargarDatosaTxt_nombre_Modulo();
+            DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
+            Txt_codigoAppi.Text = dmm.ExtraerCodigoDeAplicacion(Cbo_nombre_appi.Text);
         }
         public void cargarDatosaTxt_nombre_Modulo()
         {
@@ -114,6 +136,17 @@ namespace CapaInterfazMantenimientoAplicaciones
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_codigoAppi_TextChanged(object sender, EventArgs e)
+        {
+            DatosMantenimientoAplicaciones dmm = new DatosMantenimientoAplicaciones();
+            Txt_codigoAppi.Text = dmm.ExtraerCodigoDeAplicacion(Cbo_nombre_appi.Text);
         }
     }
 }

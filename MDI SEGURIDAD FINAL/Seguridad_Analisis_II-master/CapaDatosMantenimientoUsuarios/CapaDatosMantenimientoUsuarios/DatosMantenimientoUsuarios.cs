@@ -134,13 +134,13 @@ namespace CapaDatosMantenimientoUsuarios
                     {
                         using (var cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = "SELECT usu_nickname, usu_password, usu_estado FROM tbl_usuario WHERE usu_nickname = '"+usuario+"'";
+                            cmd.CommandText = "SELECT usu_nickname, usu_password, status FROM tbl_usuario WHERE usu_nickname = '"+usuario+"'";
                             Reader = cmd.ExecuteReader();
                             while (Reader.Read())
                             {
                                 datos[0] = (Reader["usu_nickname"].ToString());
                                 datos[1] = (Reader["usu_password"].ToString());
-                                datos[2] = (Reader["usu_estado"].ToString());
+                                datos[2] = (Reader["status"].ToString());
                             }
                         }
                     }

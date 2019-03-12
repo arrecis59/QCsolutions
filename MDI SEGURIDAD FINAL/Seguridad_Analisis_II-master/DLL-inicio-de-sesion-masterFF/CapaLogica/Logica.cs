@@ -92,6 +92,7 @@ namespace CapaLogicaInicioSesion
 
         public Permiso obtenerPermisos(int usuarioCodigo, int app_codigo)
         {
+            bool flag = false;
             Datos capaDatos = new Datos();
             List<Permiso> permisos = capaDatos.obtenerPermisos(usuarioCodigo);   
 
@@ -101,6 +102,10 @@ namespace CapaLogicaInicioSesion
                 {
                     return permiso;
                 }
+            }
+            if(flag == false)
+            {
+                return null;
             }
             return null;
         }

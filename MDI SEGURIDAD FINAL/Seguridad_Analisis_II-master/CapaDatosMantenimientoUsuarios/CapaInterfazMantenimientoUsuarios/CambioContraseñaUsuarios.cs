@@ -9,16 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogicaMantenimientoUsuarios;
 using CapaDatosMantenimientoUsuarios;
+using CapaDiseñoOpciones;       // LLamada a la capa de diseño
+using CapaDatosOpciones;        // LLamada a capa de datos para importar la clase de colores
+using CapaDiseno;               // LLamada a capa del navegador   
 
 namespace CapaInterfazMantenimientoUsuarios
 {
     public partial class CambioContraseñaUsuarios : Form
     {
-        public CambioContraseñaUsuarios()
+        public string UsuarioActual = "";
+        public CambioContraseñaUsuarios(string str_nUsuario)
         {
             InitializeComponent();
+            UsuarioActual = str_nUsuario;
         }
-        public string UsuarioActual = "";
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -36,7 +40,20 @@ namespace CapaInterfazMantenimientoUsuarios
 
         private void CambioContraseñaUsuarios_Load(object sender, EventArgs e)
         {
-            if(UsuarioActual != "")
+            CapaDiseño_Opciones cd = new CapaDiseño_Opciones();
+            Colores cl = cd.obtenerColores();
+            try
+            {
+                if (cl.ID.ToString() != "")
+                {
+                    pnl_Titulo.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    pnl_Inferior.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTituloAplicaciones));
+                    this.BackColor = Color.FromArgb(Convert.ToInt32(cl.FondoAplicaciones));
+                    //Lbl_asignacionPerfiles.ForeColor = Color.FromArgb(Convert.ToInt32(cl.FunteDeTexto4));
+                }
+            }
+            catch (Exception ex) { }
+            if (UsuarioActual != "")
             {
                 txt_Nusuario.Text = UsuarioActual;
             }else

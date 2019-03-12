@@ -33,6 +33,15 @@
     <Reference Include="CapaDatosMantenimientoAplicaciones">
       <HintPath>..\CapaDatosMantenimientoAplicaciones\bin\Debug\CapaDatosMantenimientoAplicaciones.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDatosOpciones">
+      <HintPath>..\..\..\..\..\..\PNComp\Esc\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseno">
+      <HintPath>..\..\CapaDatosMantenimientoUsuarios\CapaInterfazMantenimientoUsuarios\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseñoOpciones">
+      <HintPath>..\..\..\..\..\..\PNComp\Esc\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
+    </Reference>
     <Reference Include="CapaLogicaMantenimientoAplicaciones">
       <HintPath>..\CapaLogicaMantenimientoAplicaciones\bin\Debug\CapaLogicaMantenimientoAplicaciones.dll</HintPath>
     </Reference>

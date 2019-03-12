@@ -39,13 +39,13 @@
             this.Btn_agregar = new System.Windows.Forms.Button();
             this.Btn_quitar = new System.Windows.Forms.Button();
             this.Txt_usuario = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_Inferior = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_asignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_asignacion2)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnl_Titulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_usuario
@@ -53,7 +53,7 @@
             this.Lbl_usuario.AutoSize = true;
             this.Lbl_usuario.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_usuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_usuario.Location = new System.Drawing.Point(193, 122);
+            this.Lbl_usuario.Location = new System.Drawing.Point(81, 83);
             this.Lbl_usuario.Name = "Lbl_usuario";
             this.Lbl_usuario.Size = new System.Drawing.Size(75, 23);
             this.Lbl_usuario.TabIndex = 52;
@@ -65,9 +65,9 @@
             this.Cbo_usuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbo_usuarios.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbo_usuarios.FormattingEnabled = true;
-            this.Cbo_usuarios.Location = new System.Drawing.Point(358, 122);
+            this.Cbo_usuarios.Location = new System.Drawing.Point(246, 83);
             this.Cbo_usuarios.Name = "Cbo_usuarios";
-            this.Cbo_usuarios.Size = new System.Drawing.Size(407, 27);
+            this.Cbo_usuarios.Size = new System.Drawing.Size(623, 27);
             this.Cbo_usuarios.TabIndex = 50;
             this.Cbo_usuarios.SelectedIndexChanged += new System.EventHandler(this.Cbo_usuarios_SelectedIndexChanged);
             // 
@@ -101,10 +101,10 @@
             this.Dgv_asignacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_asignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_asignacion.EnableHeadersVisualStyles = false;
-            this.Dgv_asignacion.Location = new System.Drawing.Point(205, 206);
+            this.Dgv_asignacion.Location = new System.Drawing.Point(162, 138);
             this.Dgv_asignacion.Name = "Dgv_asignacion";
             this.Dgv_asignacion.RowHeadersVisible = false;
-            this.Dgv_asignacion.Size = new System.Drawing.Size(250, 300);
+            this.Dgv_asignacion.Size = new System.Drawing.Size(322, 401);
             this.Dgv_asignacion.TabIndex = 53;
             this.Dgv_asignacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_asignacion_CellContentClick);
             this.Dgv_asignacion.SelectionChanged += new System.EventHandler(this.Dgv_asignacion_SelectionChanged);
@@ -128,10 +128,10 @@
             this.Dgv_asignacion2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_asignacion2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_asignacion2.EnableHeadersVisualStyles = false;
-            this.Dgv_asignacion2.Location = new System.Drawing.Point(527, 206);
+            this.Dgv_asignacion2.Location = new System.Drawing.Point(556, 138);
             this.Dgv_asignacion2.Name = "Dgv_asignacion2";
             this.Dgv_asignacion2.RowHeadersVisible = false;
-            this.Dgv_asignacion2.Size = new System.Drawing.Size(250, 300);
+            this.Dgv_asignacion2.Size = new System.Drawing.Size(313, 401);
             this.Dgv_asignacion2.TabIndex = 54;
             this.Dgv_asignacion2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_asignacion2_CellContentClick);
             this.Dgv_asignacion2.SelectionChanged += new System.EventHandler(this.Dgv_asignacion2_SelectionChanged);
@@ -143,7 +143,7 @@
             this.Btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_agregar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_agregar.Location = new System.Drawing.Point(461, 259);
+            this.Btn_agregar.Location = new System.Drawing.Point(490, 258);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(60, 60);
             this.Btn_agregar.TabIndex = 55;
@@ -159,7 +159,7 @@
             this.Btn_quitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_quitar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_quitar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_quitar.Location = new System.Drawing.Point(461, 333);
+            this.Btn_quitar.Location = new System.Drawing.Point(490, 332);
             this.Btn_quitar.Name = "Btn_quitar";
             this.Btn_quitar.Size = new System.Drawing.Size(60, 60);
             this.Btn_quitar.TabIndex = 56;
@@ -170,24 +170,24 @@
             // Txt_usuario
             // 
             this.Txt_usuario.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_usuario.Location = new System.Drawing.Point(274, 122);
+            this.Txt_usuario.Location = new System.Drawing.Point(162, 83);
             this.Txt_usuario.Name = "Txt_usuario";
             this.Txt_usuario.ReadOnly = true;
             this.Txt_usuario.Size = new System.Drawing.Size(80, 27);
             this.Txt_usuario.TabIndex = 57;
             this.Txt_usuario.TextChanged += new System.EventHandler(this.Txt_usuario_TextChanged);
             // 
-            // panel1
+            // pnl_Titulo
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel1.Controls.Add(this.btn_minimizar);
-            this.panel1.Controls.Add(this.btn_cerrar);
-            this.panel1.Controls.Add(this.Lbl_asignacionPerfiles);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 30);
-            this.panel1.TabIndex = 58;
+            this.pnl_Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnl_Titulo.Controls.Add(this.btn_minimizar);
+            this.pnl_Titulo.Controls.Add(this.btn_cerrar);
+            this.pnl_Titulo.Controls.Add(this.Lbl_asignacionPerfiles);
+            this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Titulo.Name = "pnl_Titulo";
+            this.pnl_Titulo.Size = new System.Drawing.Size(950, 30);
+            this.pnl_Titulo.TabIndex = 58;
             // 
             // btn_minimizar
             // 
@@ -197,7 +197,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_minimizar.Location = new System.Drawing.Point(890, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(880, 0);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(30, 30);
             this.btn_minimizar.TabIndex = 5;
@@ -213,22 +213,22 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_cerrar.Location = new System.Drawing.Point(920, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(910, 0);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(30, 30);
+            this.btn_cerrar.Size = new System.Drawing.Size(40, 30);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // panel2
+            // pnl_Inferior
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 620);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(950, 30);
-            this.panel2.TabIndex = 59;
+            this.pnl_Inferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnl_Inferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_Inferior.Location = new System.Drawing.Point(0, 620);
+            this.pnl_Inferior.Name = "pnl_Inferior";
+            this.pnl_Inferior.Size = new System.Drawing.Size(950, 30);
+            this.pnl_Inferior.TabIndex = 59;
             // 
             // InterfazAsignacionDePerfiles
             // 
@@ -236,8 +236,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_Inferior);
+            this.Controls.Add(this.pnl_Titulo);
             this.Controls.Add(this.Txt_usuario);
             this.Controls.Add(this.Btn_quitar);
             this.Controls.Add(this.Btn_agregar);
@@ -255,8 +255,8 @@
             this.Load += new System.EventHandler(this.InterfazAsignacionDePerfiles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_asignacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_asignacion2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl_Titulo.ResumeLayout(false);
+            this.pnl_Titulo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,9 +272,9 @@
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Button Btn_quitar;
         private System.Windows.Forms.TextBox Txt_usuario;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Titulo;
         private System.Windows.Forms.Button btn_minimizar;
         private System.Windows.Forms.Button btn_cerrar;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_Inferior;
     }
 }

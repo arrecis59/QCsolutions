@@ -20,10 +20,12 @@ namespace CapaDatos
 
              //CadenaDeConexion cadenaConexion = new CadenaDeConexion();
              List<Permiso> respuesta = new List<Permiso>();
-             string query = "select d.FK_Api_codigo as aplicacion, d.ingresar, d.editar, d.guardar, d.borrar,  d.consultar FROM tbl_usuario a, tbl_relacion_usuario_perfil b, tbl_perfil_encabezado c, tbl_perfil_detalle d WHERE a.PK_Usu_Codigo = " + usuarioCodigo + " AND b.FK_Usu_Codigo = a.PK_Usu_Codigo AND c.PK_perf_cod_encabezado = b.FK_perf_codigo AND d.FK_perf_cod_encabezado = c.PK_perf_cod_encabezado; ";
+             //string query = "select d.FK_Api_codigo as aplicacion, d.ingresar, d.editar, d.guardar, d.borrar,  d.consultar FROM tbl_usuario a, tbl_relacion_usuario_perfil b, tbl_perfil_encabezado c, tbl_perfil_detalle d WHERE a.PK_Usu_Codigo = " + usuarioCodigo + " AND b.FK_Usu_Codigo = a.PK_Usu_Codigo AND c.PK_perf_cod_encabezado = b.FK_perf_codigo AND d.FK_perf_cod_encabezado = c.PK_perf_cod_encabezado; ";
 
-             try
-             {
+            string query = "select d.FK_Api_codigo as aplicacion, d.ingresar, d.editar, d.guardar, d.borrar,  d.consultar FROM tbl_usuario a, tbl_relacion_usuario_perfil b, tbl_perfil_encabezado c, tbl_perfil_detalle d WHERE b.FK_Usu_Codigo = " + usuarioCodigo + " AND c.PK_perf_cod_encabezado = b.FK_perf_codigo AND d.FK_perf_cod_encabezado = c.PK_perf_cod_encabezado; ";
+
+            try
+            {
 
                  using (var conn = new OdbcConnection("dsn=colchoneria;"))
                  {

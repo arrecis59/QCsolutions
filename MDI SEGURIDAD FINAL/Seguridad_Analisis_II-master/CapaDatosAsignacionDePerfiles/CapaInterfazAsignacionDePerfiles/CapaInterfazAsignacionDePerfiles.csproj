@@ -33,6 +33,12 @@
     <Reference Include="CapaDatosAsignacionDePerfiles">
       <HintPath>..\CapaDatosAsignacionDePerfiles\bin\Debug\CapaDatosAsignacionDePerfiles.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDatosOpciones">
+      <HintPath>..\..\..\..\..\..\PNComp\Esc\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseñoOpciones">
+      <HintPath>..\..\..\..\..\..\PNComp\Esc\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
+    </Reference>
     <Reference Include="CapaLogicaAsignacionDePerfiles">
       <HintPath>..\CapaLogicaAsignacionDePerfiles\bin\Debug\CapaLogicaAsignacionDePerfiles.dll</HintPath>
     </Reference>

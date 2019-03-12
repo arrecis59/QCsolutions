@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using InicioSesion;
 using DiseñoTipoTransferencia;
 using MantenimientoAgencias;
+using CapaDiseñoOpciones;
+using CapaDatosOpciones;
+using CapaDiseñoOpciones.CambioDeColores;
 
 namespace MDI_Bancos
 {
@@ -22,6 +25,18 @@ namespace MDI_Bancos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CapaDiseño_Opciones cd = new CapaDiseño_Opciones();
+            Colores cl = cd.obtenerColores();
+            if (cl.ID.ToString() != "")
+            {
+                pct_Icono.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTitulo));
+                pnl_barraTitulo.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeTitulo));
+                menuStrip1.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeMenu));
+                pnl_Fecha.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeEstado));
+                pnl_Hora.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeEstado));
+                pnl_Usuario.BackColor = Color.FromArgb(Convert.ToInt32(cl.BarraDeEstado));
+            }
+            this.BackColor = Color.FromArgb(Convert.ToInt32(cl.Fondo));
             MdiClient ctlMDI;
             foreach (Control ctl in this.Controls)
             {
@@ -105,6 +120,14 @@ namespace MDI_Bancos
         private void tiposDeTransferenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConsultaTipotransferencia frm = new ConsultaTipotransferencia();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void cambioDeColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaColores frm = new ConsultaColores();
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();

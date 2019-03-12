@@ -35,12 +35,14 @@
             this.cerrarAplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeTransferenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_barraTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pct_Icono = new System.Windows.Forms.PictureBox();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
@@ -56,11 +58,12 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiposDeTransferenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_logoEmpresa)).BeginInit();
             this.pnl_Fecha.SuspendLayout();
             this.pnl_Usuario.SuspendLayout();
@@ -89,7 +92,6 @@
             // 
             // inicioToolStripMenuItem
             // 
-            this.inicioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cerrarAplicacionesToolStripMenuItem,
             this.salirToolStripMenuItem});
@@ -128,6 +130,20 @@
             this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(86, 23);
             this.catalogosToolStripMenuItem.Text = "Catalogos";
             // 
+            // almacenesToolStripMenuItem
+            // 
+            this.almacenesToolStripMenuItem.Name = "almacenesToolStripMenuItem";
+            this.almacenesToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.almacenesToolStripMenuItem.Text = "Agencias";
+            this.almacenesToolStripMenuItem.Click += new System.EventHandler(this.almacenesToolStripMenuItem_Click);
+            // 
+            // tiposDeTransferenciaToolStripMenuItem
+            // 
+            this.tiposDeTransferenciaToolStripMenuItem.Name = "tiposDeTransferenciaToolStripMenuItem";
+            this.tiposDeTransferenciaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.tiposDeTransferenciaToolStripMenuItem.Text = "Tipos de Transferencia";
+            this.tiposDeTransferenciaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeTransferenciaToolStripMenuItem_Click);
+            // 
             // procesosToolStripMenuItem
             // 
             this.procesosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,6 +162,9 @@
             // 
             // herramientasToolStripMenuItem
             // 
+            this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.seguridadToolStripMenuItem,
+            this.opcionesToolStripMenuItem});
             this.herramientasToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.herramientasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
@@ -163,7 +182,7 @@
             // pnl_barraTitulo
             // 
             this.pnl_barraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.pnl_barraTitulo.Controls.Add(this.pictureBox1);
+            this.pnl_barraTitulo.Controls.Add(this.pct_Icono);
             this.pnl_barraTitulo.Controls.Add(this.lbl_titulo);
             this.pnl_barraTitulo.Controls.Add(this.btn_minimizar);
             this.pnl_barraTitulo.Controls.Add(this.btn_cerrar);
@@ -174,16 +193,16 @@
             this.pnl_barraTitulo.TabIndex = 11;
             this.pnl_barraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_barraTitulo_Paint);
             // 
-            // pictureBox1
+            // pct_Icono
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pct_Icono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.pct_Icono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pct_Icono.BackgroundImage")));
+            this.pct_Icono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pct_Icono.Location = new System.Drawing.Point(0, 0);
+            this.pct_Icono.Name = "pct_Icono";
+            this.pct_Icono.Size = new System.Drawing.Size(30, 30);
+            this.pct_Icono.TabIndex = 5;
+            this.pct_Icono.TabStop = false;
             // 
             // lbl_titulo
             // 
@@ -219,7 +238,7 @@
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_cerrar.Location = new System.Drawing.Point(878, 0);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(30, 30);
+            this.btn_cerrar.Size = new System.Drawing.Size(45, 30);
             this.btn_cerrar.TabIndex = 2;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
@@ -339,19 +358,26 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // almacenesToolStripMenuItem
+            // seguridadToolStripMenuItem
             // 
-            this.almacenesToolStripMenuItem.Name = "almacenesToolStripMenuItem";
-            this.almacenesToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.almacenesToolStripMenuItem.Text = "Agencias";
-            this.almacenesToolStripMenuItem.Click += new System.EventHandler(this.almacenesToolStripMenuItem_Click);
+            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
-            // tiposDeTransferenciaToolStripMenuItem
+            // opcionesToolStripMenuItem
             // 
-            this.tiposDeTransferenciaToolStripMenuItem.Name = "tiposDeTransferenciaToolStripMenuItem";
-            this.tiposDeTransferenciaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.tiposDeTransferenciaToolStripMenuItem.Text = "Tipos de Transferencia";
-            this.tiposDeTransferenciaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeTransferenciaToolStripMenuItem_Click);
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambioDeColorToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.opcionesToolStripMenuItem.Text = "Opciones";
+            // 
+            // cambioDeColorToolStripMenuItem
+            // 
+            this.cambioDeColorToolStripMenuItem.Name = "cambioDeColorToolStripMenuItem";
+            this.cambioDeColorToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.cambioDeColorToolStripMenuItem.Text = "Cambio de Color";
+            this.cambioDeColorToolStripMenuItem.Click += new System.EventHandler(this.cambioDeColorToolStripMenuItem_Click);
             // 
             // BankMDI
             // 
@@ -376,7 +402,7 @@
             this.menuStrip1.PerformLayout();
             this.pnl_barraTitulo.ResumeLayout(false);
             this.pnl_barraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_logoEmpresa)).EndInit();
             this.pnl_Fecha.ResumeLayout(false);
             this.pnl_Fecha.PerformLayout();
@@ -402,7 +428,7 @@
         private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.Panel pnl_barraTitulo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pct_Icono;
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Button btn_minimizar;
         private System.Windows.Forms.Button btn_cerrar;
@@ -420,6 +446,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem almacenesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeTransferenciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioDeColorToolStripMenuItem;
     }
 }
 
