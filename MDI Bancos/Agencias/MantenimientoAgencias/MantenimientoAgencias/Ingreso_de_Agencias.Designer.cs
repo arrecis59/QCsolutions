@@ -43,6 +43,10 @@
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_Telefono = new System.Windows.Forms.TextBox();
             this.txt_Descripcion = new System.Windows.Forms.TextBox();
+            this.navegador1 = new CapaDiseno.Navegador();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btn_minimizar);
             this.panel1.Controls.Add(this.btn_cerrar);
             this.panel1.Controls.Add(this.Lbl_asignacionPerfiles);
@@ -104,7 +109,7 @@
             this.Lbl_asignacionPerfiles.AutoSize = true;
             this.Lbl_asignacionPerfiles.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_asignacionPerfiles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(10, 6);
+            this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(65, 6);
             this.Lbl_asignacionPerfiles.Name = "Lbl_asignacionPerfiles";
             this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(68, 19);
             this.Lbl_asignacionPerfiles.TabIndex = 48;
@@ -171,6 +176,7 @@
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(664, 27);
             this.txt_Codigo.TabIndex = 73;
+            this.txt_Codigo.Tag = "1";
             // 
             // txt_Direccion
             // 
@@ -178,6 +184,7 @@
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(664, 27);
             this.txt_Direccion.TabIndex = 74;
+            this.txt_Direccion.Tag = "2";
             // 
             // txt_Nombre
             // 
@@ -185,6 +192,7 @@
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(664, 27);
             this.txt_Nombre.TabIndex = 75;
+            this.txt_Nombre.Tag = "3";
             // 
             // txt_Telefono
             // 
@@ -192,6 +200,7 @@
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(664, 27);
             this.txt_Telefono.TabIndex = 76;
+            this.txt_Telefono.Tag = "4";
             // 
             // txt_Descripcion
             // 
@@ -199,12 +208,63 @@
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(664, 27);
             this.txt_Descripcion.TabIndex = 77;
+            this.txt_Descripcion.Tag = "5";
+            // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.navegador1.DataGr = null;
+            this.navegador1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navegador1.Location = new System.Drawing.Point(0, 30);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Procedimiento = null;
+            this.navegador1.pubNombrechm = null;
+            this.navegador1.pubNombreHtml = null;
+            this.navegador1.Size = new System.Drawing.Size(950, 55);
+            this.navegador1.TabIndex = 78;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(189, 380);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(664, 27);
+            this.textBox1.TabIndex = 80;
+            this.textBox1.Tag = "";
+            this.textBox1.Text = "1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(115, 380);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 23);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "Estado:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(12, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 19);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "81541";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Ingreso_de_Agencias
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txt_Descripcion);
             this.Controls.Add(this.txt_Telefono);
             this.Controls.Add(this.txt_Nombre);
@@ -246,5 +306,9 @@
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.TextBox txt_Telefono;
         private System.Windows.Forms.TextBox txt_Descripcion;
+        private CapaDiseno.Navegador navegador1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

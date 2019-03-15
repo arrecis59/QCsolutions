@@ -13,6 +13,8 @@ using CapaLogica;
 using BIT;
 using InicioSesion;
 using CapaDatos;
+using DLL__Reporteador;
+using CrystalDecisions.CrystalReports.Engine;
 
 
 namespace CapaDiseno
@@ -63,6 +65,8 @@ namespace CapaDiseno
         static Form forma;
         static int userCD = 0;
         static int appCD = 0;
+        static DataTable dtRefresco;
+        static ReportDocument rptRefresco;
 
         /*[Description("Nombre de la Forma")]
         [DisplayName("Form")]
@@ -114,6 +118,21 @@ namespace CapaDiseno
 
         /*public int userCD = 0;
         public int appCD = 0;*/
+
+        public void getReporteApp(string appCode)
+        {
+            bool flag;
+            Logica lg = new Logica();
+            flag = lg.getTFReportApp(appCode);
+            if(flag == true)
+            {
+                MessageBox.Show("Hay reporte");
+            }
+            else
+            {
+                MessageBox.Show("No hay reporte");
+            }
+        }
 
 
         public void getPermisos(int userCode, int appCode)
@@ -211,6 +230,12 @@ namespace CapaDiseno
         {
            // MessageBox.Show("Forma: "+fm);
             forma = fm;
+        }
+
+        public void getDatosReportes(DataTable dt, ReportDocument rpt)
+        {
+            dtRefresco = dt;
+            rptRefresco = rpt;
         }
 
         public void getDatos(int usd, int appd)
@@ -1039,6 +1064,10 @@ namespace CapaDiseno
 
         private void Btn_imprimir_Click(object sender, EventArgs e)
         {
+            AdministradorDeReportes frm = new AdministradorDeReportes();
+            frm.getDatosNecesariosParaReportes(appCD);
+            frm.getDatosNecesariosParaReportes2(dtRefresco, rptRefresco);
+            frm.ShowDialog();
             /*Administrador reportes = new Administrador();
             reportes.AbrirAdministrador();
             Reporteador frmMSG = new Reporteador();

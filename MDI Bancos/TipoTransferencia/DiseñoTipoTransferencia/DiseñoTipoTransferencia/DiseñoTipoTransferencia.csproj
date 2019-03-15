@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDiseno">
+      <HintPath>..\..\..\..\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -49,6 +55,19 @@
     <Compile Include="ConsultaTipotransferencia.Designer.cs">
       <DependentUpon>ConsultaTipotransferencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSTipoT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTipoT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTipoTransferencia.cs">
+      <DependentUpon>DSTipoTransferencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTipoTransferencia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTipoTransferencia.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IngresoTipoTransferencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +75,22 @@
       <DependentUpon>IngresoTipoTransferencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RPTTipoTransferencia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTTipoTransferencia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT_TipoT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_TipoT.rpt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ConsultaTipotransferencia.resx">
@@ -64,6 +99,46 @@
     <EmbeddedResource Include="IngresoTipoTransferencia.resx">
       <DependentUpon>IngresoTipoTransferencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RPTTipoTransferencia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTTipoTransferencia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT_TipoT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_TipoT.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DSTipoT.xsc">
+      <DependentUpon>DSTipoT.xsd</DependentUpon>
+    </None>
+    <None Include="DSTipoT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTipoT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSTipoT.xss">
+      <DependentUpon>DSTipoT.xsd</DependentUpon>
+    </None>
+    <None Include="DSTipoTransferencia.xsc">
+      <DependentUpon>DSTipoTransferencia.xsd</DependentUpon>
+    </None>
+    <None Include="DSTipoTransferencia.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTipoTransferencia.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSTipoTransferencia.xss">
+      <DependentUpon>DSTipoTransferencia.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

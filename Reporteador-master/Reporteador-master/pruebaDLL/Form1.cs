@@ -17,12 +17,15 @@ namespace pruebaDLL
         public Form1()
         {
             InitializeComponent();
+            AdministradorDeReportes frm = new AdministradorDeReportes();
+            //int codigomudlo = devulevacodigomodulo(int aplicacion);
+            frm.getDatosNecesariosParaReportes(1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             DLL__Reporteador.Administrador adm = new Administrador();
-            adm.AbrirAdministrador(1);
+            //adm.AbrirAdministrador(1);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,7 +33,7 @@ namespace pruebaDLL
             try
             {
                 DLL__Reporteador.Visualizador vs = new Visualizador();
-                vs.AbrirReporte(1);
+                vs.AbrirReporte(7);
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -92,6 +95,19 @@ namespace pruebaDLL
                 MessageBox.Show(ex.ToString());
             }
 
+
+            DataTable Dt = new DataTable();
+            Dt = (DataTable)dataGridView1.DataSource;                  // Se crea un datatable que contenga los datos del data grid
+            dataGridView2.DataSource = Dt;
+
+            DLL__Reporteador.Visualizador vp = new Visualizador();
+            Prueba pp = new Prueba();
+
+            //vp.generarReporte(Dt, pp);
+
+            AdministradorDeReportes frm = new AdministradorDeReportes();
+            frm.getDatosNecesariosParaReportes2(Dt, pp);
+
             /*MySqlConnection conexion = new MySqlConnection("Server=localhost; User Id=root; Password='tu password'; Database=nombre_de_la_BD");
 
             ------------------------------------------------- ----
@@ -110,6 +126,12 @@ namespace pruebaDLL
             DataTable Dt = new DataTable();
             Dt = (DataTable)dataGridView1.DataSource;                  // Se crea un datatable que contenga los datos del data grid
             dataGridView2.DataSource = Dt;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AdministradorDeReportes frm = new AdministradorDeReportes();
+            frm.ShowDialog();
         }
     }
 }

@@ -13,6 +13,7 @@ using MantenimientoAgencias;
 using CapaDiseñoOpciones;
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
+using Seguridad2;
 
 namespace MDI_Bancos
 {
@@ -57,7 +58,8 @@ namespace MDI_Bancos
             this.btn_cerrar.Location = new Point(this.Width - 35, 0);
             this.btn_minimizar.Location = new Point(this.Width - 70, 0);
             this.ptb_logoEmpresa.Location = new Point(2, this.Height - 177);
-            InicioSesionForm inicioSes = new InicioSesionForm();
+            pnl_Menu inicioSes = new pnl_Menu();
+            //InicioSesionForm inicioSes = new InicioSesionForm();
             inicioSes.FormClosed += new FormClosedEventHandler(form2_FormClosed);
             inicioSes.ShowDialog();
             inicioSes.TopMost = true;
@@ -111,7 +113,9 @@ namespace MDI_Bancos
 
         private void almacenesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaAgencias frm = new ConsultaAgencias();
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaAgencias frm = new ConsultaAgencias(intCodigoUsuario, this) ;
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();
@@ -119,7 +123,9 @@ namespace MDI_Bancos
 
         private void tiposDeTransferenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaTipotransferencia frm = new ConsultaTipotransferencia();
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaTipotransferencia frm = new ConsultaTipotransferencia(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();
@@ -129,6 +135,13 @@ namespace MDI_Bancos
         {
             ConsultaColores frm = new ConsultaColores();
             frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void seguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Seguridad2._0.MDIPrincipalSeguridad frm = new Seguridad2._0.MDIPrincipalSeguridad();
             frm.Show();
             Application.DoEvents();
         }

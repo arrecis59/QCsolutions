@@ -62,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
+    <Compile Include="AdministradorDeReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministradorDeReportes.Designer.cs">
+      <DependentUpon>AdministradorDeReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Visualizador.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdministradorDeReportes.resx">
+      <DependentUpon>AdministradorDeReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form Administrador.resx">
       <DependentUpon>Form Administrador.cs</DependentUpon>
     </EmbeddedResource>

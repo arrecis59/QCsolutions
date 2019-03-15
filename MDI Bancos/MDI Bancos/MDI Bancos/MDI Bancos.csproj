@@ -36,18 +36,27 @@
     <Reference Include="CapaDatosOpciones">
       <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDiseno, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Agencias\MantenimientoAgencias\MantenimientoAgencias\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
     <Reference Include="CapaDiseñoOpciones">
       <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
     </Reference>
-    <Reference Include="DiseñoTipoTransferencia">
-      <HintPath>..\..\..\..\..\..\Desktop\TipoTransferencia\DiseñoTipoTransferencia\DiseñoTipoTransferencia\bin\Debug\DiseñoTipoTransferencia.dll</HintPath>
+    <Reference Include="DiseñoTipoTransferencia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TipoTransferencia\DiseñoTipoTransferencia\DiseñoTipoTransferencia\bin\Debug\DiseñoTipoTransferencia.dll</HintPath>
     </Reference>
     <Reference Include="InicioSesion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\DLL-inicio-de-sesion-masterFF\InicioSesion\bin\Debug\InicioSesion.dll</HintPath>
+      <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\Seguridad2.0\Seguridad2.0\bin\Debug\InicioSesion.dll</HintPath>
     </Reference>
-    <Reference Include="MantenimientoAgencias">
-      <HintPath>..\..\..\..\..\..\Desktop\Agencias\MantenimientoAgencias\MantenimientoAgencias\bin\Debug\MantenimientoAgencias.dll</HintPath>
+    <Reference Include="MantenimientoAgencias, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Agencias\MantenimientoAgencias\MantenimientoAgencias\bin\Debug\MantenimientoAgencias.dll</HintPath>
+    </Reference>
+    <Reference Include="Seguridad2.0">
+      <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\Seguridad2.0\Seguridad2.0\bin\Debug\Seguridad2.0.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

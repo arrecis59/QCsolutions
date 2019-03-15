@@ -26,7 +26,7 @@ namespace Implementacion
             nv.nombreForm(this);
             nv.dgv_datos(dgv);
 
-            nv.ingresarTabla("tbl_aplicacion");
+            nv.ingresarTabla("tbl_agencia");
 
 
         }
@@ -47,6 +47,11 @@ namespace Implementacion
             VisualizarReporte vsR = new VisualizarReporte();
             vsR.CrVAplicaciones.ReportSource = Cr;
             vsR.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            nv.getReporteApp("7");
         }
     }
 }

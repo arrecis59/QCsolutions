@@ -22,6 +22,19 @@ namespace DLL__Reporteador
         DataTable DataTable = new DataTable();
         int Search = 1, codigoModulo = 0;
 
+        public static int intCodigoAplicacion;
+        public static int intCodigoModulo;
+
+        public void getAplicacion(int intCodigoAplicacion2)
+        {
+            intCodigoAplicacion = intCodigoAplicacion2;
+        }
+        public void getModulo(int intCodigoModulo2)
+        {
+            intCodigoModulo = intCodigoModulo2;
+        }
+
+
 
         public void RefreshGrid()
         {

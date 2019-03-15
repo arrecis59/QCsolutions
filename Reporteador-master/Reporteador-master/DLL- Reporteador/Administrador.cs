@@ -14,12 +14,8 @@ namespace DLL__Reporteador
     /// </summary>
     public class Administrador
     {
-        /// <summary>
-        /// Este metodo abre el administrador de reportes si el usuario tiene los permisos.
-        /// </summary>
-        /// <param name="codigoModulo"> Codigo de modulo </param>
 
-        public void AbrirAdministrador(int codigoModulo)
+        public void AbrirAdministradorPorModulo(int codigoModulo)
         {
             //obtener permisos del usuario
             //obtener modulo al que esta logueado
@@ -37,7 +33,29 @@ namespace DLL__Reporteador
                 adm.Show();
             }else{
                 MessageBox.Show("Codigo De Modulo Incorrecto");  
-            }       
+            }
+        }
+
+        public void AbrirAdministradorporAplicacion(int intCodigoAplicacion)
+        {
+            //obtener aplicacion al que esta logueado
+            //cargar rutas de todos los docs asociados al modulo
+            OdbcConnection cnx = new OdbcConnection("DSN=colchoneria");
+            OdbcDataReader DataReader = null;
+            OdbcCommand query = new OdbcCommand();
+            query.CommandText = "SELECT api_descripcion FROM tbl_aplicacion WHERE PK_Api_codigo=" + intCodigoAplicacion + ";";
+            cnx.Open();
+            query.Connection = cnx;
+            DataReader = query.ExecuteReader();
+            if (DataReader.Read())
+            {
+                Form_Administrador adm = new Form_Administrador(intCodigoAplicacion);
+                adm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Codigo De Aplicacion Incorrecto");
+            }
         }
     }
 

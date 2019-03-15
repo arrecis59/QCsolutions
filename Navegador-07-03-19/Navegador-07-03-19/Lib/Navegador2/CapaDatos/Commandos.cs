@@ -17,8 +17,44 @@ namespace CapaDatos
         Conexion nuevo4 = new Conexion();
         Conexion nuevo5 = new Conexion();
         Conexion nuevo6 = new Conexion();
+        Conexion nuevo7 = new Conexion();
         OdbcTransaction transaction = null;
 
+
+        /***************************************************/
+        
+
+        public bool getTFREporteAplicacion(string appCodigo)    // Funcion que devuelve si existe un reporte para la aplicacion
+        {
+            try
+            {
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
+                {
+                    OdbcDataReader Reader;
+                    conn.Open();
+                    {
+                        using (var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = "SELECT PK_Id_Documento FROM tbl_doc_asociado WHERE FK_Api_codigo = '" + appCodigo + "' AND status = 1;";
+                            //cmd.CommandText = "SELECT PK_Modulo_codigo FROM tbl_modulo WHERE modulo_nombre = '" + nombremodulo + "'";
+                            Reader = cmd.ExecuteReader();
+                            while (Reader.Read())
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
+                return false;
+            }
+            return false;
+        }
+        /***************************************************/
 
         public void pubInsertData(string sParametro)
         {

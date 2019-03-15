@@ -15,11 +15,6 @@ namespace DLL__Reporteador
     /// </summary>
     public class Visualizador
     {
-        /// <summary>
-        /// Este metodo abre el visualizador de reportes.
-        /// </summary>
-        /// <param name="codigoAplicacion"> Codigo de la aplicacion(form), para obtener el reporte asociado a dicha aplicacion. </param>
-        /// 
 
         public void generarReporte(DataTable dtt, ReportDocument Cr)
         {
@@ -61,6 +56,12 @@ namespace DLL__Reporteador
             }
 
            
+        }
+
+        public void AbrirReporteCreado(string strruta)
+        {
+            Form_Visualizador vs = new Form_Visualizador(strruta);
+            vs.Show();
         }
     }
 }

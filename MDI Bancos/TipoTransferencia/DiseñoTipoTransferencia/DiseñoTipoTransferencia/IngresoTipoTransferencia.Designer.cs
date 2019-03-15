@@ -39,6 +39,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.navegador1 = new CapaDiseno.Navegador();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btn_minimizar);
             this.panel1.Controls.Add(this.btn_cerrar);
             this.panel1.Controls.Add(this.Lbl_asignacionPerfiles);
@@ -100,7 +105,7 @@
             this.Lbl_asignacionPerfiles.AutoSize = true;
             this.Lbl_asignacionPerfiles.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_asignacionPerfiles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(10, 6);
+            this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(65, 5);
             this.Lbl_asignacionPerfiles.Name = "Lbl_asignacionPerfiles";
             this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(129, 19);
             this.Lbl_asignacionPerfiles.TabIndex = 48;
@@ -112,6 +117,7 @@
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(664, 27);
             this.txt_Descripcion.TabIndex = 89;
+            this.txt_Descripcion.Tag = "3";
             // 
             // txt_Nombre
             // 
@@ -119,6 +125,7 @@
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(664, 27);
             this.txt_Nombre.TabIndex = 87;
+            this.txt_Nombre.Tag = "2";
             // 
             // txt_Codigo
             // 
@@ -126,6 +133,7 @@
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(664, 27);
             this.txt_Codigo.TabIndex = 85;
+            this.txt_Codigo.Tag = "1";
             // 
             // label5
             // 
@@ -160,12 +168,60 @@
             this.label1.TabIndex = 80;
             this.label1.Text = "Codigo:";
             // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.navegador1.DataGr = null;
+            this.navegador1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navegador1.Location = new System.Drawing.Point(0, 30);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Procedimiento = null;
+            this.navegador1.pubNombrechm = null;
+            this.navegador1.pubNombreHtml = null;
+            this.navegador1.Size = new System.Drawing.Size(950, 55);
+            this.navegador1.TabIndex = 90;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(12, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 19);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "81553";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(179, 383);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(664, 27);
+            this.textBox1.TabIndex = 92;
+            this.textBox1.Tag = "";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(105, 383);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 23);
+            this.label4.TabIndex = 91;
+            this.label4.Text = "Estado:";
+            // 
             // IngresoTipoTransferencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txt_Descripcion);
@@ -176,7 +232,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresoTipoTransferencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngresoTipoTransferencia";
@@ -200,5 +256,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private CapaDiseno.Navegador navegador1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

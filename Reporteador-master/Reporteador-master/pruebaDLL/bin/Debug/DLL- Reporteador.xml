@@ -9,11 +9,22 @@
             Esta clase contiene los metodos para abrir el administrador de reportes, y que el usuario busque el reporte deseado.
             </summary>
         </member>
-        <member name="M:DLL__Reporteador.Administrador.AbrirAdministrador(System.Int32)">
+        <member name="F:DLL__Reporteador.AdministradorDeReportes.components">
             <summary>
-            Este metodo abre el administrador de reportes si el usuario tiene los permisos.
+            Required designer variable.
             </summary>
-            <param name="codigoModulo"> Codigo de modulo </param>
+        </member>
+        <member name="M:DLL__Reporteador.AdministradorDeReportes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DLL__Reporteador.AdministradorDeReportes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
         </member>
         <member name="F:DLL__Reporteador.Form_Administrador.components">
             <summary>
@@ -114,13 +125,6 @@
             <summary>
             Esta clase contiene los metodos para abrir el visualizador de reportes, con un reporte especifico.
             </summary>
-        </member>
-        <member name="M:DLL__Reporteador.Visualizador.generarReporte(System.Data.DataTable,CrystalDecisions.CrystalReports.Engine.ReportDocument)">
-            <summary>
-            Este metodo abre el visualizador de reportes.
-            </summary>
-            <param name="codigoAplicacion"> Codigo de la aplicacion(form), para obtener el reporte asociado a dicha aplicacion. </param>
-            
         </member>
     </members>
 </doc>

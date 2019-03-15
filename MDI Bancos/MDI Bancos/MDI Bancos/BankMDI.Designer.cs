@@ -40,6 +40,9 @@
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_barraTitulo = new System.Windows.Forms.Panel();
             this.pct_Icono = new System.Windows.Forms.PictureBox();
@@ -58,9 +61,6 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambioDeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).BeginInit();
@@ -170,6 +170,28 @@
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
+            // 
+            // seguridadToolStripMenuItem
+            // 
+            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.seguridadToolStripMenuItem.Text = "Seguridad";
+            this.seguridadToolStripMenuItem.Click += new System.EventHandler(this.seguridadToolStripMenuItem_Click);
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambioDeColorToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.opcionesToolStripMenuItem.Text = "Opciones";
+            // 
+            // cambioDeColorToolStripMenuItem
+            // 
+            this.cambioDeColorToolStripMenuItem.Name = "cambioDeColorToolStripMenuItem";
+            this.cambioDeColorToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.cambioDeColorToolStripMenuItem.Text = "Cambio de Color";
+            this.cambioDeColorToolStripMenuItem.Click += new System.EventHandler(this.cambioDeColorToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -357,27 +379,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // seguridadToolStripMenuItem
-            // 
-            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.seguridadToolStripMenuItem.Text = "Seguridad";
-            // 
-            // opcionesToolStripMenuItem
-            // 
-            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cambioDeColorToolStripMenuItem});
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.opcionesToolStripMenuItem.Text = "Opciones";
-            // 
-            // cambioDeColorToolStripMenuItem
-            // 
-            this.cambioDeColorToolStripMenuItem.Name = "cambioDeColorToolStripMenuItem";
-            this.cambioDeColorToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
-            this.cambioDeColorToolStripMenuItem.Text = "Cambio de Color";
-            this.cambioDeColorToolStripMenuItem.Click += new System.EventHandler(this.cambioDeColorToolStripMenuItem_Click);
             // 
             // BankMDI
             // 

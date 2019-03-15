@@ -16,6 +16,17 @@ namespace CapaLogica
         Sentencia sen = new Sentencia();
 
         Commandos comando = new Commandos();
+
+        /********************************************/
+        public bool getTFReportApp(string appCod)
+        {
+            Commandos cmd = new Commandos();
+            bool res = false;
+            res = cmd.getTFREporteAplicacion(appCod);
+            return res;
+        }
+        /********************************************/
+
         //string sSentencia = "INSERT INTO prueba VALUES('Julios', 'Lutin', '43')";
 
         public void pubInsertarDatos()

@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDiseno;
 
 namespace MantenimientoAgencias
 {
     public partial class Ingreso_de_Agencias : Form
     {
-        public Ingreso_de_Agencias()
+        Navegador nv = new Navegador();
+        public Ingreso_de_Agencias(DataGridView dgv)
         {
             InitializeComponent();
+
+            nv.nombreForm(this);
+            nv.dgv_datos(dgv);
+
+            nv.ingresarTabla("tbl_agencia");
+
+
+
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -25,6 +35,11 @@ namespace MantenimientoAgencias
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "1";
         }
     }
 }
