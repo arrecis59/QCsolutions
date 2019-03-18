@@ -16,6 +16,7 @@ using CapaDiseñoOpciones.CambioDeColores;
 using Seguridad2;
 using TipoEmpleado;
 
+
 namespace MDI_Bancos
 {
     public partial class BankMDI : Form
@@ -155,6 +156,13 @@ namespace MDI_Bancos
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();
+        }
+
+        private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            
+
         }
 
         /*----------------EJEMPLO PARA ABRIR UN FORM
