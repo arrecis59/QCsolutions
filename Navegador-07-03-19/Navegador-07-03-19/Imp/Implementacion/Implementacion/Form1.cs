@@ -24,13 +24,14 @@ namespace Implementacion
             nv.nombreForm(this);
             nv.dgv_datos(dgv);
 
-            nv.ingresarTabla("tbl_aplicacion");
-            nv.getPermisos(1, 2);
+            nv.ingresarTabla("tbl_empleado");
+    
             
 
-            /*DataSet dt = nv.cargarCombobox("tbl_tipo_empleado", "nombre");
+           
+            DataSet dt = nv.cargarCombobox("tbl_tipo_empleado", "nombre");
             comboBox1.DataSource = dt.Tables[0].DefaultView;
-            comboBox1.ValueMember = "Nombre";*/
+            comboBox1.ValueMember = "Nombre";
 
             
 

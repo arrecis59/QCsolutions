@@ -61,6 +61,7 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).BeginInit();
@@ -123,7 +124,8 @@
             // 
             this.catalogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.almacenesToolStripMenuItem,
-            this.tiposDeTransferenciaToolStripMenuItem});
+            this.tiposDeTransferenciaToolStripMenuItem,
+            this.empleadoToolStripMenuItem});
             this.catalogosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
@@ -174,7 +176,7 @@
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             this.seguridadToolStripMenuItem.Click += new System.EventHandler(this.seguridadToolStripMenuItem_Click);
             // 
@@ -183,7 +185,7 @@
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cambioDeColorToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // cambioDeColorToolStripMenuItem
@@ -380,6 +382,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // empleadoToolStripMenuItem
+            // 
+            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.empleadoToolStripMenuItem.Text = "Empleado";
+            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click_1);
+            // 
             // BankMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,6 +459,7 @@
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambioDeColorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem;
     }
 }
 

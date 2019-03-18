@@ -13,6 +13,8 @@ using MantenimientoAgencias;
 using CapaDiseñoOpciones;
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
+using Empleado;
+
 using Seguridad2;
 
 namespace MDI_Bancos
@@ -142,6 +144,23 @@ namespace MDI_Bancos
         private void seguridadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Seguridad2._0.MDIPrincipalSeguridad frm = new Seguridad2._0.MDIPrincipalSeguridad();
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+         
+        }
+
+        private void empleadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Usuario usr = new Usuario();
+
+            int intCodigoUsuario = usr.obtenerCodigoUsuario();
+            dataEmpleado frm = new dataEmpleado(intCodigoUsuario, this);
+            frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();
         }

@@ -19,9 +19,9 @@ namespace Implementacion
         public dataEmpleado()
         {
             InitializeComponent();
-            nv.getDatos(1, 1);
+            nv.getDatos(1, 40000);
 
-            dtEmpleado = nv.cargarDatos("tbl_aplicacion");
+            dtEmpleado = nv.cargarDatos("tbl_empleado");
             dataGridView1.DataSource = dtEmpleado;
         }
 
@@ -32,7 +32,7 @@ namespace Implementacion
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            new Form2(dataGridView1).Show();
+            new Form1(dataGridView1).Show();
             
         }
 

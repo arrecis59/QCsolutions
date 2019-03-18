@@ -389,13 +389,12 @@ namespace CapaDiseno
                             if (componente is DateTimePicker)
                             {
 
+                                //Conversion a Formato fecha requerido (YEAR-MONTH-DAY)
+
                                 int numero = Convert.ToInt32(componente.Tag.ToString()) - 1;
-
-
                                 DateTime date = Convert.ToDateTime(componente.Text.ToString());
-                                string fecha = date.Day + "/" + date.Month + "/" + date.Year;
-                               
-                                arrayCampos[numero] = fecha;
+                                string Sfecha = date.Year + "-" + date.Month + "-" + date.Day;
+                                arrayCampos[numero] = Sfecha;
 
 
                             }
