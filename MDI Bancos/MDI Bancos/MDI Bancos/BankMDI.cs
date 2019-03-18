@@ -15,7 +15,7 @@ using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
 using Seguridad2;
 using TipoEmpleado;
-using Empleado;
+
 
 namespace MDI_Bancos
 {
@@ -161,12 +161,7 @@ namespace MDI_Bancos
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Usuario inc = new Usuario();
-            int intCodigoUsuario = inc.obtenerCodigoUsuario();
-            dataEmpleado frm = new dataEmpleado(intCodigoUsuario, this);
-            frm.MdiParent = this;
-            frm.Show();
-            Application.DoEvents();
+            
 
         }
 
