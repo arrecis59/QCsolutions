@@ -69,6 +69,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TipoEmpleado">
+      <HintPath>..\..\TipoEmpleado\TipoEmpleado\bin\Debug\TipoEmpleado.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankMDI.cs">
