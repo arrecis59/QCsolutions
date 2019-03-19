@@ -26,7 +26,7 @@ namespace ConsultasInteligentes.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=bdbancos;uid=root")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=bdbancos;uid=root;pwd=#include<password.h>")]
         public string ruta {
             get {
                 return ((string)(this["ruta"]));

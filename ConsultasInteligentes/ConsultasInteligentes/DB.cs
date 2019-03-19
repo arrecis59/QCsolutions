@@ -18,7 +18,7 @@ namespace ConsultasInteligentes
              */
             try
             {
-                OdbcConnection cnx = new OdbcConnection("Dsn=bdbancos");
+                OdbcConnection cnx = new OdbcConnection("Dsn=colchoneria");
                 cnx.Open();
                 return cnx;
             }
