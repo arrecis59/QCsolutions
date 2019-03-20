@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstipodecambio" targetNamespace="http://tempuri.org/dstipodecambio.xsd" xmlns:mstns="http://tempuri.org/dstipodecambio.xsd" xmlns="http://tempuri.org/dstipodecambio.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.MantenimientoTipoDeCambio.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_tipo_cambioTableAdapter" GeneratorDataComponentClassName="tbl_tipo_cambioTableAdapter" Name="tbl_tipo_cambio" UserDataComponentName="tbl_tipo_cambioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `tbl_tipo_cambio`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_tipo_cambio" DataSetColumn="id_tipo_cambio" />
+              <Mapping SourceColumn="equivalencia" DataSetColumn="equivalencia" />
+              <Mapping SourceColumn="cod_moneda_local" DataSetColumn="cod_moneda_local" />
+              <Mapping SourceColumn="cod_moneda_externa" DataSetColumn="cod_moneda_externa" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstipodecambio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dstipodecambio" msprop:Generator_UserDSName="dstipodecambio">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_tipo_cambio" msprop:Generator_TableClassName="tbl_tipo_cambioDataTable" msprop:Generator_TableVarName="tabletbl_tipo_cambio" msprop:Generator_TablePropName="tbl_tipo_cambio" msprop:Generator_RowDeletingName="tbl_tipo_cambioRowDeleting" msprop:Generator_RowChangingName="tbl_tipo_cambioRowChanging" msprop:Generator_RowEvHandlerName="tbl_tipo_cambioRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_tipo_cambioRowDeleted" msprop:Generator_UserTableName="tbl_tipo_cambio" msprop:Generator_RowChangedName="tbl_tipo_cambioRowChanged" msprop:Generator_RowEvArgName="tbl_tipo_cambioRowChangeEvent" msprop:Generator_RowClassName="tbl_tipo_cambioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_tipo_cambio" msprop:Generator_ColumnVarNameInTable="columnid_tipo_cambio" msprop:Generator_ColumnPropNameInRow="id_tipo_cambio" msprop:Generator_ColumnPropNameInTable="id_tipo_cambioColumn" msprop:Generator_UserColumnName="id_tipo_cambio" type="xs:int" />
+              <xs:element name="equivalencia" msprop:Generator_ColumnVarNameInTable="columnequivalencia" msprop:Generator_ColumnPropNameInRow="equivalencia" msprop:Generator_ColumnPropNameInTable="equivalenciaColumn" msprop:Generator_UserColumnName="equivalencia" type="xs:int" minOccurs="0" />
+              <xs:element name="cod_moneda_local" msprop:Generator_ColumnVarNameInTable="columncod_moneda_local" msprop:Generator_ColumnPropNameInRow="cod_moneda_local" msprop:Generator_ColumnPropNameInTable="cod_moneda_localColumn" msprop:Generator_UserColumnName="cod_moneda_local" type="xs:int" />
+              <xs:element name="cod_moneda_externa" msprop:Generator_ColumnVarNameInTable="columncod_moneda_externa" msprop:Generator_ColumnPropNameInRow="cod_moneda_externa" msprop:Generator_ColumnPropNameInTable="cod_moneda_externaColumn" msprop:Generator_UserColumnName="cod_moneda_externa" type="xs:int" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_tipo_cambio" />
+      <xs:field xpath="mstns:id_tipo_cambio" />
+      <xs:field xpath="mstns:cod_moneda_local" />
+      <xs:field xpath="mstns:cod_moneda_externa" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
