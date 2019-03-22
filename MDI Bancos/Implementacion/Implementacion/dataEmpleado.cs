@@ -16,10 +16,10 @@ namespace Implementacion
         DataTable dtEmpleado = new DataTable();
         Navegador nv = new Navegador();
 
-        public dataEmpleado()
+        public dataEmpleado(int userCode)
         {
             InitializeComponent();
-            nv.getDatos(1, 40000);
+            nv.getDatos(userCode, 40000);
 
             dtEmpleado = nv.cargarDatos("tbl_empleado");
             dataGridView1.DataSource = dtEmpleado;

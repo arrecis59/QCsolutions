@@ -16,7 +16,7 @@ namespace Implementacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dataEmpleado());
+            Application.Run(new dataEmpleado(1));
         }
     }
 }
