@@ -46,6 +46,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TipoTransferencia\DiseñoTipoTransferencia\DiseñoTipoTransferencia\bin\Debug\DiseñoTipoTransferencia.dll</HintPath>
     </Reference>
+    <Reference Include="Empleado">
+      <HintPath>..\..\Empleado\Empleado\bin\Debug\Empleado.dll</HintPath>
+    </Reference>
     <Reference Include="Implementacion">
       <HintPath>..\..\Implementacion\Implementacion\bin\Debug\Implementacion.dll</HintPath>
     </Reference>

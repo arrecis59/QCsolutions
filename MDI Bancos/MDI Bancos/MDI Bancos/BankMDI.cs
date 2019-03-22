@@ -15,7 +15,7 @@ using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
 using Seguridad2;
 using TipoEmpleado;
-using Implementacion;
+using Empleado;
 
 
 namespace MDI_Bancos
@@ -164,7 +164,7 @@ namespace MDI_Bancos
 
             Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
-            dataEmpleado frm = new dataEmpleado(intCodigoUsuario);
+            empleadoData frm = new empleadoData(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();
