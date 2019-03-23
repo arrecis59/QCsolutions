@@ -14,19 +14,28 @@ namespace ConceptosIngresosEgresos
     public partial class Ingreso_de_Conceptos : Form
     {
         Navegador navegador = new Navegador();
-        public Ingreso_de_Conceptos()
+        public Ingreso_de_Conceptos(DataGridView dataGridView)
         {
             InitializeComponent();
+
+            navegador.nombreForm(this);
+            navegador.dgv_datos(dataGridView);
+            navegador.ingresarTabla("tbl_conceptos_flujo_efectivo");
         }
 
-        private void txt_Id_TextChanged(object sender, EventArgs e)
+        private void btn_cerrar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btn_minimizar_Click(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void txt_Estado_TextChanged(object sender, EventArgs e)
+        {
+            txt_Estado.Text = "1";
         }
     }
 }

@@ -51,6 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS_Conceptos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Conceptos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ingreso_de_Conceptos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +85,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DS_Conceptos.xsc">
+      <DependentUpon>DS_Conceptos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Conceptos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Conceptos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Conceptos.xss">
+      <DependentUpon>DS_Conceptos.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

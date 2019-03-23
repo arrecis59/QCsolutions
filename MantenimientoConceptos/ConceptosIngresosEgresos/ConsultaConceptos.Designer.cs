@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgw_Conceptos = new System.Windows.Forms.DataGridView();
+            this.dgv_Conceptos = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_asignacionPerfiles = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgw_Conceptos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Conceptos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgw_Conceptos
+            // dgv_Conceptos
             // 
-            this.dgw_Conceptos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgw_Conceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgw_Conceptos.Location = new System.Drawing.Point(16, 34);
-            this.dgw_Conceptos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgw_Conceptos.Name = "dgw_Conceptos";
-            this.dgw_Conceptos.Size = new System.Drawing.Size(921, 579);
-            this.dgw_Conceptos.TabIndex = 0;
+            this.dgv_Conceptos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Conceptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.dgv_Conceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Conceptos.Location = new System.Drawing.Point(30, 60);
+            this.dgv_Conceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_Conceptos.Name = "dgv_Conceptos";
+            this.dgv_Conceptos.Size = new System.Drawing.Size(890, 520);
+            this.dgv_Conceptos.TabIndex = 0;
+            this.dgv_Conceptos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Conceptos_CellClick);
             // 
             // panel2
             // 
@@ -97,6 +99,7 @@
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.Text = "_";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_cerrar
             // 
@@ -112,6 +115,7 @@
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // Lbl_asignacionPerfiles
             // 
@@ -124,21 +128,21 @@
             this.Lbl_asignacionPerfiles.TabIndex = 48;
             this.Lbl_asignacionPerfiles.Text = "Conceptos de Ingreso y Egreso";
             // 
-            // formData
+            // ConsultaConceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgw_Conceptos);
+            this.Controls.Add(this.dgv_Conceptos);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "formData";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ConsultaConceptos";
             this.Text = "formData";
-            this.Load += new System.EventHandler(this.formData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgw_Conceptos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Conceptos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -147,7 +151,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgw_Conceptos;
+        private System.Windows.Forms.DataGridView dgv_Conceptos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
