@@ -75,7 +75,7 @@ namespace ConsultasInteligentes
             try
             {
                 OdbcConnection conexion = DB.getConnection(); // obtiene conexion con la DB // obtiene conexion con la DB
-                string Query = string.Format("SELECT nombre_campo FROM TBL_Campo WHERE id_tabla = (SELECT id_tabla FROM TBL_Tabla WHERE nombre_tabla = '" + modulo + "');"); // query
+                string Query = string.Format("SELECT nombre_campo FROM tbl_campo WHERE id_tabla = (SELECT id_tabla FROM tbl_tabla WHERE nombre_tabla = '" + modulo + "');"); // query
                 OdbcCommand cmd = new OdbcCommand(Query, conexion);
                 OdbcDataReader reader = cmd.ExecuteReader();
                 cbo_temp.SelectedIndex = -1;
@@ -101,7 +101,7 @@ namespace ConsultasInteligentes
             try
             {
                 OdbcConnection conexion = DB.getConnection(); // obtiene conexion con la DB
-                string Query = string.Format("SELECT OPERADOR_OPERADOR FROM TBL_Operador WHERE ID_Tipo_Operador = " + operador + ";");
+                string Query = string.Format("SELECT OPERADOR_OPERADOR FROM tbl_operador WHERE ID_Tipo_Operador = " + operador + ";");
                 OdbcCommand cmd = new OdbcCommand(Query, conexion);
                 OdbcDataReader reader = cmd.ExecuteReader();
                 cbo_temp.SelectedIndex = -1;
@@ -127,7 +127,7 @@ namespace ConsultasInteligentes
             try
             {
                 OdbcConnection conexion = DB.getConnection(); // obtiene conexion con la DB
-                string sql = string.Format("SELECT id_query, usu_codigo, nombre_query, select_query FROM TBL_Query WHERE usu_codigo = " + lbl_usuario.Text + " AND status = 0;");
+                string sql = string.Format("SELECT id_query, usu_codigo, nombre_query, select_query FROM tbl_query WHERE usu_codigo = " + lbl_usuario.Text + " AND status = 0;");
                 OdbcCommand cmd = new OdbcCommand(sql, conexion);
                 OdbcDataReader reader = cmd.ExecuteReader();
                 dgv_query.Rows.Clear();
@@ -215,7 +215,7 @@ namespace ConsultasInteligentes
                 try
                 {
                     OdbcConnection conexion = DB.getConnection(); // obtiene conexion con la DB
-                    string sql = string.Format("INSERT INTO TBL_Query VALUES (NULL,'" + txt_nombre_consulta.Text + "'," + '"' + campos + '"' + "," + lbl_usuario.Text + ",0)");
+                    string sql = string.Format("INSERT INTO tbl_query VALUES (NULL,'" + txt_nombre_consulta.Text + "'," + '"' + campos + '"' + "," + lbl_usuario.Text + ",0)");
                     OdbcCommand cmd = new OdbcCommand(sql, conexion);
                     cmd.ExecuteNonQuery();
                     limpiar();
@@ -782,7 +782,7 @@ namespace ConsultasInteligentes
                 try
                 {
                     OdbcConnection conexion = DB.getConnection(); // obtiene conexion con la DB
-                    string sql = string.Format("DELETE FROM TBL_Query WHERE ID_QUERY = {0}", txt_id_consulta.Text);
+                    string sql = string.Format("DELETE FROM tbl_query WHERE ID_QUERY = {0}", txt_id_consulta.Text);
                     OdbcCommand cmd = new OdbcCommand(sql, conexion);
                     int ban = cmd.ExecuteNonQuery();
                     if (ban == 1)
@@ -822,7 +822,7 @@ namespace ConsultasInteligentes
                 try
                 {
                     OdbcConnection conexion = DB.getConnection(); // obtiene conexion con la DB
-                    string sql = string.Format("SELECT NOMBRE_QUERY, SELECT_QUERY FROM TBL_Query WHERE ID_QUERY = " + txt_id_consulta_editar.Text);
+                    string sql = string.Format("SELECT NOMBRE_QUERY, SELECT_QUERY FROM tbl_query WHERE ID_QUERY = " + txt_id_consulta_editar.Text);
                     OdbcCommand cmd = new OdbcCommand(sql, conexion);
                     OdbcDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
@@ -883,7 +883,7 @@ namespace ConsultasInteligentes
                 try
                 {
                     OdbcConnection conexion = DB.getConnection(); // obtiene conexion con la DB ;
-                    string sql = string.Format("UPDATE TBL_Query SET NOMBRE_QUERY = '" + txt_query.Text + "', SELECT_QUERY = '" + txt_select.Text + "' WHERE ID_QUERY = " + txt_id_consulta_editar.Text);
+                    string sql = string.Format("UPDATE tbl_query SET NOMBRE_QUERY = '" + txt_query.Text + "', SELECT_QUERY = '" + txt_select.Text + "' WHERE ID_QUERY = " + txt_id_consulta_editar.Text);
                     OdbcCommand cmd = new OdbcCommand(sql, conexion);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Consulta actualizada!", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
