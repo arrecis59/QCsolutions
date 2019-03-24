@@ -33,9 +33,6 @@ namespace MantenimientoTipoDeCuenta
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            textBox1.Text = "1";
-        }
+        
     }
 }

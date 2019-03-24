@@ -37,6 +37,8 @@
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeTransferenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,8 +63,8 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tipoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bancosExternosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).BeginInit();
@@ -127,7 +129,9 @@
             this.almacenesToolStripMenuItem,
             this.tiposDeTransferenciaToolStripMenuItem,
             this.tipoEmpleadoToolStripMenuItem,
-            this.empleadoToolStripMenuItem});
+            this.empleadoToolStripMenuItem,
+            this.tipoDeCuentaToolStripMenuItem,
+            this.bancosExternosToolStripMenuItem});
             this.catalogosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
@@ -147,6 +151,20 @@
             this.tiposDeTransferenciaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
             this.tiposDeTransferenciaToolStripMenuItem.Text = "Tipos de Transferencia";
             this.tiposDeTransferenciaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeTransferenciaToolStripMenuItem_Click);
+            // 
+            // tipoEmpleadoToolStripMenuItem
+            // 
+            this.tipoEmpleadoToolStripMenuItem.Name = "tipoEmpleadoToolStripMenuItem";
+            this.tipoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.tipoEmpleadoToolStripMenuItem.Text = "Tipo Empleado";
+            this.tipoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.tipoEmpleadoToolStripMenuItem_Click);
+            // 
+            // empleadoToolStripMenuItem
+            // 
+            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.empleadoToolStripMenuItem.Text = "Empleado";
+            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -384,19 +402,19 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tipoEmpleadoToolStripMenuItem
+            // tipoDeCuentaToolStripMenuItem
             // 
-            this.tipoEmpleadoToolStripMenuItem.Name = "tipoEmpleadoToolStripMenuItem";
-            this.tipoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.tipoEmpleadoToolStripMenuItem.Text = "Tipo Empleado";
-            this.tipoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.tipoEmpleadoToolStripMenuItem_Click);
+            this.tipoDeCuentaToolStripMenuItem.Name = "tipoDeCuentaToolStripMenuItem";
+            this.tipoDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.tipoDeCuentaToolStripMenuItem.Text = "Tipo de Cuenta";
+            this.tipoDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.tipoDeCuentaToolStripMenuItem_Click);
             // 
-            // empleadoToolStripMenuItem
+            // bancosExternosToolStripMenuItem
             // 
-            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
-            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.empleadoToolStripMenuItem.Text = "Empleado";
-            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
+            this.bancosExternosToolStripMenuItem.Name = "bancosExternosToolStripMenuItem";
+            this.bancosExternosToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.bancosExternosToolStripMenuItem.Text = "Bancos Externos";
+            this.bancosExternosToolStripMenuItem.Click += new System.EventHandler(this.bancosExternosToolStripMenuItem_Click);
             // 
             // BankMDI
             // 
@@ -470,6 +488,8 @@
         private System.Windows.Forms.ToolStripMenuItem cambioDeColorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoEmpleadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeCuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bancosExternosToolStripMenuItem;
     }
 }
 
