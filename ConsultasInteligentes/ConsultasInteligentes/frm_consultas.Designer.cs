@@ -140,10 +140,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_produccion = new System.Windows.Forms.Button();
-            this.btn_minimizar = new System.Windows.Forms.Button();
-            this.btn_salir = new System.Windows.Forms.Button();
             this.btn_ayuda = new System.Windows.Forms.Button();
             this.pnl_borde_superior = new System.Windows.Forms.Panel();
+            this.btn_minimizar = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tbc_gestion.SuspendLayout();
             this.tbp_consultar.SuspendLayout();
             this.gpb_data.SuspendLayout();
@@ -171,7 +172,7 @@
             this.tbc_gestion.Location = new System.Drawing.Point(12, 57);
             this.tbc_gestion.Name = "tbc_gestion";
             this.tbc_gestion.SelectedIndex = 0;
-            this.tbc_gestion.Size = new System.Drawing.Size(893, 552);
+            this.tbc_gestion.Size = new System.Drawing.Size(893, 542);
             this.tbc_gestion.TabIndex = 80;
             // 
             // tbp_consultar
@@ -185,7 +186,7 @@
             this.tbp_consultar.Location = new System.Drawing.Point(4, 22);
             this.tbp_consultar.Name = "tbp_consultar";
             this.tbp_consultar.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_consultar.Size = new System.Drawing.Size(885, 526);
+            this.tbp_consultar.Size = new System.Drawing.Size(885, 516);
             this.tbp_consultar.TabIndex = 1;
             this.tbp_consultar.Text = "CONSULTAR/ELIMINAR";
             this.tbp_consultar.Click += new System.EventHandler(this.tabPage2_Click);
@@ -227,7 +228,7 @@
             this.gpb_data.BackColor = System.Drawing.SystemColors.ControlLight;
             this.gpb_data.Controls.Add(this.dgv_query);
             this.gpb_data.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpb_data.Location = new System.Drawing.Point(8, 121);
+            this.gpb_data.Location = new System.Drawing.Point(6, 111);
             this.gpb_data.Name = "gpb_data";
             this.gpb_data.Size = new System.Drawing.Size(871, 399);
             this.gpb_data.TabIndex = 61;
@@ -1532,9 +1533,9 @@
             // 
             // btn_produccion
             // 
-            this.btn_produccion.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_produccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_produccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_produccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(176)))), ((int)(((byte)(153)))));
+            this.btn_produccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_produccion.Image = ((System.Drawing.Image)(resources.GetObject("btn_produccion.Image")));
             this.btn_produccion.Location = new System.Drawing.Point(12, 0);
             this.btn_produccion.Name = "btn_produccion";
@@ -1543,41 +1544,13 @@
             this.toolTip1.SetToolTip(this.btn_produccion, "Produccion");
             this.btn_produccion.UseVisualStyleBackColor = false;
             // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(176)))), ((int)(((byte)(153)))));
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(817, 0);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(41, 41);
-            this.btn_minimizar.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btn_minimizar, "Minimizar");
-            this.btn_minimizar.UseVisualStyleBackColor = false;
-            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(176)))), ((int)(((byte)(153)))));
-            this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
-            this.btn_salir.Location = new System.Drawing.Point(864, 1);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(41, 41);
-            this.btn_salir.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btn_salir, "Salir");
-            this.btn_salir.UseVisualStyleBackColor = false;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click_1);
-            // 
             // btn_ayuda
             // 
-            this.btn_ayuda.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_ayuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ayuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(176)))), ((int)(((byte)(153)))));
+            this.btn_ayuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_ayuda.Image")));
-            this.btn_ayuda.Location = new System.Drawing.Point(770, 0);
+            this.btn_ayuda.Location = new System.Drawing.Point(797, 1);
             this.btn_ayuda.Name = "btn_ayuda";
             this.btn_ayuda.Size = new System.Drawing.Size(41, 41);
             this.btn_ayuda.TabIndex = 80;
@@ -1587,17 +1560,61 @@
             // 
             // pnl_borde_superior
             // 
-            this.pnl_borde_superior.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnl_borde_superior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnl_borde_superior.Controls.Add(this.btn_minimizar);
+            this.pnl_borde_superior.Controls.Add(this.btn_cerrar);
             this.pnl_borde_superior.Controls.Add(this.btn_ayuda);
             this.pnl_borde_superior.Controls.Add(this.btn_produccion);
-            this.pnl_borde_superior.Controls.Add(this.btn_minimizar);
-            this.pnl_borde_superior.Controls.Add(this.btn_salir);
             this.pnl_borde_superior.Controls.Add(this.Lbl_gestionFormatos);
             this.pnl_borde_superior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_borde_superior.Location = new System.Drawing.Point(0, 0);
             this.pnl_borde_superior.Name = "pnl_borde_superior";
             this.pnl_borde_superior.Size = new System.Drawing.Size(917, 42);
             this.pnl_borde_superior.TabIndex = 95;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_minimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_minimizar.FlatAppearance.BorderSize = 0;
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btn_minimizar.Location = new System.Drawing.Point(837, 0);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(40, 42);
+            this.btn_minimizar.TabIndex = 82;
+            this.btn_minimizar.Text = "_";
+            this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click_1);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.btn_cerrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btn_cerrar.Location = new System.Drawing.Point(877, 0);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(40, 42);
+            this.btn_cerrar.TabIndex = 81;
+            this.btn_cerrar.Text = "x";
+            this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 617);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(917, 44);
+            this.panel2.TabIndex = 96;
             // 
             // frm_consultas
             // 
@@ -1606,6 +1623,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(917, 661);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_borde_superior);
             this.Controls.Add(this.lbl_hora);
             this.Controls.Add(this.lbl_fecha);
@@ -1756,8 +1774,6 @@
         private System.Windows.Forms.ComboBox cmb_tabla;
         private System.Windows.Forms.Panel pnl_borde_superior;
         private System.Windows.Forms.Button btn_produccion;
-        private System.Windows.Forms.Button btn_minimizar;
-        private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button btn_ayuda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -1771,5 +1787,8 @@
         private System.Windows.Forms.Button btn_add_tabla;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmb_tablas_disp;
+        private System.Windows.Forms.Button btn_minimizar;
+        private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

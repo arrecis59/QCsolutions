@@ -1022,5 +1022,15 @@ namespace ConsultasInteligentes
                 MessageBox.Show("Complete los campos obligatorios!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
