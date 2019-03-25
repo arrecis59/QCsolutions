@@ -11,16 +11,16 @@ using InicioSesion;
 using DiseñoTipoTransferencia;
 using MantenimientoAgencias;
 using CapaDiseñoOpciones;
-using MantenimientoTipoDeCuenta;
+using TipoEmpleado;
+using Empleado;
+/*using MantenimientoTipoDeCuenta;*/
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
-
-using MantenimientoBancosExternos;
+/*using MantenimientoBancosExternos;*/
 using Seguridad2;
 
-/*using TipoEmpleado;
-using Empleado;
-*/
+
+
 
 
 
@@ -158,45 +158,45 @@ namespace MDI_Bancos
 
         private void tipoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             dataTipoEmpleado frm = new dataTipoEmpleado(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           /* Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             empleadoData frm = new empleadoData(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
 
         }
 
         private void tipoDeCuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Usuario inc = new Usuario();
+            /*Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
 
             ConsultaTipoDeCuenta frm = new ConsultaTipoDeCuenta(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();
+            Application.DoEvents();*/
         }
 
         private void bancosExternosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Usuario inc = new Usuario();
+            /*Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             ConsultaBancosExternos frm = new ConsultaBancosExternos(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();
+            Application.DoEvents();*/
         }
 
         /*----------------EJEMPLO PARA ABRIR UN FORM
