@@ -52,6 +52,11 @@ namespace MantenimientoBancosExternos
 
         private void dt_BancosExternos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void dt_BancosExternos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             Ingreso_de_BancosExternos frm = new Ingreso_de_BancosExternos(dt_BancosExternos);
             frm.MdiParent = frmMDI2;
             frm.Show();
