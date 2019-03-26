@@ -118,6 +118,7 @@
             this.dt_BancosExternos.RowHeadersVisible = false;
             this.dt_BancosExternos.Size = new System.Drawing.Size(890, 520);
             this.dt_BancosExternos.TabIndex = 81;
+            this.dt_BancosExternos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_BancosExternos_CellClick);
             this.dt_BancosExternos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_BancosExternos_CellContentClick);
             // 
             // panel2
@@ -140,7 +141,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultaBancosExternos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaBancosExternos";
