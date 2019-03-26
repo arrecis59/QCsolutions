@@ -40,11 +40,6 @@ namespace MantenimientoTipoDeCambio
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -54,6 +49,14 @@ namespace MantenimientoTipoDeCambio
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void dt_TipoDeCambio_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IngresoTipoDeCambio frm = new IngresoTipoDeCambio(dt_TipoDeCambio);
+            frm.MdiParent = frmMDI2;
+            frm.Show();
+            Application.DoEvents();
         }
     }
 }
