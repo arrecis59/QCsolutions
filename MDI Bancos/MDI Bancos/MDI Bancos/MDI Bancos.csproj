@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MDI_Bancos</RootNamespace>
     <AssemblyName>MDI Bancos</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,9 +37,6 @@
     <Reference Include="CapaDatosOpciones">
       <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
     </Reference>
-    <Reference Include="CapaDiseno">
-      <HintPath>..\..\..\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
-    </Reference>
     <Reference Include="CapaDiseñoOpciones">
       <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
     </Reference>
@@ -46,11 +44,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TipoTransferencia\DiseñoTipoTransferencia\DiseñoTipoTransferencia\bin\Debug\DiseñoTipoTransferencia.dll</HintPath>
     </Reference>
-    <Reference Include="Empleado">
+    <Reference Include="Empleado, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Empleado\Empleado\bin\Debug\Empleado.dll</HintPath>
-    </Reference>
-    <Reference Include="Implementacion">
-      <HintPath>..\..\Implementacion\Implementacion\bin\Debug\Implementacion.dll</HintPath>
     </Reference>
     <Reference Include="InicioSesion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -99,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

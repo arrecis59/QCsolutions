@@ -32,13 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaDatosInicioSesion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="CapaDiseno, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\CapaDiseno.dll</HintPath>
+    <Reference Include="CapaDiseno">
+      <HintPath>..\..\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
     </Reference>
-    <Reference Include="CapaLogica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="InicioSesion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

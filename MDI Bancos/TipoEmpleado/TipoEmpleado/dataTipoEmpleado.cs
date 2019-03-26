@@ -30,11 +30,26 @@ namespace TipoEmpleado
             dt = nv2.cargarDatos("tbl_tipo_empleado");
             dt_tipo_empleado.DataSource = dt;
 
+
+
+            DataTable Dt = new DataTable();
+            Dt = (DataTable)dt_tipo_empleado.DataSource;                  // Se crea un datatable que contenga los datos del data grid
+
+            RPTTempleados rp = new RPTTempleados();
+            nv.getDatosReportes(Dt, rp);
+
+
         }
 
         private void dt_tipo_empleado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            new mantenimientoTipoEmpleado(dt_tipo_empleado).Show();
+
+            mantenimientoTipoEmpleado frm = new mantenimientoTipoEmpleado(dt_tipo_empleado);
+            frm.MdiParent = frmMDI2;
+            frm.Show();
+            Application.DoEvents();
+
+           
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
@@ -45,6 +60,11 @@ namespace TipoEmpleado
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dt_tipo_empleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

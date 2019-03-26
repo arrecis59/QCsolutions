@@ -30,6 +30,7 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_asignacionPerfiles = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.navegador1 = new CapaDiseno.Navegador();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(950, 30);
             this.panel1.TabIndex = 66;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(12, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 19);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "81541";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn_minimizar
             // 
@@ -223,6 +235,7 @@
             this.navegador1.pubNombreHtml = null;
             this.navegador1.Size = new System.Drawing.Size(950, 55);
             this.navegador1.TabIndex = 78;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // textBox1
             // 
@@ -244,18 +257,6 @@
             this.label6.Size = new System.Drawing.Size(67, 23);
             this.label6.TabIndex = 79;
             this.label6.Text = "Estado:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(12, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 19);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "81541";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Ingreso_de_Agencias
             // 

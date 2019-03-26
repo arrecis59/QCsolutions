@@ -114,7 +114,7 @@
             this.dt_TipoDeCambio.Name = "dt_TipoDeCambio";
             this.dt_TipoDeCambio.Size = new System.Drawing.Size(866, 247);
             this.dt_TipoDeCambio.TabIndex = 82;
-            this.dt_TipoDeCambio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dt_TipoDeCambio.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_TipoDeCambio_CellClick);
             // 
             // consultaMantenimientoTipodeCambio
             // 

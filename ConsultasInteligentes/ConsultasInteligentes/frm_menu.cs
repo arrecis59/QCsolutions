@@ -46,7 +46,7 @@ namespace ConsultasInteligentes
             try
             {
                 OdbcConnection conexion = DB.getConnection(); // obtencion de conexion con la DB
-                string sql = string.Format("SELECT NOMBRE_QUERY FROM TBL_Query WHERE usu_codigo = " + lbl_usuario.Text + "  AND status = 0;"); // query
+                string sql = string.Format("SELECT NOMBRE_QUERY FROM tbl_query WHERE usu_codigo = " + lbl_usuario.Text + "  AND status = 0;"); // query
                 OdbcCommand cmd = new OdbcCommand(sql, conexion);
                 OdbcDataReader reader = cmd.ExecuteReader(); // ejecucion query
                 cbo_consultas.Items.Clear();
@@ -129,7 +129,7 @@ namespace ConsultasInteligentes
                 try
                 {
                     OdbcConnection conexion = DB.getConnection(); // obtencion de conexion con la DB
-                    string sql = string.Format("SELECT SELECT_QUERY FROM TBL_Query WHERE NOMBRE_QUERY = '" + cbo_consultas.Text + "' AND usu_codigo = " + lbl_usuario.Text + " AND status = 0;"); // query
+                    string sql = string.Format("SELECT SELECT_QUERY FROM tbl_query WHERE NOMBRE_QUERY = '" + cbo_consultas.Text + "' AND usu_codigo = " + lbl_usuario.Text + " AND status = 0;"); // query
                     OdbcCommand cmd = new OdbcCommand(sql, conexion);
                     OdbcDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
@@ -208,6 +208,16 @@ namespace ConsultasInteligentes
              * programador: Josue Roberto Ponciano del Cid
              * descripcion: minimizar formulario 
              */
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click_1(object sender, EventArgs e)
+        {
             this.WindowState = FormWindowState.Minimized;
         }
     }

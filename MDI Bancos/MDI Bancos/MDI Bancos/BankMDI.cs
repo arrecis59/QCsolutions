@@ -11,11 +11,18 @@ using InicioSesion;
 using DiseñoTipoTransferencia;
 using MantenimientoAgencias;
 using CapaDiseñoOpciones;
-using CapaDatosOpciones;
-using CapaDiseñoOpciones.CambioDeColores;
-using Seguridad2;
 using TipoEmpleado;
 using Empleado;
+/*using MantenimientoTipoDeCuenta;*/
+using CapaDatosOpciones;
+using CapaDiseñoOpciones.CambioDeColores;
+/*using MantenimientoBancosExternos;*/
+using Seguridad2;
+
+
+
+
+
 
 
 namespace MDI_Bancos
@@ -169,6 +176,27 @@ namespace MDI_Bancos
             frm.Show();
             Application.DoEvents();
 
+        }
+
+        private void tipoDeCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+
+            ConsultaTipoDeCuenta frm = new ConsultaTipoDeCuenta(intCodigoUsuario, this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();*/
+        }
+
+        private void bancosExternosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaBancosExternos frm = new ConsultaBancosExternos(intCodigoUsuario, this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();*/
         }
 
         /*----------------EJEMPLO PARA ABRIR UN FORM

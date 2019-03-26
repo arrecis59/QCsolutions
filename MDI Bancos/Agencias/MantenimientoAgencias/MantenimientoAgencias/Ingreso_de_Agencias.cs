@@ -41,5 +41,10 @@ namespace MantenimientoAgencias
         {
             textBox1.Text = "1";
         }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
