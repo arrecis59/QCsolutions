@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtmoneda" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdbancosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdbancosConnectionString (Settings)" PropertyReference="ApplicationSettings.Manttenimiento_Moneda.Properties.Settings.GlobalReference.Default.bdbancosConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_monedaTableAdapter" GeneratorDataComponentClassName="tbl_monedaTableAdapter" Name="tbl_moneda" UserDataComponentName="tbl_monedaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdbancosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `tbl_moneda`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_moneda" DataSetColumn="id_moneda" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="simbolo" DataSetColumn="simbolo" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtmoneda" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtmoneda" msprop:Generator_UserDSName="dtmoneda">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_moneda" msprop:Generator_TableClassName="tbl_monedaDataTable" msprop:Generator_TableVarName="tabletbl_moneda" msprop:Generator_TablePropName="tbl_moneda" msprop:Generator_RowDeletingName="tbl_monedaRowDeleting" msprop:Generator_RowChangingName="tbl_monedaRowChanging" msprop:Generator_RowEvHandlerName="tbl_monedaRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_monedaRowDeleted" msprop:Generator_UserTableName="tbl_moneda" msprop:Generator_RowChangedName="tbl_monedaRowChanged" msprop:Generator_RowEvArgName="tbl_monedaRowChangeEvent" msprop:Generator_RowClassName="tbl_monedaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_moneda" msprop:Generator_ColumnVarNameInTable="columnid_moneda" msprop:Generator_ColumnPropNameInRow="id_moneda" msprop:Generator_ColumnPropNameInTable="id_monedaColumn" msprop:Generator_UserColumnName="id_moneda" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="simbolo" msprop:Generator_ColumnVarNameInTable="columnsimbolo" msprop:Generator_ColumnPropNameInRow="simbolo" msprop:Generator_ColumnPropNameInTable="simboloColumn" msprop:Generator_UserColumnName="simbolo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_moneda" />
+      <xs:field xpath="mstns:id_moneda" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
