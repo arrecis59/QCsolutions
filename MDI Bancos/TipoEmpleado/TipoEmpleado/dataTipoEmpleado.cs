@@ -46,5 +46,10 @@ namespace TipoEmpleado
         {
             this.Close();
         }
+
+        private void dt_tipo_empleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
