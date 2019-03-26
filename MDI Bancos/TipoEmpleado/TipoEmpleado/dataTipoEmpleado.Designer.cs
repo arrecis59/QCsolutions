@@ -110,6 +110,7 @@
             // 
             // dt_tipo_empleado
             // 
+            this.dt_tipo_empleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dt_tipo_empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt_tipo_empleado.Location = new System.Drawing.Point(29, 73);
             this.dt_tipo_empleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);

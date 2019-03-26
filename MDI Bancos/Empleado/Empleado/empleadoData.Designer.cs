@@ -46,8 +46,9 @@
             this.panel1.Controls.Add(this.Lbl_asignacionPerfiles);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 30);
+            this.panel1.Size = new System.Drawing.Size(950, 44);
             this.panel1.TabIndex = 92;
             // 
             // btn_minimizar
@@ -58,9 +59,10 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_minimizar.Location = new System.Drawing.Point(890, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(870, 0);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(30, 30);
+            this.btn_minimizar.Size = new System.Drawing.Size(40, 44);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.Text = "_";
             this.btn_minimizar.UseVisualStyleBackColor = false;
@@ -74,9 +76,10 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_cerrar.Location = new System.Drawing.Point(920, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(910, 0);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(30, 30);
+            this.btn_cerrar.Size = new System.Drawing.Size(40, 44);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
@@ -87,7 +90,8 @@
             this.Lbl_asignacionPerfiles.AutoSize = true;
             this.Lbl_asignacionPerfiles.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_asignacionPerfiles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(10, 6);
+            this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(13, 13);
+            this.Lbl_asignacionPerfiles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_asignacionPerfiles.Name = "Lbl_asignacionPerfiles";
             this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(73, 19);
             this.Lbl_asignacionPerfiles.TabIndex = 48;
@@ -97,30 +101,35 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 620);
+            this.panel2.Location = new System.Drawing.Point(0, 606);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(950, 30);
+            this.panel2.Size = new System.Drawing.Size(950, 44);
             this.panel2.TabIndex = 93;
             // 
             // dt_datosEmpleado
             // 
+            this.dt_datosEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dt_datosEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dt_datosEmpleado.Location = new System.Drawing.Point(30, 64);
+            this.dt_datosEmpleado.Location = new System.Drawing.Point(28, 73);
+            this.dt_datosEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dt_datosEmpleado.Name = "dt_datosEmpleado";
-            this.dt_datosEmpleado.Size = new System.Drawing.Size(890, 520);
+            this.dt_datosEmpleado.Size = new System.Drawing.Size(896, 514);
             this.dt_datosEmpleado.TabIndex = 94;
             this.dt_datosEmpleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_datosEmpleado_CellDoubleClick);
             // 
             // empleadoData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.dt_datosEmpleado);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "empleadoData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "empleadoData";

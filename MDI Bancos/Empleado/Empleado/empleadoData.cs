@@ -16,16 +16,28 @@ namespace Empleado
 
         Navegador nv = new Navegador();
         DataTable dt = new DataTable();
-       
+        public Form frmMDI2;
 
-        public empleadoData(int userCode, Form MDI)
+
+        public empleadoData(int userCode, Form frmMDI)
         {
             InitializeComponent();
 
             nv.getDatos(userCode, 50000);
 
+            frmMDI2 = frmMDI;
+
             dt = nv.cargarDatos("tbl_empleado");
             dt_datosEmpleado.DataSource = dt;
+
+
+            //Reporte
+            DataTable Dt = new DataTable();
+            Dt = (DataTable)dt_datosEmpleado.DataSource;                  
+
+            RPTEmpleados rp = new RPTEmpleados();
+            nv.getDatosReportes(Dt, rp);
+
 
         }
 
@@ -41,7 +53,10 @@ namespace Empleado
 
         private void dt_datosEmpleado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            new empleadoMantenimiento(dt_datosEmpleado).Show();
+            empleadoMantenimiento frm = new empleadoMantenimiento(dt_datosEmpleado);
+            frm.MdiParent = frmMDI2;
+            frm.Show();
+            Application.DoEvents();
         }
     }
 }

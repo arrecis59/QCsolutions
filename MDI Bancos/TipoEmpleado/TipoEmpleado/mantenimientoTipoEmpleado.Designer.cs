@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Codigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.navegador1 = new CapaDiseno.Navegador();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -188,12 +189,26 @@
             this.label4.TabIndex = 93;
             this.label4.Text = "Codigo:";
             // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.navegador1.DataGr = null;
+            this.navegador1.Location = new System.Drawing.Point(1, 45);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Procedimiento = null;
+            this.navegador1.pubNombrechm = null;
+            this.navegador1.pubNombreHtml = null;
+            this.navegador1.Size = new System.Drawing.Size(950, 55);
+            this.navegador1.TabIndex = 95;
+            // 
             // mantenimientoTipoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txt_Codigo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_Descripcion);
@@ -229,5 +244,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Codigo;
         private System.Windows.Forms.Label label4;
+        private CapaDiseno.Navegador navegador1;
     }
 }
