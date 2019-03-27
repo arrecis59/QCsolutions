@@ -48,7 +48,7 @@
             // txt_id
             // 
             this.txt_id.Location = new System.Drawing.Point(261, 253);
-            this.txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(4);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(572, 27);
             this.txt_id.TabIndex = 0;
@@ -57,7 +57,7 @@
             // txt_equivalencia
             // 
             this.txt_equivalencia.Location = new System.Drawing.Point(261, 291);
-            this.txt_equivalencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_equivalencia.Margin = new System.Windows.Forms.Padding(4);
             this.txt_equivalencia.Name = "txt_equivalencia";
             this.txt_equivalencia.Size = new System.Drawing.Size(572, 27);
             this.txt_equivalencia.TabIndex = 1;
@@ -66,7 +66,7 @@
             // txt_codigomonedalocal
             // 
             this.txt_codigomonedalocal.Location = new System.Drawing.Point(261, 329);
-            this.txt_codigomonedalocal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_codigomonedalocal.Margin = new System.Windows.Forms.Padding(4);
             this.txt_codigomonedalocal.Name = "txt_codigomonedalocal";
             this.txt_codigomonedalocal.Size = new System.Drawing.Size(572, 27);
             this.txt_codigomonedalocal.TabIndex = 2;
@@ -75,7 +75,7 @@
             // txt_codigomonedaexterna
             // 
             this.txt_codigomonedaexterna.Location = new System.Drawing.Point(261, 367);
-            this.txt_codigomonedaexterna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_codigomonedaexterna.Margin = new System.Windows.Forms.Padding(4);
             this.txt_codigomonedaexterna.Name = "txt_codigomonedaexterna";
             this.txt_codigomonedaexterna.Size = new System.Drawing.Size(572, 27);
             this.txt_codigomonedaexterna.TabIndex = 3;
@@ -190,6 +190,7 @@
             this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(112, 19);
             this.Lbl_asignacionPerfiles.TabIndex = 48;
             this.Lbl_asignacionPerfiles.Text = "Tipo De Cambio";
+            this.Lbl_asignacionPerfiles.Click += new System.EventHandler(this.Lbl_asignacionPerfiles_Click);
             // 
             // navegador1
             // 
@@ -197,7 +198,7 @@
             this.navegador1.DataGr = null;
             this.navegador1.Dock = System.Windows.Forms.DockStyle.Top;
             this.navegador1.Location = new System.Drawing.Point(0, 44);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Procedimiento = null;
             this.navegador1.pubNombrechm = null;
@@ -223,8 +224,9 @@
             this.Controls.Add(this.txt_id);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresoTipoDeCambio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngresoTipoDeCambio";
             this.Load += new System.EventHandler(this.IngresoTipoDeCambio_Load);
             this.panel1.ResumeLayout(false);

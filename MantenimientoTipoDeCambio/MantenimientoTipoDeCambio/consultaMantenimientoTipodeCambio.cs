@@ -22,7 +22,7 @@ namespace MantenimientoTipoDeCambio
         {
             InitializeComponent();
             Navegador nv2 = new Navegador();
-            nv2.getDatos(intUsuarioCodigo, 81510);
+            nv2.getDatos(intUsuarioCodigo, 81540);
             frmMDI2 = frmMDI;
 
             dt_TipoDeCambio2 = nv2.cargarDatos("tbl_tipo_cambio");

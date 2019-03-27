@@ -41,7 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.navegador1 = new CapaDiseno.Navegador();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +63,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -178,7 +181,7 @@
             this.navegador1.DataGr = null;
             this.navegador1.Dock = System.Windows.Forms.DockStyle.Top;
             this.navegador1.Location = new System.Drawing.Point(0, 44);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Procedimiento = null;
             this.navegador1.pubNombrechm = null;
@@ -186,6 +189,19 @@
             this.navegador1.Size = new System.Drawing.Size(950, 55);
             this.navegador1.TabIndex = 91;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(13, 13);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 19);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Moneda 1234";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // IngresoMoneda
             // 
@@ -205,10 +221,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresoMoneda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngresoMoneda";
             this.Load += new System.EventHandler(this.IngresoMoneda_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +248,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private CapaDiseno.Navegador navegador1;
+        private System.Windows.Forms.Label label4;
     }
 }

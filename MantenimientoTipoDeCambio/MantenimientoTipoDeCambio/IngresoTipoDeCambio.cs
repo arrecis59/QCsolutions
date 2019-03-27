@@ -43,5 +43,10 @@ namespace MantenimientoTipoDeCambio
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Lbl_asignacionPerfiles_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

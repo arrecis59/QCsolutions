@@ -11,9 +11,11 @@ using InicioSesion;
 using DiseñoTipoTransferencia;
 using MantenimientoAgencias;
 using CapaDiseñoOpciones;
-using TipoEmpleado;
-using Empleado;
+//using TipoEmpleado;
+//using Empleado;
 /*using MantenimientoTipoDeCuenta;*/
+using MantenimientoTipoDeCambio;
+using Manttenimiento_Moneda;
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
 /*using MantenimientoBancosExternos;*/
@@ -158,23 +160,23 @@ namespace MDI_Bancos
 
         private void tipoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Usuario inc = new Usuario();
+            /*Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             dataTipoEmpleado frm = new dataTipoEmpleado(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();
+            Application.DoEvents();*/
         }
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Usuario inc = new Usuario();
+            /*Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             empleadoData frm = new empleadoData(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();
+            Application.DoEvents();*/
 
         }
 
@@ -197,6 +199,26 @@ namespace MDI_Bancos
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();*/
+        }
+
+        private void tipoDeCambioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            consultaMantenimientoTipodeCambio frm = new consultaMantenimientoTipodeCambio(intCodigoUsuario, this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void tipoMonedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            cnsultaMantenimientoMoneda frm = new cnsultaMantenimientoMoneda(intCodigoUsuario, this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
         }
 
         /*----------------EJEMPLO PARA ABRIR UN FORM
