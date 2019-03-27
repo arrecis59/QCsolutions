@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDiseno">
+      <HintPath>..\..\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,14 +48,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ConsultaCliente.Designer.cs">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSCliente.cs">
+      <DependentUpon>DSCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ingreso_de_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_de_Cliente.Designer.cs">
+      <DependentUpon>Ingreso_de_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsultaCliente.resx">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_de_Cliente.resx">
+      <DependentUpon>Ingreso_de_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +85,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DSCliente.xsc">
+      <DependentUpon>DSCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DSCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCliente.xss">
+      <DependentUpon>DSCliente.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -73,7 +107,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

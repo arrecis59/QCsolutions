@@ -244,7 +244,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ingreso_de_Conceptos";
-            this.Text = "Form1";
+            this.Text = "Mantenimiento_de_Conceptos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
