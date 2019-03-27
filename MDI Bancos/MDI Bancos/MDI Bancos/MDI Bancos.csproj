@@ -37,6 +37,10 @@
     <Reference Include="CapaDatosOpciones">
       <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDatosOpciones.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDiseno, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
     <Reference Include="CapaDiseñoOpciones">
       <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
     </Reference>

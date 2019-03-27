@@ -13,6 +13,7 @@ using CapaLogica;
 using BIT;
 using InicioSesion;
 using CapaDatos;
+using ConsultasInteligentes;
 using DLL__Reporteador;
 using CrystalDecisions.CrystalReports.Engine;
 
@@ -23,6 +24,9 @@ namespace CapaDiseno
     {
 
         InicioSesion.Usuario inicioSesion = new InicioSesion.Usuario();
+
+
+
 
         private int sBanIngresar = 0;
         private int nControl;
@@ -1120,9 +1124,9 @@ namespace CapaDiseno
 
         private void Btn_consultar_Click(object sender, EventArgs e)
         {
-            /*String[] tablas = { "TBL_Operador", "TBL_Tipo_Operador" };
+            String[] tablas = { "tbl_operador", "tbl_tipo_operador","tbl_agencias","tbl_empleado","tbl_bancos_externos" };
             Consulta cn = new Consulta("1",tablas);
-            cn.abrir();*/
+            cn.abrir();
         }
 
         public DataTable cargarDatos(string table)
