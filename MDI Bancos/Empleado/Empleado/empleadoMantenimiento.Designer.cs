@@ -72,7 +72,7 @@
             this.panel1.Controls.Add(this.Lbl_asignacionPerfiles);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(950, 44);
             this.panel1.TabIndex = 80;
@@ -87,7 +87,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 19);
             this.label2.TabIndex = 91;
-            this.label2.Text = "50000";
+            this.label2.Text = "81530";
             // 
             // btn_minimizar
             // 
@@ -98,7 +98,7 @@
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_minimizar.Location = new System.Drawing.Point(870, 0);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(40, 44);
             this.btn_minimizar.TabIndex = 5;
@@ -115,7 +115,7 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_cerrar.Location = new System.Drawing.Point(910, 0);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(40, 44);
             this.btn_cerrar.TabIndex = 4;
@@ -140,7 +140,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 606);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(950, 44);
             this.panel2.TabIndex = 81;
@@ -148,7 +148,7 @@
             // txt_Codigo
             // 
             this.txt_Codigo.Location = new System.Drawing.Point(195, 163);
-            this.txt_Codigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Codigo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(325, 27);
             this.txt_Codigo.TabIndex = 1;
@@ -193,7 +193,7 @@
             // txt_PrimerApellido
             // 
             this.txt_PrimerApellido.Location = new System.Drawing.Point(195, 271);
-            this.txt_PrimerApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrimerApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrimerApellido.Name = "txt_PrimerApellido";
             this.txt_PrimerApellido.Size = new System.Drawing.Size(280, 27);
             this.txt_PrimerApellido.TabIndex = 5;
@@ -226,7 +226,7 @@
             // txt_Dpi
             // 
             this.txt_Dpi.Location = new System.Drawing.Point(642, 164);
-            this.txt_Dpi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Dpi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Dpi.Name = "txt_Dpi";
             this.txt_Dpi.Size = new System.Drawing.Size(280, 27);
             this.txt_Dpi.TabIndex = 2;
@@ -235,7 +235,7 @@
             // txt_Nit
             // 
             this.txt_Nit.Location = new System.Drawing.Point(195, 326);
-            this.txt_Nit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Nit.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Nit.Name = "txt_Nit";
             this.txt_Nit.Size = new System.Drawing.Size(280, 27);
             this.txt_Nit.TabIndex = 3;
@@ -244,7 +244,7 @@
             // txt_Telefono
             // 
             this.txt_Telefono.Location = new System.Drawing.Point(642, 327);
-            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(280, 27);
             this.txt_Telefono.TabIndex = 11;
@@ -265,7 +265,7 @@
             // txt_Email
             // 
             this.txt_Email.Location = new System.Drawing.Point(642, 442);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(280, 27);
             this.txt_Email.TabIndex = 9;
@@ -286,7 +286,7 @@
             // txt_SegundoApellido
             // 
             this.txt_SegundoApellido.Location = new System.Drawing.Point(642, 268);
-            this.txt_SegundoApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SegundoApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SegundoApellido.Name = "txt_SegundoApellido";
             this.txt_SegundoApellido.Size = new System.Drawing.Size(280, 27);
             this.txt_SegundoApellido.TabIndex = 6;
@@ -295,7 +295,7 @@
             // txt_Direccion
             // 
             this.txt_Direccion.Location = new System.Drawing.Point(642, 384);
-            this.txt_Direccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Direccion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(280, 27);
             this.txt_Direccion.TabIndex = 10;
@@ -332,7 +332,7 @@
             "M",
             "F"});
             this.cmb_Genero.Location = new System.Drawing.Point(195, 383);
-            this.cmb_Genero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Genero.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Genero.Name = "cmb_Genero";
             this.cmb_Genero.Size = new System.Drawing.Size(280, 27);
             this.cmb_Genero.TabIndex = 7;
@@ -353,7 +353,7 @@
             // dt_FechaNacimiento
             // 
             this.dt_FechaNacimiento.Location = new System.Drawing.Point(195, 498);
-            this.dt_FechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dt_FechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dt_FechaNacimiento.Name = "dt_FechaNacimiento";
             this.dt_FechaNacimiento.Size = new System.Drawing.Size(280, 27);
             this.dt_FechaNacimiento.TabIndex = 8;
@@ -362,7 +362,7 @@
             // txt_Nombres
             // 
             this.txt_Nombres.Location = new System.Drawing.Point(195, 218);
-            this.txt_Nombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Nombres.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Nombres.Name = "txt_Nombres";
             this.txt_Nombres.Size = new System.Drawing.Size(727, 27);
             this.txt_Nombres.TabIndex = 4;
@@ -384,7 +384,7 @@
             // 
             this.cbm_Tipo_Empleado.FormattingEnabled = true;
             this.cbm_Tipo_Empleado.Location = new System.Drawing.Point(195, 441);
-            this.cbm_Tipo_Empleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbm_Tipo_Empleado.Margin = new System.Windows.Forms.Padding(4);
             this.cbm_Tipo_Empleado.Name = "cbm_Tipo_Empleado";
             this.cbm_Tipo_Empleado.Size = new System.Drawing.Size(280, 27);
             this.cbm_Tipo_Empleado.TabIndex = 12;
@@ -406,7 +406,7 @@
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(195, 549);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(132, 27);
             this.textBox10.TabIndex = 123;
@@ -418,7 +418,7 @@
             this.navegador1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.navegador1.DataGr = null;
             this.navegador1.Location = new System.Drawing.Point(0, 45);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Procedimiento = null;
             this.navegador1.pubNombrechm = null;
@@ -462,7 +462,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "empleadoMantenimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

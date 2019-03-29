@@ -23,7 +23,7 @@ namespace Empleado
         {
             InitializeComponent();
 
-            nv.getDatos(userCode, 50000);
+            nv.getDatos(userCode, 81530);
 
             frmMDI2 = frmMDI;
 

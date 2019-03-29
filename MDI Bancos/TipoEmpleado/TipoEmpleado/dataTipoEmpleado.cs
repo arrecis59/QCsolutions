@@ -23,7 +23,7 @@ namespace TipoEmpleado
             InitializeComponent();
 
             Navegador nv2 = new Navegador();
-            nv2.getDatos(codUser, 40000);
+            nv2.getDatos(codUser, 81535);
             frmMDI2 = frmMDI;
 
 
