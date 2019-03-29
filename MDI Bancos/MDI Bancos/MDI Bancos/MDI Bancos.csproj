@@ -56,11 +56,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Agencias\MantenimientoAgencias\MantenimientoAgencias\bin\Debug\MantenimientoAgencias.dll</HintPath>
     </Reference>
-    <Reference Include="MantenimientoTipoDeCambio">
-      <HintPath>..\..\..\MantenimientoTipoDeCambio\MantenimientoTipoDeCambio\bin\Debug\MantenimientoTipoDeCambio.dll</HintPath>
-    </Reference>
-    <Reference Include="Manttenimiento Moneda">
-      <HintPath>..\..\..\Manttenimiento Moneda\Manttenimiento Moneda\bin\Debug\Manttenimiento Moneda.dll</HintPath>
+    <Reference Include="MantenimientoCuentas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\vhjim\Desktop\Creacion de cuentas\MantenimientoCuentas\MantenimientoCuentas\bin\Debug\MantenimientoCuentas.dll</HintPath>
     </Reference>
     <Reference Include="Seguridad2.0">
       <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\Seguridad2.0\Seguridad2.0\bin\Debug\Seguridad2.0.exe</HintPath>

@@ -41,6 +41,8 @@
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bancosExternosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeCambioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoMonedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,8 +67,7 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tipoDeCambioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoMonedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creacionDeCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).BeginInit();
@@ -135,7 +136,8 @@
             this.tipoDeCuentaToolStripMenuItem,
             this.bancosExternosToolStripMenuItem,
             this.tipoDeCambioToolStripMenuItem,
-            this.tipoMonedaToolStripMenuItem});
+            this.tipoMonedaToolStripMenuItem,
+            this.creacionDeCuentasToolStripMenuItem});
             this.catalogosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
@@ -184,6 +186,20 @@
             this.bancosExternosToolStripMenuItem.Text = "Bancos Externos";
             this.bancosExternosToolStripMenuItem.Click += new System.EventHandler(this.bancosExternosToolStripMenuItem_Click);
             // 
+            // tipoDeCambioToolStripMenuItem
+            // 
+            this.tipoDeCambioToolStripMenuItem.Name = "tipoDeCambioToolStripMenuItem";
+            this.tipoDeCambioToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.tipoDeCambioToolStripMenuItem.Text = "Tipo de Cambio";
+            this.tipoDeCambioToolStripMenuItem.Click += new System.EventHandler(this.tipoDeCambioToolStripMenuItem_Click);
+            // 
+            // tipoMonedaToolStripMenuItem
+            // 
+            this.tipoMonedaToolStripMenuItem.Name = "tipoMonedaToolStripMenuItem";
+            this.tipoMonedaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.tipoMonedaToolStripMenuItem.Text = "Tipo Moneda";
+            this.tipoMonedaToolStripMenuItem.Click += new System.EventHandler(this.tipoMonedaToolStripMenuItem_Click);
+            // 
             // procesosToolStripMenuItem
             // 
             this.procesosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,7 +230,7 @@
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             this.seguridadToolStripMenuItem.Click += new System.EventHandler(this.seguridadToolStripMenuItem_Click);
             // 
@@ -223,7 +239,7 @@
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cambioDeColorToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // cambioDeColorToolStripMenuItem
@@ -420,19 +436,12 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tipoDeCambioToolStripMenuItem
+            // creacionDeCuentasToolStripMenuItem
             // 
-            this.tipoDeCambioToolStripMenuItem.Name = "tipoDeCambioToolStripMenuItem";
-            this.tipoDeCambioToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.tipoDeCambioToolStripMenuItem.Text = "Tipo de Cambio";
-            this.tipoDeCambioToolStripMenuItem.Click += new System.EventHandler(this.tipoDeCambioToolStripMenuItem_Click);
-            // 
-            // tipoMonedaToolStripMenuItem
-            // 
-            this.tipoMonedaToolStripMenuItem.Name = "tipoMonedaToolStripMenuItem";
-            this.tipoMonedaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.tipoMonedaToolStripMenuItem.Text = "Tipo Moneda";
-            this.tipoMonedaToolStripMenuItem.Click += new System.EventHandler(this.tipoMonedaToolStripMenuItem_Click);
+            this.creacionDeCuentasToolStripMenuItem.Name = "creacionDeCuentasToolStripMenuItem";
+            this.creacionDeCuentasToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.creacionDeCuentasToolStripMenuItem.Text = "Creacion de Cuentas";
+            this.creacionDeCuentasToolStripMenuItem.Click += new System.EventHandler(this.creacionDeCuentasToolStripMenuItem_Click);
             // 
             // BankMDI
             // 
@@ -510,6 +519,7 @@
         private System.Windows.Forms.ToolStripMenuItem bancosExternosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeCambioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoMonedaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem creacionDeCuentasToolStripMenuItem;
     }
 }
 

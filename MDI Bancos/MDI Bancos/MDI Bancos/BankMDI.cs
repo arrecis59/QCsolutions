@@ -14,12 +14,13 @@ using CapaDiseñoOpciones;
 //using TipoEmpleado;
 //using Empleado;
 /*using MantenimientoTipoDeCuenta;*/
-using MantenimientoTipoDeCambio;
-using Manttenimiento_Moneda;
+//using MantenimientoTipoDeCambio;
+//using Manttenimiento_Moneda;
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
 /*using MantenimientoBancosExternos;*/
 using Seguridad2;
+using MantenimientoCuentas;
 
 
 
@@ -203,19 +204,29 @@ namespace MDI_Bancos
 
         private void tipoDeCambioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Usuario inc = new Usuario();
+            /*Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             consultaMantenimientoTipodeCambio frm = new consultaMantenimientoTipodeCambio(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();
+            Application.DoEvents();*/
         }
 
         private void tipoMonedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Usuario inc = new Usuario();
+            /*Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             cnsultaMantenimientoMoneda frm = new cnsultaMantenimientoMoneda(intCodigoUsuario, this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();*/
+        }
+
+        private void creacionDeCuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaCreacionCuentas frm = new ConsultaCreacionCuentas(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();
