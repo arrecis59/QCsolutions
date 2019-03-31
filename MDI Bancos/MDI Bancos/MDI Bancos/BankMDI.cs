@@ -21,6 +21,10 @@ using CapaDiseñoOpciones.CambioDeColores;
 /*using MantenimientoBancosExternos;*/
 using Seguridad2;
 using MantenimientoCuentas;
+using OperacionesExternas.BeneficiarioExterno;
+using OperacionesExternas.OperacionExterna;
+using OperacionesExternas;
+
 
 
 
@@ -227,6 +231,54 @@ namespace MDI_Bancos
             Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             ConsultaCreacionCuentas frm = new ConsultaCreacionCuentas(intCodigoUsuario, this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void beneficiarioExternoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void beneficiarioExternoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaBenerficiarioExterno frm = new ConsultaBenerficiarioExterno(intCodigoUsuario, this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void operacionesExternasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ingresarNuevaSolicitudToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            OperacionExternaSolicitud frm = new OperacionExternaSolicitud(this);
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void consultarSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaOperacionesExternas frm = new ConsultaOperacionesExternas();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void consultarSolicitudesDeConcialiacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaDeSolicitudes frm = new ConsultaDeSolicitudes();
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();

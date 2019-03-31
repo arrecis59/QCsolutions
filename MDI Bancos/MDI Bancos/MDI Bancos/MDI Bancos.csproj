@@ -58,7 +58,10 @@
     </Reference>
     <Reference Include="MantenimientoCuentas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\vhjim\Desktop\Creacion de cuentas\MantenimientoCuentas\MantenimientoCuentas\bin\Debug\MantenimientoCuentas.dll</HintPath>
+      <HintPath>..\..\MantenimientoCuentas\MantenimientoCuentas\bin\Debug\MantenimientoCuentas.dll</HintPath>
+    </Reference>
+    <Reference Include="OperacionesExternas">
+      <HintPath>C:\Users\vhjim\Desktop\Creacion de cuentas\OperacionesExternas\OperacionesExternas\bin\Debug\OperacionesExternas.dll</HintPath>
     </Reference>
     <Reference Include="Seguridad2.0">
       <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\Seguridad2.0\Seguridad2.0\bin\Debug\Seguridad2.0.exe</HintPath>

@@ -43,6 +43,7 @@
             this.bancosExternosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeCambioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoMonedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creacionDeCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,11 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.creacionDeCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.beneficiarioExternoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionesExternasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarNuevaSolicitudToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarSolicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarSolicitudesDeConcialiacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).BeginInit();
@@ -137,7 +142,8 @@
             this.bancosExternosToolStripMenuItem,
             this.tipoDeCambioToolStripMenuItem,
             this.tipoMonedaToolStripMenuItem,
-            this.creacionDeCuentasToolStripMenuItem});
+            this.creacionDeCuentasToolStripMenuItem,
+            this.beneficiarioExternoToolStripMenuItem});
             this.catalogosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
@@ -200,8 +206,17 @@
             this.tipoMonedaToolStripMenuItem.Text = "Tipo Moneda";
             this.tipoMonedaToolStripMenuItem.Click += new System.EventHandler(this.tipoMonedaToolStripMenuItem_Click);
             // 
+            // creacionDeCuentasToolStripMenuItem
+            // 
+            this.creacionDeCuentasToolStripMenuItem.Name = "creacionDeCuentasToolStripMenuItem";
+            this.creacionDeCuentasToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.creacionDeCuentasToolStripMenuItem.Text = "Creacion de Cuentas";
+            this.creacionDeCuentasToolStripMenuItem.Click += new System.EventHandler(this.creacionDeCuentasToolStripMenuItem_Click);
+            // 
             // procesosToolStripMenuItem
             // 
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.operacionesExternasToolStripMenuItem});
             this.procesosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.procesosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
@@ -436,12 +451,44 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // creacionDeCuentasToolStripMenuItem
+            // beneficiarioExternoToolStripMenuItem
             // 
-            this.creacionDeCuentasToolStripMenuItem.Name = "creacionDeCuentasToolStripMenuItem";
-            this.creacionDeCuentasToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.creacionDeCuentasToolStripMenuItem.Text = "Creacion de Cuentas";
-            this.creacionDeCuentasToolStripMenuItem.Click += new System.EventHandler(this.creacionDeCuentasToolStripMenuItem_Click);
+            this.beneficiarioExternoToolStripMenuItem.Name = "beneficiarioExternoToolStripMenuItem";
+            this.beneficiarioExternoToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.beneficiarioExternoToolStripMenuItem.Text = "Beneficiario Externo";
+            this.beneficiarioExternoToolStripMenuItem.Click += new System.EventHandler(this.beneficiarioExternoToolStripMenuItem_Click_1);
+            // 
+            // operacionesExternasToolStripMenuItem
+            // 
+            this.operacionesExternasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarNuevaSolicitudToolStripMenuItem,
+            this.consultarSolicitudesToolStripMenuItem,
+            this.consultarSolicitudesDeConcialiacionToolStripMenuItem});
+            this.operacionesExternasToolStripMenuItem.Name = "operacionesExternasToolStripMenuItem";
+            this.operacionesExternasToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.operacionesExternasToolStripMenuItem.Text = "Operaciones Externas";
+            this.operacionesExternasToolStripMenuItem.Click += new System.EventHandler(this.operacionesExternasToolStripMenuItem_Click);
+            // 
+            // ingresarNuevaSolicitudToolStripMenuItem
+            // 
+            this.ingresarNuevaSolicitudToolStripMenuItem.Name = "ingresarNuevaSolicitudToolStripMenuItem";
+            this.ingresarNuevaSolicitudToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
+            this.ingresarNuevaSolicitudToolStripMenuItem.Text = "Ingresar Nueva Solicitud";
+            this.ingresarNuevaSolicitudToolStripMenuItem.Click += new System.EventHandler(this.ingresarNuevaSolicitudToolStripMenuItem_Click);
+            // 
+            // consultarSolicitudesToolStripMenuItem
+            // 
+            this.consultarSolicitudesToolStripMenuItem.Name = "consultarSolicitudesToolStripMenuItem";
+            this.consultarSolicitudesToolStripMenuItem.Size = new System.Drawing.Size(325, 24);
+            this.consultarSolicitudesToolStripMenuItem.Text = "Consultar Operaciones";
+            this.consultarSolicitudesToolStripMenuItem.Click += new System.EventHandler(this.consultarSolicitudesToolStripMenuItem_Click);
+            // 
+            // consultarSolicitudesDeConcialiacionToolStripMenuItem
+            // 
+            this.consultarSolicitudesDeConcialiacionToolStripMenuItem.Name = "consultarSolicitudesDeConcialiacionToolStripMenuItem";
+            this.consultarSolicitudesDeConcialiacionToolStripMenuItem.Size = new System.Drawing.Size(325, 24);
+            this.consultarSolicitudesDeConcialiacionToolStripMenuItem.Text = "Consultar Solicitudes de Concialiacion";
+            this.consultarSolicitudesDeConcialiacionToolStripMenuItem.Click += new System.EventHandler(this.consultarSolicitudesDeConcialiacionToolStripMenuItem_Click);
             // 
             // BankMDI
             // 
@@ -520,6 +567,11 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDeCambioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoMonedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creacionDeCuentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem beneficiarioExternoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem operacionesExternasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresarNuevaSolicitudToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarSolicitudesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarSolicitudesDeConcialiacionToolStripMenuItem;
     }
 }
 
