@@ -16,7 +16,7 @@ namespace ConceptosIngresosEgresos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ingreso_de_Conceptos());
+            //Application.Run(new Ingreso_de_Conceptos());
             //Application.Run(new formData());
 
         }
