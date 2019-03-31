@@ -25,7 +25,12 @@ namespace MantenimientoBancosExternos
 
         private void txt_Codigo_TextChanged(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

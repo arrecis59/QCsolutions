@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F04CF23A-8235-44A9-A979-CACBD2A33792}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OperacionesExternas</RootNamespace>
+    <AssemblyName>OperacionesExternas</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CapaDatosOperacionesExternas">
+      <HintPath>..\CapaDatosOperacionesExternas\bin\Debug\CapaDatosOperacionesExternas.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseno">
+      <HintPath>D:\Documents\Github\QCsolutions\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaLogicaOperacionesExternas">
+      <HintPath>..\CapaLogicaOperacionesExternas\bin\Debug\CapaLogicaOperacionesExternas.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeneficiarioExterno\IngresoBeneficiarioExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeneficiarioExterno\IngresoBeneficiarioExterno.Designer.cs">
+      <DependentUpon>IngresoBeneficiarioExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="BeneficiarioExterno\ConsultaBenerficiarioExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeneficiarioExterno\ConsultaBenerficiarioExterno.Designer.cs">
+      <DependentUpon>ConsultaBenerficiarioExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionExterna\ConfirmarSolicitudOperacionesExternas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperacionExterna\ConfirmarSolicitudOperacionesExternas.Designer.cs">
+      <DependentUpon>ConfirmarSolicitudOperacionesExternas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionExterna\ConsultaDeSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperacionExterna\ConsultaDeSolicitudes.Designer.cs">
+      <DependentUpon>ConsultaDeSolicitudes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionExterna\ConsultaOperacionesExternas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperacionExterna\ConsultaOperacionesExternas.Designer.cs">
+      <DependentUpon>ConsultaOperacionesExternas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionExterna\OperacionExternaSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperacionExterna\OperacionExternaSolicitud.Designer.cs">
+      <DependentUpon>OperacionExternaSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BeneficiarioExterno\ConsultaBenerficiarioExterno.resx">
+      <DependentUpon>ConsultaBenerficiarioExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeneficiarioExterno\IngresoBeneficiarioExterno.resx">
+      <DependentUpon>IngresoBeneficiarioExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperacionExterna\ConfirmarSolicitudOperacionesExternas.resx">
+      <DependentUpon>ConfirmarSolicitudOperacionesExternas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperacionExterna\ConsultaDeSolicitudes.resx">
+      <DependentUpon>ConsultaDeSolicitudes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperacionExterna\ConsultaOperacionesExternas.resx">
+      <DependentUpon>ConsultaOperacionesExternas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperacionExterna\OperacionExternaSolicitud.resx">
+      <DependentUpon>OperacionExternaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
