@@ -13,7 +13,7 @@ namespace ConceptosIngresosEgresos
 {
     public partial class ConsultaConceptos : Form
     {
-        //private Navegador navegador = new Navegador(); En espera del reporteador.
+        private Navegador navegador = new Navegador();
         private Form frm_consulta_proceso;
 
         public ConsultaConceptos(int codUsuario, Form frm_consulta_proceso)
@@ -27,8 +27,11 @@ namespace ConceptosIngresosEgresos
             dgv_Conceptos.DataSource = tmp_navegador.cargarDatos("tbl_conceptos_flujo_efectivo");
             
             //DataTable para el reporteador.
-            //DataTable tmp_dt = new DataTable();
-            //tmp_dt = (DataTable)dgv_Conceptos.DataSource;
+            DataTable tmp_dt = new DataTable();
+            tmp_dt = (DataTable)dgv_Conceptos.DataSource;
+
+            RPTConcepto rpt = new RPTConcepto();
+            navegador.getDatosReportes(tmp_dt, rpt);
 
         }
 
