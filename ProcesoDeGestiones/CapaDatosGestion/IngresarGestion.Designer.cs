@@ -113,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 119);
+            this.label1.Location = new System.Drawing.Point(96, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 97;
@@ -121,7 +121,7 @@
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(100, 141);
+            this.txt_codigo.Location = new System.Drawing.Point(100, 166);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(736, 27);
             this.txt_codigo.TabIndex = 96;
@@ -129,7 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(96, 251);
+            this.label4.Location = new System.Drawing.Point(96, 276);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 19);
             this.label4.TabIndex = 101;
@@ -137,7 +137,7 @@
             // 
             // txt_Observacion
             // 
-            this.txt_Observacion.Location = new System.Drawing.Point(100, 273);
+            this.txt_Observacion.Location = new System.Drawing.Point(100, 298);
             this.txt_Observacion.Multiline = true;
             this.txt_Observacion.Name = "txt_Observacion";
             this.txt_Observacion.Size = new System.Drawing.Size(736, 98);
@@ -150,7 +150,7 @@
             "BAJA",
             "MEDIA",
             "ALTA"});
-            this.cbo_Prioridad.Location = new System.Drawing.Point(100, 411);
+            this.cbo_Prioridad.Location = new System.Drawing.Point(485, 235);
             this.cbo_Prioridad.Name = "cbo_Prioridad";
             this.cbo_Prioridad.Size = new System.Drawing.Size(351, 27);
             this.cbo_Prioridad.TabIndex = 114;
@@ -158,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 389);
+            this.label3.Location = new System.Drawing.Point(481, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 113;
@@ -167,7 +167,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(96, 188);
+            this.label7.Location = new System.Drawing.Point(96, 213);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 19);
             this.label7.TabIndex = 116;
@@ -175,7 +175,7 @@
             // 
             // txt_Agencia
             // 
-            this.txt_Agencia.Location = new System.Drawing.Point(100, 210);
+            this.txt_Agencia.Location = new System.Drawing.Point(100, 235);
             this.txt_Agencia.Name = "txt_Agencia";
             this.txt_Agencia.Size = new System.Drawing.Size(351, 27);
             this.txt_Agencia.TabIndex = 115;
@@ -226,7 +226,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresarGestion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngresarGestion";
