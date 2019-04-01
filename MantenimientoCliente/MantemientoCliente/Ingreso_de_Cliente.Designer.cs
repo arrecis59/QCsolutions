@@ -145,7 +145,7 @@
             this.navegador1.DataGr = null;
             this.navegador1.Dock = System.Windows.Forms.DockStyle.Top;
             this.navegador1.Location = new System.Drawing.Point(0, 30);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Procedimiento = null;
             this.navegador1.pubNombrechm = null;
@@ -170,6 +170,7 @@
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(664, 27);
             this.txt_codigo.TabIndex = 74;
+            this.txt_codigo.Tag = "1";
             // 
             // txt_dpi
             // 
@@ -177,6 +178,7 @@
             this.txt_dpi.Name = "txt_dpi";
             this.txt_dpi.Size = new System.Drawing.Size(664, 27);
             this.txt_dpi.TabIndex = 75;
+            this.txt_dpi.Tag = "2";
             // 
             // txt_nombre
             // 
@@ -184,6 +186,7 @@
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(664, 27);
             this.txt_nombre.TabIndex = 76;
+            this.txt_nombre.Tag = "3";
             // 
             // txt_apellido1
             // 
@@ -191,6 +194,7 @@
             this.txt_apellido1.Name = "txt_apellido1";
             this.txt_apellido1.Size = new System.Drawing.Size(664, 27);
             this.txt_apellido1.TabIndex = 77;
+            this.txt_apellido1.Tag = "4";
             // 
             // label2
             // 
@@ -231,6 +235,7 @@
             this.txt_apellido2.Name = "txt_apellido2";
             this.txt_apellido2.Size = new System.Drawing.Size(664, 27);
             this.txt_apellido2.TabIndex = 81;
+            this.txt_apellido2.Tag = "5";
             // 
             // label5
             // 
@@ -260,6 +265,7 @@
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(664, 27);
             this.txt_telefono.TabIndex = 84;
+            this.txt_telefono.Tag = "5";
             // 
             // txt_celular
             // 
@@ -267,6 +273,7 @@
             this.txt_celular.Name = "txt_celular";
             this.txt_celular.Size = new System.Drawing.Size(664, 27);
             this.txt_celular.TabIndex = 85;
+            this.txt_celular.Tag = "6";
             // 
             // label8
             // 
@@ -285,6 +292,7 @@
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(664, 27);
             this.txt_correo.TabIndex = 87;
+            this.txt_correo.Tag = "7";
             // 
             // label9
             // 
@@ -303,6 +311,7 @@
             this.txt_fecha_nacimiento.Name = "txt_fecha_nacimiento";
             this.txt_fecha_nacimiento.Size = new System.Drawing.Size(664, 27);
             this.txt_fecha_nacimiento.TabIndex = 89;
+            this.txt_fecha_nacimiento.Tag = "8";
             // 
             // label10
             // 
@@ -321,6 +330,7 @@
             this.txt_genero.Name = "txt_genero";
             this.txt_genero.Size = new System.Drawing.Size(664, 27);
             this.txt_genero.TabIndex = 91;
+            this.txt_genero.Tag = "9";
             // 
             // label11
             // 
@@ -339,6 +349,7 @@
             this.txt_nit.Name = "txt_nit";
             this.txt_nit.Size = new System.Drawing.Size(664, 27);
             this.txt_nit.TabIndex = 93;
+            this.txt_nit.Tag = "10";
             // 
             // label12
             // 
@@ -357,6 +368,7 @@
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(664, 27);
             this.txt_estado.TabIndex = 95;
+            this.txt_estado.Tag = "11";
             this.txt_estado.Text = "1";
             this.txt_estado.TextChanged += new System.EventHandler(this.txt_estado_TextChanged);
             // 

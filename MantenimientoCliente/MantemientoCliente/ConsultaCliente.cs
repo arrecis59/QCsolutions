@@ -13,7 +13,7 @@ namespace MantemientoCliente
 {
     public partial class ConsultaCliente : Form
     {
-        //private Navegador navegador = new Navegador(); En espera del reporteador.
+        private Navegador navegador = new Navegador();
         private Form frm_consulta_proceso;
 
         public ConsultaCliente(int codUsuario, Form frm_consulta_proceso)
@@ -27,11 +27,11 @@ namespace MantemientoCliente
             dgv_cliente.DataSource = tmp_navegador.cargarDatos("tbl_cliente");
 
             //DataTable para el reporteador.
-            //DataTable tmp_dt = new DataTable();
-            //tmp_dt = (DataTable)dgv_Conceptos.DataSource;
+            DataTable tmp_dt = new DataTable();
+            tmp_dt = (DataTable)dgv_cliente.DataSource;
 
-            //RPTCliente rpt = new RPTCliente();
-            //navegador.getDatosReportes(tmp_dt, rpt);
+            RPTCliente rpt = new RPTCliente();
+            navegador.getDatosReportes(tmp_dt, rpt);
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
