@@ -35,7 +35,7 @@
       <HintPath>..\CapaDatosOperacionesExternas\bin\Debug\CapaDatosOperacionesExternas.dll</HintPath>
     </Reference>
     <Reference Include="CapaDiseno">
-      <HintPath>D:\Documents\Github\QCsolutions\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
+      <HintPath>..\..\..\Navegador-07-03-19\Navegador-07-03-19\Lib\Navegador2\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
     </Reference>
     <Reference Include="CapaLogicaOperacionesExternas">
       <HintPath>..\CapaLogicaOperacionesExternas\bin\Debug\CapaLogicaOperacionesExternas.dll</HintPath>

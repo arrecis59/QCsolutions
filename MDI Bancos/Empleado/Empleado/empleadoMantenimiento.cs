@@ -75,5 +75,20 @@ namespace Empleado
                 textBox10.Text = Convert.ToString(nv.findSelectedItem("id_tipo_empleado", "tbl_tipo_empleado", "nombre", cbm_Tipo_Empleado.Text.ToString()));
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_SegundoNombre_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txt_SegundoApellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

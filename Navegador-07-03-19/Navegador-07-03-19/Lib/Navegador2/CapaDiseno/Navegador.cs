@@ -265,7 +265,7 @@ namespace CapaDiseno
         {
             if (forma.CanSelect)
             {
-                Help.ShowHelp(this, "C:\\Ayuda\\" + sNombrechm, sNombrehtml);
+                Help.ShowHelp(this, "C:\\Ayuda\\" + sNombrechm +".chm", sNombrehtml + ".html");
                 //MessageBox.Show(sNombrechm);
             }
         }

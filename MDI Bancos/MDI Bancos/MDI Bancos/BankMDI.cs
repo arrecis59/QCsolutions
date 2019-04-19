@@ -11,8 +11,8 @@ using InicioSesion;
 using DiseñoTipoTransferencia;
 using MantenimientoAgencias;
 using CapaDiseñoOpciones;
-//using TipoEmpleado;
-//using Empleado;
+using TipoEmpleado;
+using Empleado;
 /*using MantenimientoTipoDeCuenta;*/
 //using MantenimientoTipoDeCambio;
 //using Manttenimiento_Moneda;
@@ -24,11 +24,6 @@ using MantenimientoCuentas;
 using OperacionesExternas.BeneficiarioExterno;
 using OperacionesExternas.OperacionExterna;
 using OperacionesExternas;
-
-
-
-
-
 
 
 
@@ -165,23 +160,23 @@ namespace MDI_Bancos
 
         private void tipoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             dataTipoEmpleado frm = new dataTipoEmpleado(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             empleadoData frm = new empleadoData(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
 
         }
 
