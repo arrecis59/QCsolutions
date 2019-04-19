@@ -521,28 +521,7 @@ namespace CapaDiseno
                             {
                                 if (camposT[i, ii] is DateTimePicker)
                                 {
-                                    /*string fecha = camposT[i, ii].Text;
-                                    string dia = fecha.Substring(0, fecha.IndexOf('/'));
-                                    string complemento = fecha.Substring((fecha.IndexOf('/') + 1), 7);
-                                    string mes = complemento.Substring(0, complemento.IndexOf('/'));
-                                    string resto = complemento.Substring((complemento.IndexOf('/') + 1), (complemento.Length - 3));
-                                    string anio = resto.Substring(0, resto.Length);
-
-                                    if (dia.Length == 1)
-                                    {
-                                        dia = "0" + dia;
-                                    }
-                                    string fechaFinal = anio + mes + dia;
-                                    cmpss[ii] = fechaFinal;*/
-
-                                    /*int numero = Convert.ToInt32(componente.Tag.ToString()) - 1;
-
-
-                                    DateTime date = Convert.ToDateTime(componente.Text.ToString());
-                                    string fecha = date.Day + "/" + date.Month + "/" + date.Year;
-                                    arrayCampos[numero] = fecha;*/
-
-                                    MessageBox.Show("Entra aqui");
+                                  
 
 
 
@@ -737,14 +716,15 @@ namespace CapaDiseno
                             {
                                 if (componente is DateTimePicker)
                                 {
-                                        
+
 
                                     //Conversion a Formato fecha requerido (YEAR-MONTH-DAY)
 
-                                    int numero = Convert.ToInt32(componente.Tag.ToString()) -1;
+                                    int numero = Convert.ToInt32(componente.Tag.ToString()) - 1;
                                     DateTime date = Convert.ToDateTime(componente.Text.ToString());
-                                    string Sfecha = date.Year + "-" + date.Month + "-" + date.Day;
-                                    arrayCampos[numero] = Sfecha;
+                                    string sFecha = date.Year + "-" + date.Month + "-" + date.Day;
+                                    arrayCampos[numero] = sFecha;
+
 
                                 }
                                 else

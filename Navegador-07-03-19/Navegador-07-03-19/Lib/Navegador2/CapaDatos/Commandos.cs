@@ -106,14 +106,13 @@ namespace CapaDatos
 
 
         //Retorna Id del registro seleccionado
-
         public int selectedItemCombo(string Nid, string table, string campo, string search)
         {
 
             OdbcDataReader dr = null;
             int id = 0;
-            string ssearch = "\'" + search + "\'";
-            string sParametro = "SELECT " + Nid + " FROM " + table + " WHERE " + campo + " = " + ssearch + "";
+            string sSearch = "\'" + search + "\'";
+            string sParametro = "SELECT " + Nid + " FROM " + table + " WHERE " + campo + " = " + sSearch + "";
 
             var resultado = nuevo6.ObtenerConexion();
             OdbcTransaction transaction = resultado.Item2;
@@ -135,8 +134,6 @@ namespace CapaDatos
                 MessageBox.Show(ex.ToString());
                 MessageBox.Show("Error al obtener el Id del elemento seleccionado en combobox");
             }
-
-
             return id;
         }
 
