@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_Valor = new System.Windows.Forms.TextBox();
@@ -43,7 +44,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Estado = new System.Windows.Forms.TextBox();
             this.navegador1 = new CapaDiseno.Navegador();
+            this.dgv_conceptos = new System.Windows.Forms.DataGridView();
+            this.dSConceptosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Conceptos = new ConceptosIngresosEgresos.DS_Conceptos();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_conceptos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSConceptosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Conceptos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(99, 254);
+            this.label1.Location = new System.Drawing.Point(496, 267);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 23);
@@ -60,19 +67,19 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(189, 250);
+            this.txt_Nombre.Location = new System.Drawing.Point(586, 263);
             this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(644, 27);
+            this.txt_Nombre.Size = new System.Drawing.Size(334, 27);
             this.txt_Nombre.TabIndex = 2;
             this.txt_Nombre.Tag = "2";
             // 
             // txt_Valor
             // 
-            this.txt_Valor.Location = new System.Drawing.Point(189, 285);
+            this.txt_Valor.Location = new System.Drawing.Point(586, 298);
             this.txt_Valor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Valor.Name = "txt_Valor";
-            this.txt_Valor.Size = new System.Drawing.Size(644, 27);
+            this.txt_Valor.Size = new System.Drawing.Size(334, 27);
             this.txt_Valor.TabIndex = 3;
             this.txt_Valor.Tag = "3";
             // 
@@ -81,7 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(122, 289);
+            this.label2.Location = new System.Drawing.Point(519, 302);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 23);
@@ -90,10 +97,10 @@
             // 
             // txt_Codigo
             // 
-            this.txt_Codigo.Location = new System.Drawing.Point(189, 215);
+            this.txt_Codigo.Location = new System.Drawing.Point(586, 228);
             this.txt_Codigo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Codigo.Name = "txt_Codigo";
-            this.txt_Codigo.Size = new System.Drawing.Size(644, 27);
+            this.txt_Codigo.Size = new System.Drawing.Size(334, 27);
             this.txt_Codigo.TabIndex = 1;
             this.txt_Codigo.Tag = "1";
             // 
@@ -102,7 +109,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(109, 219);
+            this.label3.Location = new System.Drawing.Point(506, 232);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 23);
@@ -191,7 +198,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14F);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(110, 324);
+            this.label4.Location = new System.Drawing.Point(507, 337);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 23);
@@ -201,10 +208,10 @@
             // txt_Estado
             // 
             this.txt_Estado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
-            this.txt_Estado.Location = new System.Drawing.Point(189, 320);
+            this.txt_Estado.Location = new System.Drawing.Point(586, 333);
             this.txt_Estado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Estado.Name = "txt_Estado";
-            this.txt_Estado.Size = new System.Drawing.Size(644, 27);
+            this.txt_Estado.Size = new System.Drawing.Size(334, 27);
             this.txt_Estado.TabIndex = 4;
             this.txt_Estado.Tag = "3";
             this.txt_Estado.TextChanged += new System.EventHandler(this.txt_Estado_TextChanged);
@@ -223,12 +230,35 @@
             this.navegador1.Size = new System.Drawing.Size(950, 55);
             this.navegador1.TabIndex = 73;
             // 
+            // dgv_conceptos
+            // 
+            this.dgv_conceptos.AutoGenerateColumns = false;
+            this.dgv_conceptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.dgv_conceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_conceptos.DataSource = this.dSConceptosBindingSource;
+            this.dgv_conceptos.Location = new System.Drawing.Point(13, 93);
+            this.dgv_conceptos.Name = "dgv_conceptos";
+            this.dgv_conceptos.Size = new System.Drawing.Size(457, 521);
+            this.dgv_conceptos.TabIndex = 74;
+            this.dgv_conceptos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_conceptos_CellClick);
+            // 
+            // dSConceptosBindingSource
+            // 
+            this.dSConceptosBindingSource.DataSource = this.dS_Conceptos;
+            this.dSConceptosBindingSource.Position = 0;
+            // 
+            // dS_Conceptos
+            // 
+            this.dS_Conceptos.DataSetName = "DS_Conceptos";
+            this.dS_Conceptos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Ingreso_de_Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.dgv_conceptos);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txt_Estado);
             this.Controls.Add(this.label4);
@@ -247,6 +277,9 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_conceptos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSConceptosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Conceptos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,6 +301,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Estado;
         private CapaDiseno.Navegador navegador1;
+        private System.Windows.Forms.DataGridView dgv_conceptos;
+        private System.Windows.Forms.BindingSource dSConceptosBindingSource;
+        private DS_Conceptos dS_Conceptos;
     }
 }
 
