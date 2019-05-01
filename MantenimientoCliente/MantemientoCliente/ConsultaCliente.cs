@@ -9,30 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDiseno;
 
-namespace ConceptosIngresosEgresos
+namespace MantemientoCliente
 {
-    public partial class ConsultaConceptos : Form
+    public partial class ConsultaCliente : Form
     {
         private Navegador navegador = new Navegador();
         private Form frm_consulta_proceso;
 
-        public ConsultaConceptos(int codUsuario, Form frm_consulta_proceso)
+        public ConsultaCliente(int codUsuario, Form frm_consulta_proceso)
         {
             InitializeComponent();
             this.frm_consulta_proceso = frm_consulta_proceso;
 
             Navegador tmp_navegador = new Navegador();
-            
+
             tmp_navegador.getDatos(codUsuario, 81561);
-            dgv_Conceptos.DataSource = tmp_navegador.cargarDatos("tbl_conceptos_flujo_efectivo");
-            
+            dgv_cliente.DataSource = tmp_navegador.cargarDatos("tbl_cliente");
+
             //DataTable para el reporteador.
             DataTable tmp_dt = new DataTable();
-            tmp_dt = (DataTable)dgv_Conceptos.DataSource;
+            tmp_dt = (DataTable)dgv_cliente.DataSource;
 
-            RPTConcepto rpt = new RPTConcepto();
+            RPTCliente rpt = new RPTCliente();
             navegador.getDatosReportes(tmp_dt, rpt);
-
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -45,13 +44,12 @@ namespace ConceptosIngresosEgresos
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void dgv_Conceptos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_cliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Ingreso_de_Conceptos tmp_frm = new Ingreso_de_Conceptos(dgv_Conceptos);
+            Ingreso_de_Cliente tmp_frm = new Ingreso_de_Cliente(dgv_cliente);
             tmp_frm.MdiParent = this.frm_consulta_proceso;
             tmp_frm.Show();
             Application.DoEvents();
-
         }
     }
 }

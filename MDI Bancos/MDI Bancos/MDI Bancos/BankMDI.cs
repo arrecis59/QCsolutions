@@ -16,6 +16,9 @@ using Empleado;
 using MantenimientoTipoDeCuenta;
 using MantenimientoTipoDeCambio;
 using Manttenimiento_Moneda;
+/*using MantenimientoTipoDeCuenta;*/
+//using MantenimientoTipoDeCambio;
+//using Manttenimiento_Moneda;
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
 using MantenimientoBancosExternos;
@@ -24,11 +27,6 @@ using MantenimientoCuentas;
 using OperacionesExternas.BeneficiarioExterno;
 using OperacionesExternas.OperacionExterna;
 using OperacionesExternas;
-
-
-
-
-
 
 
 

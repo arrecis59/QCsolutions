@@ -193,13 +193,13 @@
             // 
             this.navegador1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.navegador1.DataGr = null;
-            this.navegador1.Location = new System.Drawing.Point(1, 45);
+            this.navegador1.Location = new System.Drawing.Point(6, 45);
             this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Procedimiento = null;
-            this.navegador1.pubNombrechm = null;
-            this.navegador1.pubNombreHtml = null;
-            this.navegador1.Size = new System.Drawing.Size(950, 55);
+            this.navegador1.pubNombrechm = "ayudaTipoEmpleado";
+            this.navegador1.pubNombreHtml = "index";
+            this.navegador1.Size = new System.Drawing.Size(936, 55);
             this.navegador1.TabIndex = 95;
             // 
             // mantenimientoTipoEmpleado
