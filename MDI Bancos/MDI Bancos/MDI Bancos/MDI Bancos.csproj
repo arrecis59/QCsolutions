@@ -65,6 +65,9 @@
     <Reference Include="OperacionesExternas">
       <HintPath>..\..\OperacionesExternas\OperacionesExternas\bin\Debug\OperacionesExternas.dll</HintPath>
     </Reference>
+    <Reference Include="OperacionesInternas">
+      <HintPath>..\..\OperacionesInternas\OperacionesInternas\bin\Debug\OperacionesInternas.dll</HintPath>
+    </Reference>
     <Reference Include="Seguridad2.0">
       <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\Seguridad2.0\Seguridad2.0\bin\Debug\Seguridad2.0.exe</HintPath>
     </Reference>
