@@ -237,6 +237,15 @@ namespace OperacionesInternas
         {
             this.WindowState = FormWindowState.Minimized;
         }
-    
+
+        private void txt_Empleado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TransferenciaCuentas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
