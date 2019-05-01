@@ -79,7 +79,7 @@
             // 
             this.txt_ID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ID.Location = new System.Drawing.Point(201, 103);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID.Multiline = true;
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(652, 27);
@@ -90,7 +90,7 @@
             // 
             this.txt_Nombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombre.Location = new System.Drawing.Point(201, 141);
-            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Nombre.Multiline = true;
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(652, 27);
@@ -106,7 +106,7 @@
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_minimizar.Location = new System.Drawing.Point(870, 0);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(40, 30);
             this.btn_minimizar.TabIndex = 5;
@@ -123,7 +123,7 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_cerrar.Location = new System.Drawing.Point(910, 0);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(40, 30);
             this.btn_cerrar.TabIndex = 4;
@@ -148,7 +148,7 @@
             this.pnl_Inferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.pnl_Inferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Inferior.Location = new System.Drawing.Point(0, 620);
-            this.pnl_Inferior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Inferior.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Inferior.Name = "pnl_Inferior";
             this.pnl_Inferior.Size = new System.Drawing.Size(950, 30);
             this.pnl_Inferior.TabIndex = 82;
@@ -161,7 +161,7 @@
             this.pnl_Titulo.Controls.Add(this.Lbl_asignacionPerfiles);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Titulo.Name = "pnl_Titulo";
             this.pnl_Titulo.Size = new System.Drawing.Size(950, 30);
             this.pnl_Titulo.TabIndex = 81;
@@ -170,7 +170,7 @@
             // 
             this.txt_Utilizado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Utilizado.Location = new System.Drawing.Point(201, 538);
-            this.txt_Utilizado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Utilizado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Utilizado.Multiline = true;
             this.txt_Utilizado.Name = "txt_Utilizado";
             this.txt_Utilizado.Size = new System.Drawing.Size(652, 27);
@@ -183,7 +183,7 @@
             this.btn_Fondo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Fondo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Fondo.Location = new System.Drawing.Point(201, 176);
-            this.btn_Fondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Fondo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Fondo.Name = "btn_Fondo";
             this.btn_Fondo.Size = new System.Drawing.Size(100, 100);
             this.btn_Fondo.TabIndex = 84;
@@ -197,7 +197,7 @@
             this.btn_BarraTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BarraTitulo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BarraTitulo.Location = new System.Drawing.Point(343, 176);
-            this.btn_BarraTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BarraTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BarraTitulo.Name = "btn_BarraTitulo";
             this.btn_BarraTitulo.Size = new System.Drawing.Size(100, 100);
             this.btn_BarraTitulo.TabIndex = 85;
@@ -211,7 +211,7 @@
             this.btn_BarraEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BarraEstado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BarraEstado.Location = new System.Drawing.Point(625, 176);
-            this.btn_BarraEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BarraEstado.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BarraEstado.Name = "btn_BarraEstado";
             this.btn_BarraEstado.Size = new System.Drawing.Size(100, 100);
             this.btn_BarraEstado.TabIndex = 87;
@@ -225,7 +225,7 @@
             this.btn_Barramenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Barramenu.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Barramenu.Location = new System.Drawing.Point(484, 176);
-            this.btn_Barramenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Barramenu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Barramenu.Name = "btn_Barramenu";
             this.btn_Barramenu.Size = new System.Drawing.Size(100, 100);
             this.btn_Barramenu.TabIndex = 86;
@@ -239,7 +239,7 @@
             this.btn_Fuente3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Fuente3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Fuente3.Location = new System.Drawing.Point(342, 357);
-            this.btn_Fuente3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Fuente3.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Fuente3.Name = "btn_Fuente3";
             this.btn_Fuente3.Size = new System.Drawing.Size(100, 100);
             this.btn_Fuente3.TabIndex = 89;
@@ -253,7 +253,7 @@
             this.btn_Fuente2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Fuente2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Fuente2.Location = new System.Drawing.Point(200, 357);
-            this.btn_Fuente2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Fuente2.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Fuente2.Name = "btn_Fuente2";
             this.btn_Fuente2.Size = new System.Drawing.Size(100, 100);
             this.btn_Fuente2.TabIndex = 88;
@@ -267,7 +267,7 @@
             this.btn_FondoA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_FondoA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FondoA.Location = new System.Drawing.Point(624, 357);
-            this.btn_FondoA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_FondoA.Margin = new System.Windows.Forms.Padding(4);
             this.btn_FondoA.Name = "btn_FondoA";
             this.btn_FondoA.Size = new System.Drawing.Size(100, 100);
             this.btn_FondoA.TabIndex = 91;
@@ -281,7 +281,7 @@
             this.btn_BarraTituloA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BarraTituloA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BarraTituloA.Location = new System.Drawing.Point(483, 357);
-            this.btn_BarraTituloA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BarraTituloA.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BarraTituloA.Name = "btn_BarraTituloA";
             this.btn_BarraTituloA.Size = new System.Drawing.Size(100, 100);
             this.btn_BarraTituloA.TabIndex = 90;
@@ -295,7 +295,7 @@
             this.btn_Fuente1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Fuente1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Fuente1.Location = new System.Drawing.Point(753, 176);
-            this.btn_Fuente1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Fuente1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Fuente1.Name = "btn_Fuente1";
             this.btn_Fuente1.Size = new System.Drawing.Size(100, 100);
             this.btn_Fuente1.TabIndex = 92;
@@ -307,7 +307,7 @@
             // 
             this.txt_nFondo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nFondo.Location = new System.Drawing.Point(200, 322);
-            this.txt_nFondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nFondo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nFondo.Multiline = true;
             this.txt_nFondo.Name = "txt_nFondo";
             this.txt_nFondo.Size = new System.Drawing.Size(101, 27);
@@ -319,7 +319,7 @@
             // 
             this.txt_nBarraT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nBarraT.Location = new System.Drawing.Point(342, 322);
-            this.txt_nBarraT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nBarraT.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nBarraT.Multiline = true;
             this.txt_nBarraT.Name = "txt_nBarraT";
             this.txt_nBarraT.Size = new System.Drawing.Size(101, 27);
@@ -331,7 +331,7 @@
             // 
             this.txt_nBarraM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nBarraM.Location = new System.Drawing.Point(483, 322);
-            this.txt_nBarraM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nBarraM.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nBarraM.Multiline = true;
             this.txt_nBarraM.Name = "txt_nBarraM";
             this.txt_nBarraM.Size = new System.Drawing.Size(101, 27);
@@ -343,7 +343,7 @@
             // 
             this.txt_nBarraE.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nBarraE.Location = new System.Drawing.Point(624, 322);
-            this.txt_nBarraE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nBarraE.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nBarraE.Multiline = true;
             this.txt_nBarraE.Name = "txt_nBarraE";
             this.txt_nBarraE.Size = new System.Drawing.Size(101, 27);
@@ -355,7 +355,7 @@
             // 
             this.txt_nF1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nF1.Location = new System.Drawing.Point(752, 322);
-            this.txt_nF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nF1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nF1.Multiline = true;
             this.txt_nF1.Name = "txt_nF1";
             this.txt_nF1.Size = new System.Drawing.Size(101, 27);
@@ -367,7 +367,7 @@
             // 
             this.txt_nFondoA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nFondoA.Location = new System.Drawing.Point(625, 503);
-            this.txt_nFondoA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nFondoA.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nFondoA.Multiline = true;
             this.txt_nFondoA.Name = "txt_nFondoA";
             this.txt_nFondoA.Size = new System.Drawing.Size(99, 27);
@@ -379,7 +379,7 @@
             // 
             this.txt_nBarraTA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nBarraTA.Location = new System.Drawing.Point(484, 503);
-            this.txt_nBarraTA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nBarraTA.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nBarraTA.Multiline = true;
             this.txt_nBarraTA.Name = "txt_nBarraTA";
             this.txt_nBarraTA.Size = new System.Drawing.Size(99, 27);
@@ -391,7 +391,7 @@
             // 
             this.txt_nF3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nF3.Location = new System.Drawing.Point(343, 503);
-            this.txt_nF3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nF3.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nF3.Multiline = true;
             this.txt_nF3.Name = "txt_nF3";
             this.txt_nF3.Size = new System.Drawing.Size(99, 27);
@@ -403,7 +403,7 @@
             // 
             this.txt_nF2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nF2.Location = new System.Drawing.Point(201, 503);
-            this.txt_nF2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nF2.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nF2.Multiline = true;
             this.txt_nF2.Name = "txt_nF2";
             this.txt_nF2.Size = new System.Drawing.Size(99, 27);
@@ -415,12 +415,12 @@
             // 
             this.txt_Status.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Status.Location = new System.Drawing.Point(201, 576);
-            this.txt_Status.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Status.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Status.Multiline = true;
             this.txt_Status.Name = "txt_Status";
             this.txt_Status.Size = new System.Drawing.Size(652, 27);
             this.txt_Status.TabIndex = 112;
-            this.txt_Status.Tag = "13";
+            this.txt_Status.Tag = "";
             this.txt_Status.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // label10
@@ -471,7 +471,7 @@
             // 
             this.txt_hexF1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexF1.Location = new System.Drawing.Point(752, 284);
-            this.txt_hexF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexF1.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexF1.Multiline = true;
             this.txt_hexF1.Name = "txt_hexF1";
             this.txt_hexF1.Size = new System.Drawing.Size(101, 27);
@@ -482,7 +482,7 @@
             // 
             this.txt_hexBarraE.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexBarraE.Location = new System.Drawing.Point(624, 284);
-            this.txt_hexBarraE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexBarraE.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexBarraE.Multiline = true;
             this.txt_hexBarraE.Name = "txt_hexBarraE";
             this.txt_hexBarraE.Size = new System.Drawing.Size(101, 27);
@@ -493,7 +493,7 @@
             // 
             this.txt_hexBarraM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexBarraM.Location = new System.Drawing.Point(483, 284);
-            this.txt_hexBarraM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexBarraM.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexBarraM.Multiline = true;
             this.txt_hexBarraM.Name = "txt_hexBarraM";
             this.txt_hexBarraM.Size = new System.Drawing.Size(101, 27);
@@ -504,7 +504,7 @@
             // 
             this.txt_hexBarraT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexBarraT.Location = new System.Drawing.Point(342, 284);
-            this.txt_hexBarraT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexBarraT.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexBarraT.Multiline = true;
             this.txt_hexBarraT.Name = "txt_hexBarraT";
             this.txt_hexBarraT.Size = new System.Drawing.Size(101, 27);
@@ -515,7 +515,7 @@
             // 
             this.txt_hexfondo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexfondo.Location = new System.Drawing.Point(200, 284);
-            this.txt_hexfondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexfondo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexfondo.Multiline = true;
             this.txt_hexfondo.Name = "txt_hexfondo";
             this.txt_hexfondo.Size = new System.Drawing.Size(101, 27);
@@ -526,7 +526,7 @@
             // 
             this.txt_hexFondoA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexFondoA.Location = new System.Drawing.Point(625, 465);
-            this.txt_hexFondoA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexFondoA.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexFondoA.Multiline = true;
             this.txt_hexFondoA.Name = "txt_hexFondoA";
             this.txt_hexFondoA.Size = new System.Drawing.Size(99, 27);
@@ -537,7 +537,7 @@
             // 
             this.txt_hexBarraTA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexBarraTA.Location = new System.Drawing.Point(484, 465);
-            this.txt_hexBarraTA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexBarraTA.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexBarraTA.Multiline = true;
             this.txt_hexBarraTA.Name = "txt_hexBarraTA";
             this.txt_hexBarraTA.Size = new System.Drawing.Size(99, 27);
@@ -548,7 +548,7 @@
             // 
             this.txt_hexF3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexF3.Location = new System.Drawing.Point(343, 465);
-            this.txt_hexF3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexF3.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexF3.Multiline = true;
             this.txt_hexF3.Name = "txt_hexF3";
             this.txt_hexF3.Size = new System.Drawing.Size(99, 27);
@@ -559,7 +559,7 @@
             // 
             this.txt_hexF2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hexF2.Location = new System.Drawing.Point(201, 465);
-            this.txt_hexF2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_hexF2.Margin = new System.Windows.Forms.Padding(4);
             this.txt_hexF2.Multiline = true;
             this.txt_hexF2.Name = "txt_hexF2";
             this.txt_hexF2.Size = new System.Drawing.Size(99, 27);
@@ -593,7 +593,6 @@
             this.navegador1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.navegador1.DataGr = null;
             this.navegador1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navegador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navegador1.Location = new System.Drawing.Point(0, 30);
             this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navegador1.Name = "navegador1";
@@ -650,7 +649,7 @@
             this.Controls.Add(this.txt_ID);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DiseñoEleccionDeColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DiseñoEleccionDeColores";

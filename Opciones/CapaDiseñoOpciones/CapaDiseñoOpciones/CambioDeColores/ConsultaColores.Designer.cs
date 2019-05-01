@@ -34,9 +34,9 @@
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_asignacionPerfiles = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dt_Colores = new System.Windows.Forms.DataGridView();
             this.pnl_Titulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_Colores)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Inferior
@@ -44,7 +44,7 @@
             this.pnl_Inferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.pnl_Inferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_Inferior.Location = new System.Drawing.Point(0, 620);
-            this.pnl_Inferior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Inferior.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Inferior.Name = "pnl_Inferior";
             this.pnl_Inferior.Size = new System.Drawing.Size(950, 30);
             this.pnl_Inferior.TabIndex = 84;
@@ -57,7 +57,7 @@
             this.pnl_Titulo.Controls.Add(this.Lbl_asignacionPerfiles);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Titulo.Name = "pnl_Titulo";
             this.pnl_Titulo.Size = new System.Drawing.Size(950, 30);
             this.pnl_Titulo.TabIndex = 83;
@@ -71,7 +71,7 @@
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_minimizar.Location = new System.Drawing.Point(870, 0);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(40, 30);
             this.btn_minimizar.TabIndex = 5;
@@ -88,7 +88,7 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_cerrar.Location = new System.Drawing.Point(910, 0);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(40, 30);
             this.btn_cerrar.TabIndex = 4;
@@ -108,15 +108,14 @@
             this.Lbl_asignacionPerfiles.TabIndex = 48;
             this.Lbl_asignacionPerfiles.Text = "Seleccion de colores";
             // 
-            // dataGridView1
+            // dt_Colores
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.dt_Colores.AllowUserToDeleteRows = false;
+            this.dt_Colores.AllowUserToOrderColumns = true;
+            this.dt_Colores.AllowUserToResizeColumns = false;
+            this.dt_Colores.AllowUserToResizeRows = false;
+            this.dt_Colores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dt_Colores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,35 +123,35 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 56);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(920, 538);
-            this.dataGridView1.TabIndex = 85;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dt_Colores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dt_Colores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dt_Colores.EnableHeadersVisualStyles = false;
+            this.dt_Colores.Location = new System.Drawing.Point(13, 56);
+            this.dt_Colores.Margin = new System.Windows.Forms.Padding(4);
+            this.dt_Colores.Name = "dt_Colores";
+            this.dt_Colores.RowHeadersVisible = false;
+            this.dt_Colores.Size = new System.Drawing.Size(920, 538);
+            this.dt_Colores.TabIndex = 85;
+            this.dt_Colores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // ConsultaColores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dt_Colores);
             this.Controls.Add(this.pnl_Inferior);
             this.Controls.Add(this.pnl_Titulo);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultaColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaColores";
             this.Load += new System.EventHandler(this.ConsultaColores_Load);
             this.pnl_Titulo.ResumeLayout(false);
             this.pnl_Titulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_Colores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -164,6 +163,6 @@
         private System.Windows.Forms.Button btn_minimizar;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label Lbl_asignacionPerfiles;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dt_Colores;
     }
 }

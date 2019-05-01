@@ -11,14 +11,14 @@ using InicioSesion;
 using DiseñoTipoTransferencia;
 using MantenimientoAgencias;
 using CapaDiseñoOpciones;
-//using TipoEmpleado;
-//using Empleado;
-/*using MantenimientoTipoDeCuenta;*/
-//using MantenimientoTipoDeCambio;
-//using Manttenimiento_Moneda;
+using TipoEmpleado;
+using Empleado;
+using MantenimientoTipoDeCuenta;
+using MantenimientoTipoDeCambio;
+using Manttenimiento_Moneda;
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
-/*using MantenimientoBancosExternos;*/
+using MantenimientoBancosExternos;
 using Seguridad2;
 using MantenimientoCuentas;
 using OperacionesExternas.BeneficiarioExterno;
@@ -150,7 +150,9 @@ namespace MDI_Bancos
 
         private void cambioDeColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaColores frm = new ConsultaColores();
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaColores frm = new ConsultaColores(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();
@@ -165,65 +167,65 @@ namespace MDI_Bancos
 
         private void tipoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             dataTipoEmpleado frm = new dataTipoEmpleado(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             empleadoData frm = new empleadoData(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
 
         }
 
         private void tipoDeCuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
 
             ConsultaTipoDeCuenta frm = new ConsultaTipoDeCuenta(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void bancosExternosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             ConsultaBancosExternos frm = new ConsultaBancosExternos(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void tipoDeCambioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             consultaMantenimientoTipodeCambio frm = new consultaMantenimientoTipodeCambio(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void tipoMonedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             cnsultaMantenimientoMoneda frm = new cnsultaMantenimientoMoneda(intCodigoUsuario, this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void creacionDeCuentasToolStripMenuItem_Click(object sender, EventArgs e)

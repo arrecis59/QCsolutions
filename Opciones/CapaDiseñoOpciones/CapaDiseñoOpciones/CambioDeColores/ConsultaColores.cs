@@ -16,11 +16,18 @@ namespace CapaDiseñoOpciones.CambioDeColores
     {
         Navegador nv = new Navegador();
         DataTable dt;
-        public Form frm;
-        public ConsultaColores(Form frm2)
+        public Form frmMDI2;
+
+        public ConsultaColores(int intUsuarioCodigo, Form frmMDI)
         {
             InitializeComponent();
-            frm = frm2;
+            Navegador nv2 = new Navegador();
+            nv2.getDatos(intUsuarioCodigo, 81540);
+            frmMDI2 = frmMDI;
+
+
+            dt = nv2.cargarDatos("tbl_colores");
+            dt_Colores.DataSource = dt;
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -49,13 +56,13 @@ namespace CapaDiseñoOpciones.CambioDeColores
             }
             catch (Exception ex) { }
             dt = nv.cargarDatos("tbl_colores");
-            dataGridView1.DataSource = dt;
+            dt_Colores.DataSource = dt;
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DiseñoEleccionDeColores frm3 = new DiseñoEleccionDeColores(dataGridView1);
-            frm3.MdiParent = frm;
+            DiseñoEleccionDeColores frm3 = new DiseñoEleccionDeColores(dt_Colores);
+            frm3.MdiParent = frmMDI2;
             frm3.Show();
             Application.DoEvents();
         }
