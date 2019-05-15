@@ -289,6 +289,27 @@ namespace MDI_Bancos
             Application.DoEvents();
         }
 
+        private void retirosACuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            Retiros frm = new Retiros();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void depositosACuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            Depositos frm = new Depositos();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+
         /*----------------EJEMPLO PARA ABRIR UN FORM
          
         private void consultarModuloToolStripMenuItem_Click(object sender, EventArgs e)

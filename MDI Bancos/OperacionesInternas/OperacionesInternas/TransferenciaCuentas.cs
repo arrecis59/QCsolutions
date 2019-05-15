@@ -174,11 +174,13 @@ namespace OperacionesInternas
                 {
                     MessageBox.Show("Transferencia realizada con exito");
                     clearElements();
+                    visibleOptions();
                 }
                 else
                 {
-                    MessageBox.Show("Error al realizar transferencia");
+                    MessageBox.Show("Error al realizar transferencia, porfavor verificar fondos de cuenta");
                     clearElements();
+                    visibleOptions();
                 }
             }
             
@@ -220,6 +222,12 @@ namespace OperacionesInternas
 
         private void cbo_Empleado_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            if (!string.IsNullOrEmpty(cbo_Empleado.Text))
+            {
+                //txt_Empleado.Text = Convert.ToString(lg.getEmpleadoId(cbo_Empleado.Text.ToString()));
+            }
+
             //txt_Empleado.Text = Convert.ToString(lg.getEmpleadoId(cbo_Empleado.Text.ToString()));
         }
 
