@@ -68,6 +68,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Retiros.resx">
+      <DependentUpon>Retiros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransferenciaCuentas.resx">
       <DependentUpon>TransferenciaCuentas.cs</DependentUpon>
     </EmbeddedResource>
