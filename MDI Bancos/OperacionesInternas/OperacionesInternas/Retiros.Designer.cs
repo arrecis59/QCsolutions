@@ -83,6 +83,7 @@
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.Text = "_";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_cerrar
             // 
@@ -99,6 +100,7 @@
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // Lbl_asignacionPerfiles
             // 
@@ -108,9 +110,9 @@
             this.Lbl_asignacionPerfiles.Location = new System.Drawing.Point(13, 9);
             this.Lbl_asignacionPerfiles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_asignacionPerfiles.Name = "Lbl_asignacionPerfiles";
-            this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(141, 19);
+            this.Lbl_asignacionPerfiles.Size = new System.Drawing.Size(122, 19);
             this.Lbl_asignacionPerfiles.TabIndex = 48;
-            this.Lbl_asignacionPerfiles.Text = "Depositos a cuentas";
+            this.Lbl_asignacionPerfiles.Text = "Retiros a cuentas";
             // 
             // pcb_Importe
             // 
@@ -184,6 +186,7 @@
             this.cbo_CuentaOrigen.Size = new System.Drawing.Size(395, 27);
             this.cbo_CuentaOrigen.TabIndex = 204;
             this.cbo_CuentaOrigen.Tag = "";
+            this.cbo_CuentaOrigen.SelectedIndexChanged += new System.EventHandler(this.cbo_CuentaOrigen_SelectedIndexChanged);
             // 
             // label5
             // 

@@ -18,7 +18,11 @@ namespace OperacionesInternas
 
         private void cargarCuentas()
         {
-            lg.getCuentas();
+            cbo_CuentaOrigen.DataSource = lg.getCuentas().Tables[0];
+            cbo_CuentaOrigen.DisplayMember = "name";
+            cbo_CuentaOrigen.ValueMember = "numero_de_cuenta";
+
+           
         }
 
 
@@ -80,6 +84,9 @@ namespace OperacionesInternas
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
+
+            enableElements();
+
             DateTime fecha = dtp_Fecha.Value;
             string sFecha = fecha.Year.ToString() + "-" + fecha.Month.ToString() + "-" + fecha.Day.ToString();
 
@@ -101,23 +108,33 @@ namespace OperacionesInternas
                     else
                     {
                         MessageBox.Show("Error, al realizar el retiro");
+                        clearElements();
+                        visibleOptions();
                     }
                 }
                 else
                 {
                     MessageBox.Show("Error, al ajustar cuentas");
+                    clearElements();
+                    visibleOptions();
                 }
             }
             else
             {
                 MessageBox.Show("Error, fondos insuficientes");
+                clearElements();
+                visibleOptions();
             }
 
 
             if (successful)
             {
                 MessageBox.Show("Retiro realizado correctamente");
+                visibleOptions();
+                clearElements();
             }
+
+            clearElements();
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
@@ -135,6 +152,24 @@ namespace OperacionesInternas
         {
             enableElements();
             visibleOptions();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void cbo_CuentaOrigen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(cbo_CuentaOrigen.Text))
+            {
+                txt_Cuenta.Text = Convert.ToString(lg.getCuentaId(cbo_CuentaOrigen.Text.ToString()));
+            }
         }
     }
 }

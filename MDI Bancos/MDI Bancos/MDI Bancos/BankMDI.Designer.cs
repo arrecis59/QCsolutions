@@ -50,6 +50,8 @@
             this.ingresarNuevaSolicitudToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarSolicitudesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarSolicitudesDeConcialiacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionesInternasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transferenciaACuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,8 +75,8 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.operacionesInternasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transferenciaACuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retirosACuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.depositosACuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Icono)).BeginInit();
@@ -265,6 +267,23 @@
             this.consultarSolicitudesDeConcialiacionToolStripMenuItem.Text = "Consultar Solicitudes de Concialiacion";
             this.consultarSolicitudesDeConcialiacionToolStripMenuItem.Click += new System.EventHandler(this.consultarSolicitudesDeConcialiacionToolStripMenuItem_Click);
             // 
+            // operacionesInternasToolStripMenuItem
+            // 
+            this.operacionesInternasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transferenciaACuentasToolStripMenuItem,
+            this.retirosACuentasToolStripMenuItem,
+            this.depositosACuentasToolStripMenuItem});
+            this.operacionesInternasToolStripMenuItem.Name = "operacionesInternasToolStripMenuItem";
+            this.operacionesInternasToolStripMenuItem.Size = new System.Drawing.Size(267, 28);
+            this.operacionesInternasToolStripMenuItem.Text = "Operaciones Internas";
+            // 
+            // transferenciaACuentasToolStripMenuItem
+            // 
+            this.transferenciaACuentasToolStripMenuItem.Name = "transferenciaACuentasToolStripMenuItem";
+            this.transferenciaACuentasToolStripMenuItem.Size = new System.Drawing.Size(283, 28);
+            this.transferenciaACuentasToolStripMenuItem.Text = "Transferencia a cuentas";
+            this.transferenciaACuentasToolStripMenuItem.Click += new System.EventHandler(this.transferenciaACuentasToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -323,7 +342,7 @@
             this.pnl_barraTitulo.Controls.Add(this.btn_cerrar);
             this.pnl_barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_barraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnl_barraTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_barraTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_barraTitulo.Name = "pnl_barraTitulo";
             this.pnl_barraTitulo.Size = new System.Drawing.Size(1405, 37);
             this.pnl_barraTitulo.TabIndex = 11;
@@ -335,7 +354,7 @@
             this.pct_Icono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pct_Icono.BackgroundImage")));
             this.pct_Icono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pct_Icono.Location = new System.Drawing.Point(0, 0);
-            this.pct_Icono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pct_Icono.Margin = new System.Windows.Forms.Padding(4);
             this.pct_Icono.Name = "pct_Icono";
             this.pct_Icono.Size = new System.Drawing.Size(40, 37);
             this.pct_Icono.TabIndex = 5;
@@ -360,7 +379,7 @@
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_minimizar.Location = new System.Drawing.Point(1115, 0);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(40, 37);
             this.btn_minimizar.TabIndex = 3;
@@ -376,7 +395,7 @@
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_cerrar.Location = new System.Drawing.Point(1171, 0);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(60, 37);
             this.btn_cerrar.TabIndex = 2;
@@ -389,7 +408,7 @@
             this.ptb_logoEmpresa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_logoEmpresa.BackgroundImage")));
             this.ptb_logoEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ptb_logoEmpresa.Location = new System.Drawing.Point(0, 402);
-            this.ptb_logoEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptb_logoEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.ptb_logoEmpresa.Name = "ptb_logoEmpresa";
             this.ptb_logoEmpresa.Size = new System.Drawing.Size(200, 185);
             this.ptb_logoEmpresa.TabIndex = 13;
@@ -402,7 +421,7 @@
             this.pnl_Fecha.Controls.Add(this.lbl_fecha);
             this.pnl_Fecha.Controls.Add(this.label3);
             this.pnl_Fecha.Location = new System.Drawing.Point(667, 0);
-            this.pnl_Fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Fecha.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Fecha.Name = "pnl_Fecha";
             this.pnl_Fecha.Size = new System.Drawing.Size(332, 30);
             this.pnl_Fecha.TabIndex = 1;
@@ -434,7 +453,7 @@
             this.pnl_Usuario.Controls.Add(this.lbl_usuario);
             this.pnl_Usuario.Controls.Add(this.label2);
             this.pnl_Usuario.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Usuario.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Usuario.Name = "pnl_Usuario";
             this.pnl_Usuario.Size = new System.Drawing.Size(665, 30);
             this.pnl_Usuario.TabIndex = 0;
@@ -468,7 +487,7 @@
             this.pnl_DatosUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_DatosUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnl_DatosUsuario.Location = new System.Drawing.Point(0, 584);
-            this.pnl_DatosUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_DatosUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_DatosUsuario.Name = "pnl_DatosUsuario";
             this.pnl_DatosUsuario.Size = new System.Drawing.Size(1405, 31);
             this.pnl_DatosUsuario.TabIndex = 12;
@@ -480,7 +499,7 @@
             this.pnl_Hora.Controls.Add(this.lbl_hora);
             this.pnl_Hora.Controls.Add(this.label4);
             this.pnl_Hora.Location = new System.Drawing.Point(1000, 0);
-            this.pnl_Hora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Hora.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Hora.Name = "pnl_Hora";
             this.pnl_Hora.Size = new System.Drawing.Size(332, 30);
             this.pnl_Hora.TabIndex = 7;
@@ -509,20 +528,19 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // operacionesInternasToolStripMenuItem
+            // retirosACuentasToolStripMenuItem
             // 
-            this.operacionesInternasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.transferenciaACuentasToolStripMenuItem});
-            this.operacionesInternasToolStripMenuItem.Name = "operacionesInternasToolStripMenuItem";
-            this.operacionesInternasToolStripMenuItem.Size = new System.Drawing.Size(267, 28);
-            this.operacionesInternasToolStripMenuItem.Text = "Operaciones Internas";
+            this.retirosACuentasToolStripMenuItem.Name = "retirosACuentasToolStripMenuItem";
+            this.retirosACuentasToolStripMenuItem.Size = new System.Drawing.Size(283, 28);
+            this.retirosACuentasToolStripMenuItem.Text = "Retiros a cuentas";
+            this.retirosACuentasToolStripMenuItem.Click += new System.EventHandler(this.retirosACuentasToolStripMenuItem_Click);
             // 
-            // transferenciaACuentasToolStripMenuItem
+            // depositosACuentasToolStripMenuItem
             // 
-            this.transferenciaACuentasToolStripMenuItem.Name = "transferenciaACuentasToolStripMenuItem";
-            this.transferenciaACuentasToolStripMenuItem.Size = new System.Drawing.Size(283, 28);
-            this.transferenciaACuentasToolStripMenuItem.Text = "Transferencia a cuentas";
-            this.transferenciaACuentasToolStripMenuItem.Click += new System.EventHandler(this.transferenciaACuentasToolStripMenuItem_Click);
+            this.depositosACuentasToolStripMenuItem.Name = "depositosACuentasToolStripMenuItem";
+            this.depositosACuentasToolStripMenuItem.Size = new System.Drawing.Size(283, 28);
+            this.depositosACuentasToolStripMenuItem.Text = "Depositos a cuentas";
+            this.depositosACuentasToolStripMenuItem.Click += new System.EventHandler(this.depositosACuentasToolStripMenuItem_Click);
             // 
             // BankMDI
             // 
@@ -539,7 +557,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BankMDI";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -609,6 +627,8 @@
         private System.Windows.Forms.ToolStripMenuItem consultarSolicitudesDeConcialiacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem operacionesInternasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transferenciaACuentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem retirosACuentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem depositosACuentasToolStripMenuItem;
     }
 }
 
