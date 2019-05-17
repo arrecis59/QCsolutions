@@ -68,6 +68,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Depositos.resx">
+      <DependentUpon>Depositos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retiros.resx">
+      <DependentUpon>Retiros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransferenciaCuentas.resx">
       <DependentUpon>TransferenciaCuentas.cs</DependentUpon>
     </EmbeddedResource>

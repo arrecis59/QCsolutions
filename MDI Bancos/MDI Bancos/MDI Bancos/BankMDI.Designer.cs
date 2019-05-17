@@ -387,6 +387,7 @@
             this.pnl_barraTitulo.Controls.Add(this.btn_cerrar);
             this.pnl_barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_barraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_barraTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_barraTitulo.Name = "pnl_barraTitulo";
             this.pnl_barraTitulo.Size = new System.Drawing.Size(1054, 30);
             this.pnl_barraTitulo.TabIndex = 11;
@@ -398,6 +399,7 @@
             this.pct_Icono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pct_Icono.BackgroundImage")));
             this.pct_Icono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pct_Icono.Location = new System.Drawing.Point(0, 0);
+            this.pct_Icono.Margin = new System.Windows.Forms.Padding(4);
             this.pct_Icono.Name = "pct_Icono";
             this.pct_Icono.Size = new System.Drawing.Size(30, 30);
             this.pct_Icono.TabIndex = 5;
@@ -421,6 +423,8 @@
             this.btn_minimizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btn_minimizar.Location = new System.Drawing.Point(836, 0);
+            this.btn_minimizar.Location = new System.Drawing.Point(1115, 0);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(30, 30);
             this.btn_minimizar.TabIndex = 3;
@@ -435,7 +439,8 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btn_cerrar.Location = new System.Drawing.Point(878, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(1171, 0);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(45, 30);
             this.btn_cerrar.TabIndex = 2;
@@ -447,7 +452,8 @@
             // 
             this.ptb_logoEmpresa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptb_logoEmpresa.BackgroundImage")));
             this.ptb_logoEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_logoEmpresa.Location = new System.Drawing.Point(0, 327);
+            this.ptb_logoEmpresa.Location = new System.Drawing.Point(0, 402);
+            this.ptb_logoEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.ptb_logoEmpresa.Name = "ptb_logoEmpresa";
             this.ptb_logoEmpresa.Size = new System.Drawing.Size(150, 150);
             this.ptb_logoEmpresa.TabIndex = 13;
@@ -459,7 +465,8 @@
             this.pnl_Fecha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl_Fecha.Controls.Add(this.lbl_fecha);
             this.pnl_Fecha.Controls.Add(this.label3);
-            this.pnl_Fecha.Location = new System.Drawing.Point(500, 0);
+            this.pnl_Fecha.Location = new System.Drawing.Point(667, 0);
+            this.pnl_Fecha.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Fecha.Name = "pnl_Fecha";
             this.pnl_Fecha.Size = new System.Drawing.Size(250, 25);
             this.pnl_Fecha.TabIndex = 1;
@@ -489,6 +496,7 @@
             this.pnl_Usuario.Controls.Add(this.lbl_usuario);
             this.pnl_Usuario.Controls.Add(this.label2);
             this.pnl_Usuario.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Usuario.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Usuario.Name = "pnl_Usuario";
             this.pnl_Usuario.Size = new System.Drawing.Size(500, 25);
             this.pnl_Usuario.TabIndex = 0;
@@ -519,7 +527,8 @@
             this.pnl_DatosUsuario.Controls.Add(this.pnl_Usuario);
             this.pnl_DatosUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_DatosUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnl_DatosUsuario.Location = new System.Drawing.Point(0, 475);
+            this.pnl_DatosUsuario.Location = new System.Drawing.Point(0, 584);
+            this.pnl_DatosUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_DatosUsuario.Name = "pnl_DatosUsuario";
             this.pnl_DatosUsuario.Size = new System.Drawing.Size(1054, 25);
             this.pnl_DatosUsuario.TabIndex = 12;
@@ -530,7 +539,8 @@
             this.pnl_Hora.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl_Hora.Controls.Add(this.lbl_hora);
             this.pnl_Hora.Controls.Add(this.label4);
-            this.pnl_Hora.Location = new System.Drawing.Point(750, 0);
+            this.pnl_Hora.Location = new System.Drawing.Point(1000, 0);
+            this.pnl_Hora.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Hora.Name = "pnl_Hora";
             this.pnl_Hora.Size = new System.Drawing.Size(250, 25);
             this.pnl_Hora.TabIndex = 7;
@@ -584,6 +594,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BankMDI";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
