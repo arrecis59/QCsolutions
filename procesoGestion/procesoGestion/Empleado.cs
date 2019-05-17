@@ -8,11 +8,13 @@ namespace procesoGestion
 {
     class Empleado
     {
-        private int idEmpleado { get; } 
-        private String nombre { get; }
-        private String Puesto { get; }
+        public int idEmpleado { get; set; }
+        public String nombre { get; set; }
+        public String apellido1 { get; set; }
+        public String apellido2 { get; set; }
+        public String correo { get; set; }
+        public int tipo_empleado { get; set; }
 
-
-
+        
     }
 }

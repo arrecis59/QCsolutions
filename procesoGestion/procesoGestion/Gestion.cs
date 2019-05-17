@@ -9,17 +9,15 @@ namespace procesoGestion
 {
     class Gestion
     {
-        private int idGestion { get; set; }
-        private DateTime fecha_gestion { get; set; }
-        private String estado { get; set; }
-        private String descripcion { get; set; }
-        private Empleado emp_ini { get; set; }
-        private Empleado emo_sol { get; set; }
-
-        public void consultaGestion()
-        {
-            
-        }
-
+        public int idGestion { get; set; }
+        public DateTime fecha_gestion { get; set; }
+        public DateTime fecha_solucion { get; set; }
+        public String descripcion { get; set; }
+        public Empleado empl_servicio { get; set; }
+        public Empleado empl_solucion { get; set; }
+        public Cliente cliente { get; set; }
+        public MotivoGestion motivo { get; set; }
+        public EstadoGestion estado { get; set; }
+        
     }
 }
