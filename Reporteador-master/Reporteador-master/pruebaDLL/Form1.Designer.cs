@@ -39,7 +39,6 @@
             this.dsLLenoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsLLeno1 = new pruebaDLL.DsLLeno();
             this.dsLLeno1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -49,7 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsLLenoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsLLeno1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsLLeno1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -122,15 +120,6 @@
             this.dsLLeno1BindingSource.DataSource = this.dsLLeno1;
             this.dsLLeno1BindingSource.Position = 0;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(232, 332);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(480, 150);
-            this.dataGridView2.TabIndex = 4;
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(7, 197);
@@ -143,12 +132,14 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Red;
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(358, 66);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(219, 23);
+            this.button5.Size = new System.Drawing.Size(289, 69);
             this.button5.TabIndex = 6;
-            this.button5.Text = "Administrador";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Text = "PRESIONAR ESTE PARA ABRIR EL REPORTEADOR";
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
@@ -158,7 +149,6 @@
             this.ClientSize = new System.Drawing.Size(784, 519);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -173,7 +163,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsLLenoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsLLeno1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsLLeno1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,7 +179,6 @@
         private System.Windows.Forms.BindingSource dsLLeno1BindingSource;
         private DsLLeno dsLLeno1;
         public System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
     }

@@ -19,12 +19,15 @@ using CapaDiseñoOpciones;
 using CapaDatosOpciones;
 using CapaDiseñoOpciones.CambioDeColores;
 /*using MantenimientoBancosExternos;*/
+using OperacionesExternas.OperacionExterna;
 using Seguridad2;
+using CreacionDeCuentas;
+using OperacionesPagosAOrganizaciones;
 //using MantenimientoCuentas;
 //using OperacionesExternas.BeneficiarioExterno;
 //using OperacionesExternas.OperacionExterna;
 //using OperacionesExternas;
-using OperacionesInternas;
+//using OperacionesInternas;
 
 
 namespace MDI_Bancos
@@ -251,39 +254,92 @@ namespace MDI_Bancos
 
         private void ingresarNuevaSolicitudToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             OperacionExternaSolicitud frm = new OperacionExternaSolicitud(this);
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void consultarSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             ConsultaOperacionesExternas frm = new ConsultaOperacionesExternas();
             frm.MdiParent = this;
             frm.Show();
-            Application.DoEvents();*/
+            Application.DoEvents();
         }
 
         private void consultarSolicitudesDeConcialiacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* Usuario inc = new Usuario();
+            Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
             ConsultaDeSolicitudes frm = new ConsultaDeSolicitudes();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+        //
+        private void transferenciaACuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            transferenciaCuentas frm = new TransferenciaCuentas();
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();*/
         }
 
-        private void transferenciaACuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void creacionDeCuentasToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Usuario inc = new Usuario();
             int intCodigoUsuario = inc.obtenerCodigoUsuario();
-            TransferenciaCuentas frm = new TransferenciaCuentas();
+            CreacionDeCuentaIngreso frm = new CreacionDeCuentaIngreso();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void consultaDeCuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ConsultaDeCuentas frm = new ConsultaDeCuentas();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void modificarCuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            ModificarCuenta frm = new ModificarCuenta("1");
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();*/
+        }
+
+        public void llamarForm(Form frm)
+        {
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+
+        private void asignarClientesAOrganizacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AsignacionDeClientesAOrganizaciones frm = new AsignacionDeClientesAOrganizaciones();
+            llamarForm(frm);
+        }
+
+        private void transferenciaAOrganizacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            PagoAOrganizaciones frm = new PagoAOrganizaciones();
             frm.MdiParent = this;
             frm.Show();
             Application.DoEvents();

@@ -44,6 +44,9 @@
     <Reference Include="CapaDiseñoOpciones">
       <HintPath>..\..\..\..\..\..\Desktop\Opciones\CapaDiseñoOpciones\CapaDiseñoOpciones\bin\Debug\CapaDiseñoOpciones.dll</HintPath>
     </Reference>
+    <Reference Include="CreacionDeCuentas">
+      <HintPath>C:\Users\vhjim\Desktop\CreacionDeCuentas\CreacionDeCuentas\bin\Debug\CreacionDeCuentas.dll</HintPath>
+    </Reference>
     <Reference Include="DiseñoTipoTransferencia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\TipoTransferencia\DiseñoTipoTransferencia\DiseñoTipoTransferencia\bin\Debug\DiseñoTipoTransferencia.dll</HintPath>
@@ -62,11 +65,15 @@
     <Reference Include="MantenimientoCuentas">
       <HintPath>..\..\MantenimientoCuentas\MantenimientoCuentas\bin\Debug\MantenimientoCuentas.dll</HintPath>
     </Reference>
-    <Reference Include="OperacionesExternas">
-      <HintPath>..\..\OperacionesExternas\OperacionesExternas\bin\Debug\OperacionesExternas.dll</HintPath>
+    <Reference Include="OperacionesExternas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SEMESTRE IX\INGENIERIADESOFTWARESEMESTREIX\Creacion de cuentas\OperacionesExternas\OperacionesExternas\bin\Debug\OperacionesExternas.dll</HintPath>
     </Reference>
     <Reference Include="OperacionesInternas">
-      <HintPath>..\..\OperacionesInternas\OperacionesInternas\bin\Debug\OperacionesInternas.dll</HintPath>
+      <HintPath>C:\Users\vhjim\Desktop\TransfeInternas\lib\OperacionesInternas.dll</HintPath>
+    </Reference>
+    <Reference Include="OperacionesPagosAOrganizaciones">
+      <HintPath>C:\Users\vhjim\Desktop\OperacionesPagosAOrganizaciones\OperacionesPagosAOrganizaciones\OperacionesPagosAOrganizaciones\bin\Debug\OperacionesPagosAOrganizaciones.dll</HintPath>
     </Reference>
     <Reference Include="Seguridad2.0">
       <HintPath>..\..\..\MDI SEGURIDAD FINAL\Seguridad_Analisis_II-master\Seguridad2.0\Seguridad2.0\bin\Debug\Seguridad2.0.exe</HintPath>
