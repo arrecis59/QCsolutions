@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="Conexion.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EstadoGestion.cs" />
     <Compile Include="MotivoGestion.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="TransaccionEmpleado.cs" />
     <Compile Include="TransaccionGestion.cs" />
     <Compile Include="TransaccionMotivo.cs" />
+    <Compile Include="TransaccionMotivoGestion.cs" />
     <EmbeddedResource Include="ProcesoGestion.resx">
       <DependentUpon>ProcesoGestion.cs</DependentUpon>
     </EmbeddedResource>

@@ -15,6 +15,9 @@ namespace procesoGestion
         public String correo { get; set; }
         public int tipo_empleado { get; set; }
 
-        
+        public String getNombre()
+        {
+            return this.nombre + " " + this.apellido1 + " " + this.apellido2;
+        }
     }
 }

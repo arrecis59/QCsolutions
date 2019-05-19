@@ -13,38 +13,41 @@ namespace procesoGestion
     {
         public static Empleado consultarEmpleado(int id_empleado)
         {
-            String dato = "";
+            String[] dato = new string [6];
             Empleado empleado = null;
             try
             {
                 using (var conn = new OdbcConnection("dsn=colchoneria"))
                 {
-                    OdbcDataReader Reader;
+                    OdbcDataReader reader;
                     conn.Open();
                     {
                         empleado = new Empleado();
                         using (var cmd = conn.CreateCommand())
                         {
                             cmd.CommandText = "SELECT id_empleado, nombre, apellido_1, apellido_2, correo, tipo_empleado " +
-                                "FROM tbl_empleado WHERE gestion = 1 AND id_empleado = " + id_empleado + ";";
-                            Reader = cmd.ExecuteReader();
-                            dato = Reader["id_empleado"].ToString();
-                            empleado.idEmpleado = Convert.ToInt32(dato);
-                            dato = Reader["nombre"].ToString();
-                            empleado.nombre = dato;
-                            dato = Reader["apellido_1"].ToString();
-                            empleado.apellido1 = dato;
-                            dato = Reader["apellido_2"].ToString();
-                            empleado.apellido2 = dato;
-                            dato = Reader["correo"].ToString();
-                            empleado.correo = dato;
-                            dato = Reader["tipo_empleado"].ToString();
-                            empleado.tipo_empleado = Convert.ToInt32(dato);
-
+                                "FROM tbl_empleado WHERE id_empleado = " + id_empleado + " AND gestion = 1 AND status = 1;";
+                            reader = cmd.ExecuteReader();
+                            while (reader.Read())
+                            {
+                                dato[0] = reader["id_empleado"].ToString();
+                                dato[1] = reader["nombre"].ToString();
+                                dato[2] = reader["apellido_1"].ToString();
+                                dato[3] = reader["apellido_2"].ToString();
+                                dato[4] = reader["correo"].ToString();
+                                dato[5] = reader["tipo_empleado"].ToString();
+                            }
                         }
                     }
                     conn.Close();
                 }
+
+                empleado.idEmpleado = Convert.ToInt32(dato[0]);
+                empleado.nombre = dato[1];
+                empleado.apellido1 = dato[2];
+                empleado.apellido2 = dato[3];
+                empleado.correo = dato[4];
+                empleado.tipo_empleado = Convert.ToInt32(dato[5]);  
             }
             catch (Exception ex)
             {
