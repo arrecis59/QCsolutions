@@ -42,14 +42,14 @@ namespace pruebaDLL
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DataTable Dt = new DataTable();
+            /*DataTable Dt = new DataTable();
             Dt = (DataTable)dataGridView1.DataSource;                  // Se crea un datatable que contenga los datos del data grid
-            dataGridView2.DataSource = Dt;
+            dataGridView2.DataSource = Dt;*/
 
-            DLL__Reporteador.Visualizador vp = new Visualizador();
+            /*DLL__Reporteador.Visualizador vp = new Visualizador();
             Prueba pp = new Prueba();
 
-            vp.generarReporte(Dt, pp);
+            vp.generarReporte(Dt, pp);*/
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,7 +98,6 @@ namespace pruebaDLL
 
             DataTable Dt = new DataTable();
             Dt = (DataTable)dataGridView1.DataSource;                  // Se crea un datatable que contenga los datos del data grid
-            dataGridView2.DataSource = Dt;
 
             DLL__Reporteador.Visualizador vp = new Visualizador();
             Prueba pp = new Prueba();
@@ -125,7 +124,7 @@ namespace pruebaDLL
         {
             DataTable Dt = new DataTable();
             Dt = (DataTable)dataGridView1.DataSource;                  // Se crea un datatable que contenga los datos del data grid
-            dataGridView2.DataSource = Dt;
+            //dataGridView2.DataSource = Dt;
         }
 
         private void button5_Click(object sender, EventArgs e)
