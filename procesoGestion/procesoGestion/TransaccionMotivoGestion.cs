@@ -81,38 +81,66 @@ namespace procesoGestion
             return true;
         }
 
+        //public void cargaComboBox(ComboBox comboBox)
+        //{
+        //    comboBox = new ComboBox();
+        //    String[] dato = new string[2];
+        //    try
+        //    {
+        //        using (var conn = new OdbcConnection("dns=colchoneria"))
+        //        {
+        //            OdbcDataReader reader;
+        //            conn.Open();
+        //            {
+        //                using (var cmd = conn.CreateCommand())
+        //                {
+        //                    cmd.CommandText = "SELECT id_motivo_gestion, nombre FROM tbl_motivo_gestion" +
+        //                        "WHERE AND status = 1;";
+        //                    reader = cmd.ExecuteReader();
+        //                    while (reader.Read())
+        //                    {
+        //                        dato[0] = reader["nombre"].ToString();
+        //                        dato[1] = reader["id_motivo_gestion"].ToString();
+        //                        comboBox.Items.Add(new ComboBoxItem(dato[0], Convert.ToInt32(dato[1])));
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.ToString(), "ERROR");
+        //    }
+        //}
+
         public void cargaComboBox(ComboBox comboBox)
         {
-            comboBox = new ComboBox();
-            String[] dato = new string[2];
             try
             {
-                using (var conn = new OdbcConnection("dns=colchoneria"))
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
                 {
                     OdbcDataReader reader;
                     conn.Open();
                     {
                         using (var cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = "SELECT id_motivo_gestion, nombre FROM tbl_motivo_gestion" +
-                                "WHERE AND status = 1;";
+                            cmd.CommandText = "SELECT id_motivo_gestion FROM tbl_motivo_gestion ; ";
                             reader = cmd.ExecuteReader();
                             while (reader.Read())
                             {
-                                dato[0] = reader["nombre"].ToString();
-                                dato[1] = reader["id_motivo_gestion"].ToString();
-                                comboBox.Items.Add(new ComboBoxItem(dato[0], Convert.ToInt32(dato[1])));
+                                comboBox.Items.Add(reader["id_motivo_gestion"].ToString());
                             }
                         }
                     }
+                    conn.Close();
                 }
+                comboBox.SelectedIndex = 0;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.ToString(), "ERROR");
+                MessageBox.Show(ex.ToString(), "ERROR");
             }
         }
-
         public static List<ComboBoxItem> getItems()
         {
             List<ComboBoxItem> items = new List<ComboBoxItem>();
