@@ -12,8 +12,6 @@ namespace procesoGestion
 {
     class TransaccionGestion
     {
-        OdbcTransaction transaction = null;
-
         public Tuple<OdbcConnection, OdbcTransaction> ObtenerConexion()
         {
             OdbcConnection conectar = new OdbcConnection("Dsn=colchoneria");
@@ -23,14 +21,12 @@ namespace procesoGestion
             
         }
 
+        /**
+         * Consulta una gestion por llave primaria.
+         * */
         public static Gestion consultarGestion(string id_gestion)
         {
-            String[] dato = new string[8];
-            int empl_servicio = 0;
-            int empl_solucion = 0;
-            int cliente = 0;
-            int motivo = 0;
-            int estado = 0;
+            String[] dato = new string[10];
             Gestion gestion = null;
             try
             {
@@ -42,52 +38,121 @@ namespace procesoGestion
                         gestion = new Gestion();
                         using (var cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = "SELECT id_gestion, DATE_FORMAT(fecha,'%d/%m/%Y'), DATE_FORMAT(fecha_solucion,'%d/%m/%Y'),estado, prioridad, " +
-                                "motivo, descripcion, empl_servicio, empl_solucion, id_cliente" +
+                            cmd.CommandText = "SELECT id_gestion, DATE_FORMAT(fecha_servicio,'%d/%m/%Y') AS fecha_servicio, DATE_FORMAT(fecha_solucion,'%d/%m/%Y') AS fecha_solucion, " +
+                                "id_estado, prioridad, id_motivo, descripcion, empl_servicio, empl_solucion, id_cliente, " +
                                 "FROM tbl_gestion WHERE id_gestion = " + id_gestion + ";";
                             //validar que exista el registro.
                             reader = cmd.ExecuteReader();
                             while (reader.Read())
                             {
                                 dato[0] = reader["id_gestion"].ToString();
-                                gestion.idGestion = Convert.ToInt32(dato[0]);
-                                dato[1]= reader["fecha"].ToString();
-                                gestion.fecha_gestion = Convert.ToDateTime(dato[1]);
-                                dato[2] = reader["estado"].ToString();
-                                estado = Convert.ToInt32(dato[2]);
-                                dato[3] = reader["motivo"].ToString();
-                                motivo = Convert.ToInt32(dato[3]);
-                                dato[4] = reader["descripcion"].ToString();
-                                gestion.descripcion = dato[4];
-                                dato[5] = reader["empl_servicio"].ToString();
-                                empl_servicio = Convert.ToInt32(dato[5]);
-                                dato[6] = reader["empl_solucion"].ToString();
-                                empl_solucion = Convert.ToInt32(dato[6]);
-                                dato[7] = reader["id_cliente"].ToString();
-                                cliente = Convert.ToInt32(dato[7]);
+                                dato[1]= reader["fecha_servicio"].ToString();
+                                dato[2] = reader["fecha_solucion"].ToString();
+                                dato[3] = reader["id_estado"].ToString();
+                                dato[4] = reader["prioridad"].ToString();
+                                dato[5] = reader["id_motivo"].ToString();
+                                dato[6] = reader["descripcion"].ToString();
+                                dato[7] = reader["empl_servicio"].ToString();
+                                dato[8] = reader["empl_solucion"].ToString();
+                                dato[9] = reader["id_cliente"].ToString();
                             }
                         }
                     }
                     conn.Close();
                 }
-                //Siempre tiene empleado servicio.
-                gestion.empl_servicio = TransaccionEmpleado.consultarEmpleado(empl_servicio);
-                //Empleado solucion si no existe = 0.
-                if(empl_solucion != 0)
-                {
-                    gestion.empl_solucion = TransaccionEmpleado.consultarEmpleado(empl_solucion);
-                } else
-                {
+                gestion.idGestion = Convert.ToInt32(dato[0]);
+                gestion.fecha_gestion = Convert.ToDateTime(dato[1]);
+                gestion.fecha_solucion = Convert.ToDateTime(dato[2]);
+                gestion.estado = TransaccionEstadoGestion.consultarEstado(Convert.ToInt32(dato[3]));
+                gestion.prioridad = Convert.ToInt32(dato[4]);
+                gestion.motivo = TransaccionMotivoGestion.consultarMotivo(Convert.ToInt32(dato[5]));
+                gestion.descripcion = dato[6];
+                gestion.empl_servicio = TransaccionEmpleado.consultarEmpleado(Convert.ToInt32(dato[7]));
+                //Si no existe = 0
+                if (Convert.ToInt32(dato[8]) != 0)
+                    gestion.empl_solucion = TransaccionEmpleado.consultarEmpleado(Convert.ToInt32(dato[8]));
+                else
                     gestion.empl_solucion = null;
-                }
-                //Cliente
-                gestion.cliente = TransaccionCliente.consultarCliente(cliente);
+                gestion.cliente = TransaccionCliente.consultarCliente(Convert.ToInt32(dato[9]));
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "ERROR");
             }
             return gestion;
+        }
+
+        public bool insertarGestion(Gestion gestion)
+        {
+            if (validacion(gestion))
+            {
+                String[] gestionArray = new string[10];
+                string atributos = " id_gestion, fecha_servicio, fecha_solucion, id_estado, prioridad, id_motivo, descripcion, empl_servicio, " +
+                    "empl_solucion, id_cliente, status ";
+                try
+                {
+                    using (var conn = new OdbcConnection("dns=colchoneria"))
+                    {
+                        conn.Open();
+                        {
+                            using (var cmd = conn.CreateCommand())
+                            {
+                                cmd.CommandText = "INSERT INTO tbl_gestion ( "+ atributos +" ) " +
+                                    "VALUES ("+ gestion.cadenaValor() +", 1)";
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Error al crear gestion.");
+                    return false;
+                }
+            }
+            MessageBox.Show("Ingreso exitoso.");
+            return true;
+        }
+
+        //public int getMaxId();
+
+        //Mantiene los valores iniciales (not null) de la gestion.
+        public bool seguimientoGestion(Gestion gestion)
+        {
+            try
+            {
+                using (var conn = new OdbcConnection("dns=colchoneria"))
+                {
+                    conn.Open();
+                    {
+                        using(var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = "UPDATE tbl_gestion " +
+                                "SET = " + gestion.getSeguimiento() + " ;";
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    conn.Close();
+                }
+            }catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error al actualizar gestion");
+                return false;
+            }
+            return true;
+        }
+
+        //Valida que existan los not null.
+        private bool validacion(Gestion gestion) 
+        {
+            if (gestion.idGestion == 0)
+                return false;
+            if (gestion.fecha_gestion == null)
+                return false;
+            if (gestion.empl_servicio.idEmpleado == 0)
+                return false;
+            if (gestion.cliente.idcliente == 0)
+                return false;
+            return true;
         }
         
     }

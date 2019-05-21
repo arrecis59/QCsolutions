@@ -12,5 +12,25 @@ namespace procesoGestion
         public String nombre { get; set; }
         public String descripcion { get; set; }
 
+        public override string ToString()
+        {
+            String[] tmp = new string[3];
+            tmp[0] = this.idEstadoGestion.ToString();
+            tmp[1] = this.nombre;
+            tmp[2] = this.descripcion;
+
+            return " " + tmp[0] + ", " + tmp[1] + ", "+ tmp[2] + " ";
+        }
+
+        public string cadenaValor()
+        {
+            String[] tmp = new string[3];
+            tmp[0] = this.idEstadoGestion.ToString();
+            tmp[1] = this.nombre;
+            tmp[2] = this.descripcion;
+
+            return " " + tmp[0] + ", '" + tmp[1] + "', '" + tmp[2] + "' ";
+        }
+
     }
 }

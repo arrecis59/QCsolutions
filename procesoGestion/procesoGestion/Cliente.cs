@@ -43,5 +43,25 @@ namespace procesoGestion
             return " " + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ", " + tmp[4] + ", " + tmp[5] + ", " + tmp[6] +
                 ", " + tmp[7] + ", " + tmp[8] + ", " + tmp[9] + ", " + tmp[10] + " ";
         }
+
+        public string cadenaValor()
+        {
+            String[] tmp = new string[11];
+            tmp[0] = Convert.ToString(this.idcliente);
+            tmp[1] = this.DPI;
+            tmp[2] = this.nombre;
+            tmp[3] = this.apellido1;
+            tmp[4] = this.apellido2;
+            tmp[5] = this.telefono;
+            tmp[6] = this.celular;
+            tmp[7] = this.correo;
+            tmp[8] = this.fecha_nac.ToShortDateString();
+            tmp[9] = this.genero;
+            tmp[10] = this.nit;
+
+            return " " + tmp[0] + ", '" + tmp[1] + "', '" + tmp[2] + "', '" + tmp[3] + "', '" + tmp[4] + "', '" + tmp[5] + "', '" + tmp[6] +
+                "', '" + tmp[7] + "', STR_TO_DATE('" + tmp[8] + "','%d/%m/%Y') , '" + tmp[9] + "', '" + tmp[10] + "' ";
+        }
+
     }
 }

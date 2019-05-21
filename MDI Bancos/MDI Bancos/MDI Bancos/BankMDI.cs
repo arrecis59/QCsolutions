@@ -24,7 +24,8 @@ using Seguridad2;
 //using OperacionesExternas.BeneficiarioExterno;
 //using OperacionesExternas.OperacionExterna;
 //using OperacionesExternas;
-using OperacionesInternas;
+//using OperacionesInternas;
+using ConceptosIngresosEgresos;
 
 
 namespace MDI_Bancos
@@ -308,6 +309,17 @@ namespace MDI_Bancos
             frm.Show();
             Application.DoEvents();
         }
+
+        private void conceptoEgresoIngresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario inc = new Usuario();
+            int intCodigoUsuario = inc.obtenerCodigoUsuario();
+            Ingreso_de_Conceptos frm = new Ingreso_de_Conceptos();
+            frm.MdiParent = this;
+            frm.Show();
+            Application.DoEvents();
+        }
+    }
 
 
         /*----------------EJEMPLO PARA ABRIR UN FORM

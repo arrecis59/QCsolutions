@@ -56,17 +56,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cmb_motivo = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cmb_estado = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.grp_gestion = new System.Windows.Forms.GroupBox();
             this.cmb_prioridad = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmb_estado = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmb_motivo = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txt_fecha = new System.Windows.Forms.TextBox();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grp_cliente.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grp_gestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -179,12 +181,13 @@
             this.grp_cliente.Controls.Add(this.btnBuscarCliente);
             this.grp_cliente.Controls.Add(this.txt_dpi);
             this.grp_cliente.Controls.Add(this.label2);
+            this.grp_cliente.ForeColor = System.Drawing.SystemColors.ControlText;
             this.grp_cliente.Location = new System.Drawing.Point(12, 76);
             this.grp_cliente.Name = "grp_cliente";
             this.grp_cliente.Size = new System.Drawing.Size(925, 143);
             this.grp_cliente.TabIndex = 76;
             this.grp_cliente.TabStop = false;
-            this.grp_cliente.Text = "Información del Cliente";
+            this.grp_cliente.Text = "INFORMACION DE CLIENTE";
             // 
             // txt_nit
             // 
@@ -343,54 +346,30 @@
             this.checkBox1.Text = "Auto";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grp_gestion
             // 
-            this.groupBox1.Controls.Add(this.cmb_prioridad);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.cmb_estado);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.cmb_motivo);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Location = new System.Drawing.Point(12, 226);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(925, 261);
-            this.groupBox1.TabIndex = 79;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalle Gestión";
+            this.grp_gestion.Controls.Add(this.label15);
+            this.grp_gestion.Controls.Add(this.txt_descripcion);
+            this.grp_gestion.Controls.Add(this.cmb_prioridad);
+            this.grp_gestion.Controls.Add(this.label14);
+            this.grp_gestion.Controls.Add(this.cmb_estado);
+            this.grp_gestion.Controls.Add(this.label13);
+            this.grp_gestion.Controls.Add(this.cmb_motivo);
+            this.grp_gestion.Controls.Add(this.label12);
+            this.grp_gestion.Location = new System.Drawing.Point(12, 226);
+            this.grp_gestion.Name = "grp_gestion";
+            this.grp_gestion.Size = new System.Drawing.Size(925, 263);
+            this.grp_gestion.TabIndex = 79;
+            this.grp_gestion.TabStop = false;
+            this.grp_gestion.Text = "DETALLE DE GESTION";
             // 
-            // label12
+            // cmb_prioridad
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 32);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 19);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Motivo: ";
-            // 
-            // cmb_motivo
-            // 
-            this.cmb_motivo.FormattingEnabled = true;
-            this.cmb_motivo.Location = new System.Drawing.Point(76, 24);
-            this.cmb_motivo.Name = "cmb_motivo";
-            this.cmb_motivo.Size = new System.Drawing.Size(150, 27);
-            this.cmb_motivo.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(702, 32);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 19);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Estado: ";
-            // 
-            // cmb_estado
-            // 
-            this.cmb_estado.FormattingEnabled = true;
-            this.cmb_estado.Location = new System.Drawing.Point(769, 24);
-            this.cmb_estado.Name = "cmb_estado";
-            this.cmb_estado.Size = new System.Drawing.Size(150, 27);
-            this.cmb_estado.TabIndex = 3;
+            this.cmb_prioridad.FormattingEnabled = true;
+            this.cmb_prioridad.Location = new System.Drawing.Point(314, 24);
+            this.cmb_prioridad.Name = "cmb_prioridad";
+            this.cmb_prioridad.Size = new System.Drawing.Size(150, 27);
+            this.cmb_prioridad.TabIndex = 5;
             // 
             // label14
             // 
@@ -401,13 +380,39 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Prioridad: ";
             // 
-            // cmb_prioridad
+            // cmb_estado
             // 
-            this.cmb_prioridad.FormattingEnabled = true;
-            this.cmb_prioridad.Location = new System.Drawing.Point(314, 24);
-            this.cmb_prioridad.Name = "cmb_prioridad";
-            this.cmb_prioridad.Size = new System.Drawing.Size(150, 27);
-            this.cmb_prioridad.TabIndex = 5;
+            this.cmb_estado.FormattingEnabled = true;
+            this.cmb_estado.Location = new System.Drawing.Point(769, 24);
+            this.cmb_estado.Name = "cmb_estado";
+            this.cmb_estado.Size = new System.Drawing.Size(150, 27);
+            this.cmb_estado.TabIndex = 3;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(702, 32);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 19);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Estado: ";
+            // 
+            // cmb_motivo
+            // 
+            this.cmb_motivo.FormattingEnabled = true;
+            this.cmb_motivo.Location = new System.Drawing.Point(76, 24);
+            this.cmb_motivo.Name = "cmb_motivo";
+            this.cmb_motivo.Size = new System.Drawing.Size(150, 27);
+            this.cmb_motivo.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 32);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 19);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Motivo: ";
             // 
             // txt_fecha
             // 
@@ -416,6 +421,24 @@
             this.txt_fecha.Size = new System.Drawing.Size(300, 27);
             this.txt_fecha.TabIndex = 80;
             // 
+            // txt_descripcion
+            // 
+            this.txt_descripcion.Location = new System.Drawing.Point(111, 77);
+            this.txt_descripcion.Multiline = true;
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(804, 170);
+            this.txt_descripcion.TabIndex = 6;
+            this.txt_descripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(12, 77);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(93, 19);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Descripción: ";
+            // 
             // frm_proceso_gestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -423,7 +446,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.txt_fecha);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grp_gestion);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.grp_cliente);
@@ -440,8 +463,8 @@
             this.panel1.PerformLayout();
             this.grp_cliente.ResumeLayout(false);
             this.grp_cliente.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grp_gestion.ResumeLayout(false);
+            this.grp_gestion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,7 +500,7 @@
         private System.Windows.Forms.TextBox txt_nit;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grp_gestion;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmb_motivo;
         private System.Windows.Forms.ComboBox cmb_estado;
@@ -485,6 +508,8 @@
         private System.Windows.Forms.ComboBox cmb_prioridad;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_fecha;
+        private System.Windows.Forms.TextBox txt_descripcion;
+        private System.Windows.Forms.Label label15;
     }
 }
 

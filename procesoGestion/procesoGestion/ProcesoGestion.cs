@@ -15,6 +15,7 @@ namespace procesoGestion
         private Gestion gestion = new Gestion();
         private Cliente cliente = new Cliente();
         private static DateTime fechaActual = DateTime.Today;
+        ComboBox cmb_motivo_gestion = ComboBoxItem.llenarCmb(TransaccionMotivoGestion.getItems());
 
         public frm_proceso_gestion()
         {
@@ -22,6 +23,7 @@ namespace procesoGestion
 
             //Inicializacion
             txt_fecha.Text = fechaActual.ToLongDateString();
+            cmb_motivo = cmb_motivo_gestion;
             //if(operacion == "MODIFICAR")
         }
 

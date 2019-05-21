@@ -148,8 +148,9 @@ namespace procesoGestion
                         {
                             using (var cmd = conn.CreateCommand())
                             {
-                                cmd.CommandText = "INSERT INTO (" + atributos + ") " +
-                                    "VALUES ( "+ cliente.ToString() +" );";
+                                cmd.CommandText = "INSERT INTO tbl_cliente(" + atributos + ") " +
+                                    "VALUES ( "+ cliente.cadenaValor() +", 1 );";
+                                cmd.ExecuteNonQuery();
                             }
                         }
                         conn.Close();
@@ -161,7 +162,7 @@ namespace procesoGestion
                     return false;
                 }
             }
-            MessageBox.Show("Ingresado exitosamente.");
+            MessageBox.Show("Ingreso exitoso.");
             return true;
         }
 
