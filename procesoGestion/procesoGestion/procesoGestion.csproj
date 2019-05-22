@@ -70,6 +70,12 @@
     <Compile Include="Gestion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeguimientoGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeguimientoGestion.Designer.cs">
+      <DependentUpon>SeguimientoGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransaccionCliente.cs" />
     <Compile Include="TransaccionEmpleado.cs" />
     <Compile Include="TransaccionEstadoGestion.cs" />
@@ -90,6 +96,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SeguimientoGestion.resx">
+      <DependentUpon>SeguimientoGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
