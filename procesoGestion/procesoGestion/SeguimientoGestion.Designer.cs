@@ -34,7 +34,9 @@
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_asignacionPerfiles = new System.Windows.Forms.Label();
+            this.dgv_gestion = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_gestion)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -85,6 +87,7 @@
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.Text = "_";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_cerrar
             // 
@@ -100,6 +103,7 @@
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // Lbl_asignacionPerfiles
             // 
@@ -112,20 +116,31 @@
             this.Lbl_asignacionPerfiles.TabIndex = 48;
             this.Lbl_asignacionPerfiles.Text = "Seguimiento Gestion";
             // 
+            // dgv_gestion
+            // 
+            this.dgv_gestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_gestion.Location = new System.Drawing.Point(13, 37);
+            this.dgv_gestion.Name = "dgv_gestion";
+            this.dgv_gestion.Size = new System.Drawing.Size(925, 567);
+            this.dgv_gestion.TabIndex = 74;
+            // 
             // SeguimientoGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.dgv_gestion);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SeguimientoGestion";
             this.Text = "SeguimientoGestion";
+            this.Load += new System.EventHandler(this.SeguimientoGestion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_gestion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,5 +153,6 @@
         private System.Windows.Forms.Button btn_minimizar;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label Lbl_asignacionPerfiles;
+        private System.Windows.Forms.DataGridView dgv_gestion;
     }
 }

@@ -158,7 +158,7 @@ namespace procesoGestion
         }
 
         //Devuelve datatable con gestiones pendientes.
-        public DataSet llenarDataGrid()
+        public static DataSet llenarDataGrid()
         {
             DataSet ds = new DataSet();
             try
@@ -171,7 +171,7 @@ namespace procesoGestion
                         using (var cmd = conn.CreateCommand())
                         {
                             cmd.CommandText = " SELECT g.id_gestion, CONCAT(e.nombre, \" \", e.apellido_1) AS empleado, " +
-                                " CONCAT(c.nombre, \" \", c.apellido_1) AS cliente, g.prioridad " +
+                                " CONCAT(c.nombre, \" \", c.apellido_1) AS cliente, g.prioridad, g.descripcion " +
                                 " FROM tbl_gestion g, tbl_empleado e, tbl_cliente c " +
                                 " WHERE g.empl_servicio = e.id_empleado " +
                                 " AND g.id_cliente = c.id_cliente " +

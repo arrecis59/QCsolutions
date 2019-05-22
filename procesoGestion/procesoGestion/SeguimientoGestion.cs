@@ -16,5 +16,21 @@ namespace procesoGestion
         {
             InitializeComponent();
         }
+
+        private void SeguimientoGestion_Load(object sender, EventArgs e)
+        {
+            DataSet ds = TransaccionGestion.llenarDataGrid();
+            dgv_gestion.DataSource = ds.Tables[0];
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

@@ -16,7 +16,8 @@ namespace procesoGestion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_proceso_gestion());
+            //Application.Run(new frm_proceso_gestion());
+            Application.Run(new SeguimientoGestion());
         }
     }
 }
