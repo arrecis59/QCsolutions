@@ -335,9 +335,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 19);
+            this.label4.Size = new System.Drawing.Size(109, 19);
             this.label4.TabIndex = 77;
-            this.label4.Text = "Fecha: ";
+            this.label4.Text = "Fecha Gestion: ";
             // 
             // ckb_idGestion
             // 
@@ -438,7 +438,7 @@
             // 
             // txt_fecha
             // 
-            this.txt_fecha.Location = new System.Drawing.Point(69, 43);
+            this.txt_fecha.Location = new System.Drawing.Point(131, 43);
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(300, 27);
             this.txt_fecha.TabIndex = 80;

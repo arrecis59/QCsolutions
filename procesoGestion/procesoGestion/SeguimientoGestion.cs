@@ -44,7 +44,6 @@ namespace procesoGestion
 
         private void rbtn_pendiente_CheckedChanged(object sender, EventArgs e)
         {
-            dgv_gestion = new DataGridView();
             DataSet ds = TransaccionGestion.llenarDataGridPen();
             dgv_gestion.Refresh();
             dgv_gestion.DataSource = ds.Tables[0];
@@ -53,7 +52,6 @@ namespace procesoGestion
         
         private void rbtn_solucionados_CheckedChanged(object sender, EventArgs e)
         {
-            dgv_gestion = new DataGridView();
             DataSet ds = TransaccionGestion.llenarDataGridSol();
             dgv_gestion.Refresh();
             dgv_gestion.DataSource = ds.Tables[0];

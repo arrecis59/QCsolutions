@@ -105,7 +105,6 @@ namespace procesoGestion
                         }
                         conn.Close();
                     }
-                    comboBox.SelectedIndex = 0;
                 }
                 catch (Exception ex)
                 {

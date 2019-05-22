@@ -116,7 +116,7 @@ namespace procesoGestion
         }
 
         //Retorna el siguien valor de id_gestion.
-        public int getMaxId() {
+        public static int getMaxId() {
             String[] dato = new string[1];
             int tmp = 0;
             try

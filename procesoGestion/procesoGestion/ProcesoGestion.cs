@@ -24,6 +24,7 @@ namespace procesoGestion
             InitializeComponent();
             this.accion = "NUEVO";
             txt_fecha.Text = fechaActual.ToLongDateString();
+            initFormNuevo();
         }
 
         public frm_proceso_gestion(int idGestion)
@@ -31,7 +32,7 @@ namespace procesoGestion
             InitializeComponent();
             this.accion = "MODIFICAR";
             this.gestion = TransaccionGestion.consultarGestion(idGestion);
-            llenarForm();
+            initFormSeguimiento();
 
         }
 
@@ -52,10 +53,7 @@ namespace procesoGestion
 
         private void frm_proceso_gestion_Load(object sender, EventArgs e)
         {
-            TransaccionMotivoGestion.cargaComboBox(cmb_motivo);
-            TransaccionEstadoGestion.cargaComboBox(cmb_estado);
-            llenarPrioridad(cmb_prioridad);
-            this.empleado = TransaccionEmpleado.consultarEmpleado(10);
+            
         }
 
         private void llenarPrioridad(ComboBox cmb)
@@ -65,7 +63,6 @@ namespace procesoGestion
             cmb.Items.Add("3");
             cmb.Items.Add("2");
             cmb.Items.Add("1");
-            cmb.SelectedIndex = 0;
         }
 
         //Crea o modifica gestion.
@@ -73,6 +70,10 @@ namespace procesoGestion
         {
             if (this.accion == "NUEVO")
             {
+                //si esta marcado el auto genera el id a gestion.
+                if (ckb_idGestion.Checked)
+                    this.gestion.idGestion = TransaccionGestion.getMaxId();
+
                 reunirDatosGestion();
                 if (TransaccionGestion.insertarGestion(this.gestion))
                     MessageBox.Show("Creado exitosamente.");
@@ -94,8 +95,68 @@ namespace procesoGestion
             this.WindowState = FormWindowState.Maximized;
         }
         
-        private void llenarForm()
+        //Inicializa el form para una nueva gestion.
+        public void initFormNuevo()
         {
+            TransaccionMotivoGestion.cargaComboBox(cmb_motivo);
+            TransaccionEstadoGestion.cargaComboBox(cmb_estado);
+            llenarPrioridad(cmb_prioridad);
+            this.empleado = TransaccionEmpleado.consultarEmpleado(10);
+
+            txt_idGestion.Enabled = true;
+            txt_fecha.Enabled = false;
+            txt_dpi.Enabled = true;
+            txt_nomCliente.Enabled = false;
+            txt_fecNac.Enabled = false;
+            txt_genero.Enabled = false;
+            txt_correo.Enabled = false;
+            txt_telefono.Enabled = false;
+            txt_celular.Enabled = false;
+            txt_nit.Enabled = false;
+            cmb_motivo.Enabled = true;
+            cmb_prioridad.Enabled = true;
+            cmb_estado.Enabled = true;
+            txt_descripcion.Enabled = true;
+            btnBuscarCliente.Enabled = true;
+            btnBuscarCliente.Show();
+            ckb_idGestion.Enabled = true;
+            
+            cmb_estado.SelectedIndex = 0;
+            cmb_motivo.SelectedIndex = 0;
+            cmb_prioridad.SelectedIndex = 0;
+
+        }
+
+        //Inicializa el form con una gestion.
+        private void initFormSeguimiento()
+        {
+            TransaccionMotivoGestion.cargaComboBox(cmb_motivo);
+            TransaccionEstadoGestion.cargaComboBox(cmb_estado);
+            llenarPrioridad(cmb_prioridad);
+            this.empleado = TransaccionEmpleado.consultarEmpleado(10);
+
+            txt_idGestion.Enabled = false;
+            txt_fecha.Enabled = false;
+            txt_dpi.Enabled = false;
+            txt_nomCliente.Enabled = false;
+            txt_fecNac.Enabled = false;
+            txt_genero.Enabled = false;
+            txt_correo.Enabled = false;
+            txt_telefono.Enabled = false;
+            txt_celular.Enabled = false;
+            txt_nit.Enabled = false;
+            cmb_motivo.Enabled = false;
+            cmb_prioridad.Enabled = false;
+            cmb_estado.Enabled = true;
+            txt_descripcion.Enabled = true;
+            btnBuscarCliente.Enabled = false;
+            btnBuscarCliente.Hide();
+            ckb_idGestion.Enabled = false;
+            if (this.gestion.estado.idEstadoGestion == 2)
+                btn_guardar.Enabled = false;
+            else
+                btn_guardar.Enabled = true;
+
             txt_idGestion.Text = this.gestion.idGestion.ToString();
             txt_fecha.Text = this.gestion.fecha_gestion.ToLongDateString();
             txt_dpi.Text = this.gestion.cliente.DPI.ToString();
