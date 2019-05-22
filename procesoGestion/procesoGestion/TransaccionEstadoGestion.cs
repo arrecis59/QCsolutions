@@ -83,35 +83,34 @@ namespace procesoGestion
             return true;
         }
 
-        public void cargaComboBox(ComboBox comboBox)
+        public static void cargaComboBox(ComboBox comboBox)
         {
-            String[] dato = new string[2];
-            try
             {
-                using (var conn = new OdbcConnection("dns=colchoneria"))
+                try
                 {
-                    OdbcDataReader reader;
-                    conn.Open();
+                    using (var conn = new OdbcConnection("dsn=colchoneria"))
                     {
-                        using (var cmd = conn.CreateCommand())
+                        OdbcDataReader reader;
+                        conn.Open();
                         {
-                            cmd.CommandText = "SELECT id_estado_gestion, nombre FROM tbl_estado_gestion" +
-                                "WHERE status = 1;";
-                            reader = cmd.ExecuteReader();
-                            while (reader.Read())
+                            using (var cmd = conn.CreateCommand())
                             {
-                                dato[0] = reader["nombre"].ToString();
-                                dato[1] = reader["id_motivo_gestion"].ToString();
-
-                                comboBox.Items.Add(new ComboBoxItem(dato[0], Convert.ToInt32(dato[1])));
+                                cmd.CommandText = "SELECT id_estado_gestion FROM tbl_estado_gestion ; ";
+                                reader = cmd.ExecuteReader();
+                                while (reader.Read())
+                                {
+                                    comboBox.Items.Add(reader["id_estado_gestion"].ToString());
+                                }
                             }
                         }
+                        conn.Close();
                     }
+                    comboBox.SelectedIndex = 0;
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.ToString(), "ERROR");
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "ERROR");
+                }
             }
         }
 

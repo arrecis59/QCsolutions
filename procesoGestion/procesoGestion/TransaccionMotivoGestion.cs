@@ -113,7 +113,7 @@ namespace procesoGestion
         //    }
         //}
 
-        public void cargaComboBox(ComboBox comboBox)
+        public static void cargaComboBox(ComboBox comboBox)
         {
             try
             {
@@ -141,6 +141,7 @@ namespace procesoGestion
                 MessageBox.Show(ex.ToString(), "ERROR");
             }
         }
+
         public static List<ComboBoxItem> getItems()
         {
             List<ComboBoxItem> items = new List<ComboBoxItem>();

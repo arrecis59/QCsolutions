@@ -57,6 +57,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.grp_gestion = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.cmb_prioridad = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
@@ -64,8 +66,6 @@
             this.cmb_motivo = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_fecha = new System.Windows.Forms.TextBox();
-            this.txt_descripcion = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grp_cliente.SuspendLayout();
             this.grp_gestion.SuspendLayout();
@@ -119,6 +119,7 @@
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.Text = "_";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_cerrar
             // 
@@ -134,6 +135,7 @@
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.Text = "x";
             this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click_1);
             // 
             // Lbl_asignacionPerfiles
             // 
@@ -363,6 +365,23 @@
             this.grp_gestion.TabStop = false;
             this.grp_gestion.Text = "DETALLE DE GESTION";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(12, 77);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(93, 19);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Descripción: ";
+            // 
+            // txt_descripcion
+            // 
+            this.txt_descripcion.Location = new System.Drawing.Point(111, 77);
+            this.txt_descripcion.Multiline = true;
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(804, 170);
+            this.txt_descripcion.TabIndex = 6;
+            // 
             // cmb_prioridad
             // 
             this.cmb_prioridad.FormattingEnabled = true;
@@ -421,24 +440,6 @@
             this.txt_fecha.Size = new System.Drawing.Size(300, 27);
             this.txt_fecha.TabIndex = 80;
             // 
-            // txt_descripcion
-            // 
-            this.txt_descripcion.Location = new System.Drawing.Point(111, 77);
-            this.txt_descripcion.Multiline = true;
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(804, 170);
-            this.txt_descripcion.TabIndex = 6;
-            this.txt_descripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 77);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 19);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Descripción: ";
-            // 
             // frm_proceso_gestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -459,6 +460,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_proceso_gestion";
             this.Text = "f ";
+            this.Load += new System.EventHandler(this.frm_proceso_gestion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grp_cliente.ResumeLayout(false);
