@@ -55,7 +55,7 @@
             this.txt_dpi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckb_idGestion = new System.Windows.Forms.CheckBox();
             this.grp_gestion = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
@@ -338,15 +338,15 @@
             this.label4.TabIndex = 77;
             this.label4.Text = "Fecha: ";
             // 
-            // checkBox1
+            // ckb_idGestion
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(879, 50);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(58, 23);
-            this.checkBox1.TabIndex = 78;
-            this.checkBox1.Text = "Auto";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckb_idGestion.AutoSize = true;
+            this.ckb_idGestion.Location = new System.Drawing.Point(879, 50);
+            this.ckb_idGestion.Name = "ckb_idGestion";
+            this.ckb_idGestion.Size = new System.Drawing.Size(58, 23);
+            this.ckb_idGestion.TabIndex = 78;
+            this.ckb_idGestion.Text = "Auto";
+            this.ckb_idGestion.UseVisualStyleBackColor = true;
             // 
             // grp_gestion
             // 
@@ -448,7 +448,7 @@
             this.ClientSize = new System.Drawing.Size(950, 650);
             this.Controls.Add(this.txt_fecha);
             this.Controls.Add(this.grp_gestion);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ckb_idGestion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.grp_cliente);
             this.Controls.Add(this.txt_idGestion);
@@ -501,7 +501,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_nit;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ckb_idGestion;
         private System.Windows.Forms.GroupBox grp_gestion;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmb_motivo;
