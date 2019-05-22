@@ -82,7 +82,7 @@ namespace procesoGestion
             return gestion;
         }
 
-        public bool insertarGestion(Gestion gestion)
+        public static bool insertarGestion(Gestion gestion)
         {
             if (validacion(gestion))
             {
@@ -91,7 +91,7 @@ namespace procesoGestion
                     "empl_solucion, id_cliente, status ";
                 try
                 {
-                    using (var conn = new OdbcConnection("dns=colchoneria"))
+                    using (var conn = new OdbcConnection("dsn=colchoneria"))
                     {
                         conn.Open();
                         {
@@ -102,15 +102,17 @@ namespace procesoGestion
                                 cmd.ExecuteNonQuery();
                             }
                         }
+                        conn.Close();
                     }
                 }catch (Exception e)
                 {
                     MessageBox.Show(e.Message, "Error al crear gestion.");
                     return false;
                 }
+                return true;
             }
-            MessageBox.Show("Ingreso exitoso.");
-            return true;
+            MessageBox.Show("Faltan valores.");
+            return false;
         }
 
         //public int getMaxId();
@@ -120,7 +122,7 @@ namespace procesoGestion
         {
             try
             {
-                using (var conn = new OdbcConnection("dns=colchoneria"))
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
                 {
                     conn.Open();
                     {
@@ -142,7 +144,7 @@ namespace procesoGestion
         }
 
         //Valida que existan los not null.
-        private bool validacion(Gestion gestion) 
+        private static bool validacion(Gestion gestion) 
         {
             if (gestion.idGestion == 0)
                 return false;
@@ -153,6 +155,40 @@ namespace procesoGestion
             if (gestion.cliente.idcliente == 0)
                 return false;
             return true;
+        }
+
+        //Devuelve datatable con gestiones pendientes.
+        public DataSet llenarDataGrid()
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
+                {
+                    conn.Open();
+
+                    {
+                        using (var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = " SELECT g.id_gestion, CONCAT(e.nombre, \" \", e.apellido_1) AS empleado, " +
+                                " CONCAT(c.nombre, \" \", c.apellido_1) AS cliente, g.prioridad " +
+                                " FROM tbl_gestion g, tbl_empleado e, tbl_cliente c " +
+                                " WHERE g.empl_servicio = e.id_empleado " +
+                                " AND g.id_cliente = c.id_cliente " +
+                                " AND g.id_estado = 1 ; ";
+                            OdbcDataAdapter datos = new OdbcDataAdapter(cmd);
+                            ds = new DataSet();
+                            datos.Fill(ds);
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return ds;
         }
         
     }

@@ -17,16 +17,16 @@ namespace procesoGestion
             MotivoGestion motivo = new MotivoGestion();
             try
             {
-                using (var conn = new OdbcConnection("dns=colchoneria"))
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
                 {
                     OdbcDataReader reader;
                     conn.Open();
                     {
                         using (var cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = "SELECT id_motivo_estado, nombre, tipo_empleado, descripcion " +
+                            cmd.CommandText = "SELECT id_motivo_gestion, nombre, tipo_empleado, descripcion " +
                                 " FROM tbl_motivo_gestion " +
-                                "WHERE status = 1 AND id_motivo_gestion = "+ idMotivo.ToString() +";";
+                                "WHERE status = 1 AND id_motivo_gestion = " + idMotivo.ToString() +" ;";
                             reader = cmd.ExecuteReader();
                             while (reader.Read())
                             {
@@ -59,7 +59,7 @@ namespace procesoGestion
                 string atributos = " id_motivo_gestion, nombre, tipo_empleado, descripcion, status ";
                 try
                 {
-                    using(var conn = new OdbcConnection("dns=colchoneria"))
+                    using(var conn = new OdbcConnection("dsn=colchoneria"))
                     {
                         conn.Open();
                         {

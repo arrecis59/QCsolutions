@@ -18,14 +18,14 @@ namespace procesoGestion
             EstadoGestion estado = new EstadoGestion();
             try
             {
-                using (var conn = new OdbcConnection("dns=colchoneria"))
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
                 {
                     OdbcDataReader reader;
                     conn.Open();
                     {
                         using (var cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = "SELECT id_estado_estado, nombre, descripcion " +
+                            cmd.CommandText = "SELECT id_estado_gestion, nombre, descripcion " +
                                 " FROM tbl_estado_gestion " +
                                 "WHERE status = 1 AND id_estado_gestion = " + idEstado.ToString() + ";";
                             reader = cmd.ExecuteReader();
@@ -59,7 +59,7 @@ namespace procesoGestion
                 string atributos = " id_motivo_gestion, nombre, descripcion, status ";
                 try
                 {
-                    using (var conn = new OdbcConnection("dns=colchoneria"))
+                    using (var conn = new OdbcConnection("dsn=colchoneria"))
                     {
                         conn.Open();
                         {

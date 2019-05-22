@@ -66,6 +66,7 @@
             this.cmb_motivo = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_fecha = new System.Windows.Forms.TextBox();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grp_cliente.SuspendLayout();
             this.grp_gestion.SuspendLayout();
@@ -341,6 +342,8 @@
             // ckb_idGestion
             // 
             this.ckb_idGestion.AutoSize = true;
+            this.ckb_idGestion.Checked = true;
+            this.ckb_idGestion.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckb_idGestion.Location = new System.Drawing.Point(879, 50);
             this.ckb_idGestion.Name = "ckb_idGestion";
             this.ckb_idGestion.Size = new System.Drawing.Size(58, 23);
@@ -440,12 +443,23 @@
             this.txt_fecha.Size = new System.Drawing.Size(300, 27);
             this.txt_fecha.TabIndex = 80;
             // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Location = new System.Drawing.Point(718, 496);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(220, 118);
+            this.btn_guardar.TabIndex = 81;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            // 
             // frm_proceso_gestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.txt_fecha);
             this.Controls.Add(this.grp_gestion);
             this.Controls.Add(this.ckb_idGestion);
@@ -512,6 +526,7 @@
         private System.Windows.Forms.TextBox txt_fecha;
         private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btn_guardar;
     }
 }
 

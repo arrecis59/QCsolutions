@@ -51,7 +51,7 @@ namespace procesoGestion
             tmp[8] = this.empl_solucion.idEmpleado.ToString();
             tmp[9] = this.cliente.idcliente.ToString();
             return " " + tmp[0] + ", STR_TO_DATE('" + tmp[1] + "','%d/%m/%Y'), STR_TO_DATE('" + tmp[2] + "','%d/%m/%Y'), '" + tmp[3] +
-                "', " + tmp[4] + ", " + tmp[5] + ", " + tmp[6] + ", " + tmp[7] + ", " + tmp[8] + ", " + tmp[9] + " ";
+                "', " + tmp[4] + ", " + tmp[5] + ", '" + tmp[6] + "', " + tmp[7] + ", " + tmp[8] + ", " + tmp[9] + " ";
         }
 
         public string getSeguimiento()

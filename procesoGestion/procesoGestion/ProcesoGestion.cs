@@ -14,15 +14,15 @@ namespace procesoGestion
     {
         private Gestion gestion = new Gestion();
         private Cliente cliente = new Cliente();
-        private static DateTime fechaActual = DateTime.Today;
+        private Empleado empleado = new Empleado();
+        private DateTime fechaActual = DateTime.Today;
         //ComboBox cmb_motivo_gestion = ComboBoxItem.llenarCmb(TransaccionMotivoGestion.getItems());
 
         public frm_proceso_gestion()
         {
             InitializeComponent();
 
-            //Inicializacion
-            //if(operacion == "MODIFICAR")
+            
         }
 
         //Nueva Gestion
@@ -46,6 +46,7 @@ namespace procesoGestion
             TransaccionMotivoGestion.cargaComboBox(cmb_motivo);
             TransaccionEstadoGestion.cargaComboBox(cmb_estado);
             llenarPrioridad(cmb_prioridad);
+            this.empleado = TransaccionEmpleado.consultarEmpleado(10);
         }
 
         private void llenarPrioridad(ComboBox cmb)
@@ -58,6 +59,15 @@ namespace procesoGestion
             cmb.SelectedIndex = 0;
         }
 
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            crearGestion();
+            if (TransaccionGestion.insertarGestion(this.gestion))
+                MessageBox.Show("Creado exitosamente.");
+            else
+                MessageBox.Show("Error al crear.");
+        }
+
         private void btn_cerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -67,5 +77,20 @@ namespace procesoGestion
         {
             this.WindowState = FormWindowState.Maximized;
         }
+        
+        private void crearGestion()
+        {
+            this.gestion.idGestion = Convert.ToInt32(txt_idGestion.Text);
+            this.gestion.fecha_gestion = this.fechaActual;
+            this.gestion.fecha_gestion = this.fechaActual;
+            this.gestion.descripcion = txt_descripcion.Text;
+            this.gestion.empl_servicio = this.empleado;
+            this.gestion.empl_solucion = this.empleado;
+            this.gestion.cliente = this.cliente;
+            this.gestion.motivo = TransaccionMotivoGestion.consultarMotivo(Convert.ToInt32(cmb_motivo.Text));
+            this.gestion.estado = TransaccionEstadoGestion.consultarEstado(Convert.ToInt32(cmb_estado.Text));
+            this.gestion.prioridad = Convert.ToInt32(cmb_prioridad.Text);
+        }
+
     }
 }
