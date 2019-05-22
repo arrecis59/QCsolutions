@@ -24,7 +24,7 @@ namespace procesoGestion
         /**
          * Consulta una gestion por llave primaria.
          * */
-        public static Gestion consultarGestion(string id_gestion)
+        public static Gestion consultarGestion(int id_gestion)
         {
             String[] dato = new string[10];
             Gestion gestion = null;
@@ -39,8 +39,8 @@ namespace procesoGestion
                         using (var cmd = conn.CreateCommand())
                         {
                             cmd.CommandText = "SELECT id_gestion, DATE_FORMAT(fecha_servicio,'%d/%m/%Y') AS fecha_servicio, DATE_FORMAT(fecha_solucion,'%d/%m/%Y') AS fecha_solucion, " +
-                                "id_estado, prioridad, id_motivo, descripcion, empl_servicio, empl_solucion, id_cliente, " +
-                                "FROM tbl_gestion WHERE id_gestion = " + id_gestion + ";";
+                                "id_estado, prioridad, id_motivo, descripcion, empl_servicio, empl_solucion, id_cliente " +
+                                "FROM tbl_gestion WHERE id_gestion = " + id_gestion.ToString() + ";";
                             //validar que exista el registro.
                             reader = cmd.ExecuteReader();
                             while (reader.Read())
@@ -115,10 +115,42 @@ namespace procesoGestion
             return false;
         }
 
-        //public int getMaxId();
+        //Retorna el siguien valor de id_gestion.
+        public int getMaxId() {
+            String[] dato = new string[1];
+            int tmp = 0;
+            try
+            {
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
+                {
+                    OdbcDataReader reader;
+                    conn.Open();
+                    {
+                        using (var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = " SELECT MAX(id_gestion) AS id_gestion" +
+                                "FROM tbl_gestion ; ";
+                            //validar que exista el registro.
+                            reader = cmd.ExecuteReader();
+                            while (reader.Read())
+                            {
+                                dato[0] = reader["id_gestion"].ToString();
+                                tmp = Convert.ToInt32(dato[0]);
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
+            }
+            return tmp + 1;
+        }
 
         //Mantiene los valores iniciales (not null) de la gestion.
-        public bool seguimientoGestion(Gestion gestion)
+        public static bool seguimientoGestion(Gestion gestion)
         {
             try
             {
@@ -129,7 +161,9 @@ namespace procesoGestion
                         using(var cmd = conn.CreateCommand())
                         {
                             cmd.CommandText = "UPDATE tbl_gestion " +
-                                "SET = " + gestion.getSeguimiento() + " ;";
+                                " SET " + gestion.stringSeguimiento() + " " +
+                                " WHERE id_gestion = " + gestion.idGestion.ToString() +";";
+                            //fecha_solucion = SYSDATE(), id_estado = 1, descripcion = 'UPDATE_0', empl_solucion = 1
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -137,7 +171,7 @@ namespace procesoGestion
                 }
             }catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Error al actualizar gestion");
+                MessageBox.Show(e.Message, "Error al actualizar gestion.");
                 return false;
             }
             return true;
@@ -158,7 +192,7 @@ namespace procesoGestion
         }
 
         //Devuelve datatable con gestiones pendientes.
-        public static DataSet llenarDataGrid()
+        public static DataSet llenarDataGridPen()
         {
             DataSet ds = new DataSet();
             try
@@ -170,12 +204,21 @@ namespace procesoGestion
                     {
                         using (var cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = " SELECT g.id_gestion, CONCAT(e.nombre, \" \", e.apellido_1) AS empleado, " +
-                                " CONCAT(c.nombre, \" \", c.apellido_1) AS cliente, g.prioridad, g.descripcion " +
-                                " FROM tbl_gestion g, tbl_empleado e, tbl_cliente c " +
+                            cmd.CommandText = " SELECT g.id_gestion, " +
+                                "  CONCAT(c.nombre, \" \", c.apellido_1) AS cliente," +
+                                "  g.prioridad, " +
+                                "  m.nombre AS motivo, " +
+                                "  DATE_FORMAT(g.fecha_servicio, '%d/%m/%Y') AS fec_servicio, " +
+                                "  DATE_FORMAT(g.fecha_solucion, '%d/%m/%Y') AS fec_solucion," +
+                                "  CONCAT(e.nombre, \" \", e.apellido_1) AS servicio, " +
+                                "  CONCAT(e1.nombre, \" \", e1.apellido_1) AS solucion " +
+                                " FROM tbl_gestion g, tbl_empleado e, tbl_empleado e1, tbl_cliente c, tbl_motivo_gestion m " +
                                 " WHERE g.empl_servicio = e.id_empleado " +
-                                " AND g.id_cliente = c.id_cliente " +
-                                " AND g.id_estado = 1 ; ";
+                                "  AND e1.id_empleado = g.empl_solucion " +
+                                "  AND g.id_cliente = c.id_cliente " +
+                                "  AND m.id_motivo_gestion = g.id_motivo " +
+                                "  AND g.id_estado = 1 " +
+                                " ORDER BY g.fecha_servicio ASC, g.prioridad ASC; ";
                             OdbcDataAdapter datos = new OdbcDataAdapter(cmd);
                             ds = new DataSet();
                             datos.Fill(ds);
@@ -190,6 +233,49 @@ namespace procesoGestion
             }
             return ds;
         }
-        
+
+        //Devuelve datatable con gestiones solucionadas.
+        public static DataSet llenarDataGridSol()
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                using (var conn = new OdbcConnection("dsn=colchoneria"))
+                {
+                    conn.Open();
+
+                    {
+                        using (var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandText = " SELECT g.id_gestion, " +
+                                "  CONCAT(c.nombre, \" \", c.apellido_1) AS cliente," +
+                                "  g.prioridad, " +
+                                "  m.nombre AS motivo, " +
+                                "  DATE_FORMAT(g.fecha_servicio, '%d/%m/%Y') AS fec_servicio, " +
+                                "  DATE_FORMAT(g.fecha_solucion, '%d/%m/%Y') AS fec_solucion," +
+                                "  CONCAT(e.nombre, \" \", e.apellido_1) AS servicio, " +
+                                "  CONCAT(e1.nombre, \" \", e1.apellido_1) AS solucion " +
+                                " FROM tbl_gestion g, tbl_empleado e, tbl_empleado e1, tbl_cliente c, tbl_motivo_gestion m " +
+                                " WHERE g.empl_servicio = e.id_empleado " +
+                                "  AND e1.id_empleado = g.empl_solucion " +
+                                "  AND g.id_cliente = c.id_cliente " +
+                                "  AND m.id_motivo_gestion = g.id_motivo " +
+                                "  AND g.id_estado = 2 " +
+                                " ORDER BY g.fecha_servicio ASC, g.prioridad ASC; ";
+                            OdbcDataAdapter datos = new OdbcDataAdapter(cmd);
+                            ds = new DataSet();
+                            datos.Fill(ds);
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return ds;
+        }
+
     }
 }

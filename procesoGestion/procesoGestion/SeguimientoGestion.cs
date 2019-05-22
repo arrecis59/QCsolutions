@@ -19,7 +19,7 @@ namespace procesoGestion
 
         private void SeguimientoGestion_Load(object sender, EventArgs e)
         {
-            DataSet ds = TransaccionGestion.llenarDataGrid();
+            DataSet ds = TransaccionGestion.llenarDataGridPen();
             dgv_gestion.DataSource = ds.Tables[0];
         }
 
@@ -31,6 +31,33 @@ namespace procesoGestion
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void dgv_gestion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string tmp = dgv_gestion.Rows[e.RowIndex].Cells[0].Value.ToString();
+            frm_proceso_gestion tmpForm = new frm_proceso_gestion(Convert.ToInt32(tmp));
+            tmpForm.Show();
+
+            Application.DoEvents();
+        }
+
+        private void rbtn_pendiente_CheckedChanged(object sender, EventArgs e)
+        {
+            dgv_gestion = new DataGridView();
+            DataSet ds = TransaccionGestion.llenarDataGridPen();
+            dgv_gestion.Refresh();
+            dgv_gestion.DataSource = ds.Tables[0];
+            dgv_gestion.Refresh();
+        }
+        
+        private void rbtn_solucionados_CheckedChanged(object sender, EventArgs e)
+        {
+            dgv_gestion = new DataGridView();
+            DataSet ds = TransaccionGestion.llenarDataGridSol();
+            dgv_gestion.Refresh();
+            dgv_gestion.DataSource = ds.Tables[0];
+            dgv_gestion.Refresh();
         }
     }
 }

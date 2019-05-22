@@ -16,17 +16,26 @@ namespace procesoGestion
         private Cliente cliente = new Cliente();
         private Empleado empleado = new Empleado();
         private DateTime fechaActual = DateTime.Today;
+        private string accion = null;
         //ComboBox cmb_motivo_gestion = ComboBoxItem.llenarCmb(TransaccionMotivoGestion.getItems());
 
         public frm_proceso_gestion()
         {
             InitializeComponent();
-
-            
+            this.accion = "NUEVO";
+            txt_fecha.Text = fechaActual.ToLongDateString();
         }
 
-        //Nueva Gestion
+        public frm_proceso_gestion(int idGestion)
+        {
+            InitializeComponent();
+            this.accion = "MODIFICAR";
+            this.gestion = TransaccionGestion.consultarGestion(idGestion);
+            llenarForm();
 
+        }
+
+        //Busca cliente por DPI.
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             this.cliente = TransaccionCliente.consultarCliente(txt_dpi.Text);
@@ -40,9 +49,9 @@ namespace procesoGestion
             
         }
 
+
         private void frm_proceso_gestion_Load(object sender, EventArgs e)
         {
-            txt_fecha.Text = fechaActual.ToLongDateString();
             TransaccionMotivoGestion.cargaComboBox(cmb_motivo);
             TransaccionEstadoGestion.cargaComboBox(cmb_estado);
             llenarPrioridad(cmb_prioridad);
@@ -59,13 +68,20 @@ namespace procesoGestion
             cmb.SelectedIndex = 0;
         }
 
+        //Crea o modifica gestion.
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            crearGestion();
-            if (TransaccionGestion.insertarGestion(this.gestion))
-                MessageBox.Show("Creado exitosamente.");
-            else
-                MessageBox.Show("Error al crear.");
+            if (this.accion == "NUEVO")
+            {
+                reunirDatosGestion();
+                if (TransaccionGestion.insertarGestion(this.gestion))
+                    MessageBox.Show("Creado exitosamente.");
+            }if (this.accion == "MODIFICAR")
+            {
+                reunirDatosSeguimiento();
+                if (TransaccionGestion.seguimientoGestion(this.gestion))
+                    MessageBox.Show("Creado exitosamente.");
+            }
         }
 
         private void btn_cerrar_Click_1(object sender, EventArgs e)
@@ -78,7 +94,26 @@ namespace procesoGestion
             this.WindowState = FormWindowState.Maximized;
         }
         
-        private void crearGestion()
+        private void llenarForm()
+        {
+            txt_idGestion.Text = this.gestion.idGestion.ToString();
+            txt_fecha.Text = this.gestion.fecha_gestion.ToLongDateString();
+            txt_dpi.Text = this.gestion.cliente.DPI.ToString();
+            txt_nomCliente.Text = this.gestion.cliente.getNombreCompleto();
+            txt_fecNac.Text = this.gestion.cliente.fecha_nac.ToShortDateString();
+            txt_genero.Text = this.gestion.cliente.genero;
+            txt_correo.Text = this.gestion.cliente.correo;
+            txt_telefono.Text = this.gestion.cliente.telefono;
+            txt_celular.Text = this.gestion.cliente.celular;
+            txt_nit.Text = this.gestion.cliente.nit;
+            cmb_motivo.Text = this.gestion.motivo.idMotivoGestion.ToString();
+            cmb_prioridad.Text = this.gestion.prioridad.ToString();
+            cmb_estado.Text = this.gestion.estado.idEstadoGestion.ToString();
+            txt_descripcion.Text = this.gestion.descripcion;
+        }
+
+        //De los campos del form crea el objeto Gestion para insert.
+        private void reunirDatosGestion()
         {
             this.gestion.idGestion = Convert.ToInt32(txt_idGestion.Text);
             this.gestion.fecha_gestion = this.fechaActual;
@@ -92,5 +127,13 @@ namespace procesoGestion
             this.gestion.prioridad = Convert.ToInt32(cmb_prioridad.Text);
         }
 
+        //De los campos del form actualiza el objeto Gestion para update.
+        private void reunirDatosSeguimiento()
+        {
+            this.gestion.fecha_solucion = this.fechaActual;
+            this.gestion.descripcion = txt_descripcion.Text;
+            this.gestion.empl_solucion = this.empleado;
+            this.gestion.estado = TransaccionEstadoGestion.consultarEstado(Convert.ToInt32(cmb_estado.Text));
+        }
     }
 }

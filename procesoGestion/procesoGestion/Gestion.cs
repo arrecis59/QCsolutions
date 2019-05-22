@@ -54,17 +54,15 @@ namespace procesoGestion
                 "', " + tmp[4] + ", " + tmp[5] + ", '" + tmp[6] + "', " + tmp[7] + ", " + tmp[8] + ", " + tmp[9] + " ";
         }
 
-        public string getSeguimiento()
+        public string stringSeguimiento()
         {
-            String[] tmp = new string[6];
+            String[] tmp = new string[4];
             tmp[0] = this.fecha_solucion.ToShortDateString();
             tmp[1] = this.estado.idEstadoGestion.ToString();
-            tmp[2] = this.prioridad.ToString();
-            tmp[3] = this.motivo.idMotivoGestion.ToString();
-            tmp[4] = this.descripcion;
-            tmp[5] = this.empl_solucion.idEmpleado.ToString();
-            return " STR_TO_DATE('" + tmp[0] + "','%d/%m/%Y'), " + tmp[1] + ", " + tmp[2] +
-                ", " + tmp[3] + ", " + tmp[4] + ", " + tmp[5] + " ";
+            tmp[2] = this.descripcion;
+            tmp[3] = this.empl_solucion.idEmpleado.ToString();
+            return "fecha_solucion = STR_TO_DATE('" + tmp[0] + "','%d/%m/%Y'), id_estado = " + tmp[1] +", " +
+                " descripcion = '"+ tmp[2] +"', empl_solucion = " + tmp[3] +" ";
         }
             
     }

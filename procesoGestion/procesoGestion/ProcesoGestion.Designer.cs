@@ -242,7 +242,7 @@
             // 
             // txt_correo
             // 
-            this.txt_correo.Location = new System.Drawing.Point(82, 97);
+            this.txt_correo.Location = new System.Drawing.Point(82, 102);
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(200, 27);
             this.txt_correo.TabIndex = 10;

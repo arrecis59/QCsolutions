@@ -35,8 +35,12 @@
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_asignacionPerfiles = new System.Windows.Forms.Label();
             this.dgv_gestion = new System.Windows.Forms.DataGridView();
+            this.rbtn_pendiente = new System.Windows.Forms.RadioButton();
+            this.rbtn_solucionados = new System.Windows.Forms.RadioButton();
+            this.grp_tipo_busqueda = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gestion)).BeginInit();
+            this.grp_tipo_busqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -119,16 +123,53 @@
             // dgv_gestion
             // 
             this.dgv_gestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_gestion.Location = new System.Drawing.Point(13, 37);
+            this.dgv_gestion.Location = new System.Drawing.Point(13, 112);
             this.dgv_gestion.Name = "dgv_gestion";
-            this.dgv_gestion.Size = new System.Drawing.Size(925, 567);
+            this.dgv_gestion.Size = new System.Drawing.Size(925, 492);
             this.dgv_gestion.TabIndex = 74;
+            this.dgv_gestion.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_gestion_CellDoubleClick);
+            // 
+            // rbtn_pendiente
+            // 
+            this.rbtn_pendiente.AutoSize = true;
+            this.rbtn_pendiente.Checked = true;
+            this.rbtn_pendiente.Location = new System.Drawing.Point(6, 26);
+            this.rbtn_pendiente.Name = "rbtn_pendiente";
+            this.rbtn_pendiente.Size = new System.Drawing.Size(99, 23);
+            this.rbtn_pendiente.TabIndex = 75;
+            this.rbtn_pendiente.TabStop = true;
+            this.rbtn_pendiente.Text = "Pendientes";
+            this.rbtn_pendiente.UseVisualStyleBackColor = true;
+            this.rbtn_pendiente.CheckedChanged += new System.EventHandler(this.rbtn_pendiente_CheckedChanged);
+            // 
+            // rbtn_solucionados
+            // 
+            this.rbtn_solucionados.AutoSize = true;
+            this.rbtn_solucionados.Location = new System.Drawing.Point(123, 26);
+            this.rbtn_solucionados.Name = "rbtn_solucionados";
+            this.rbtn_solucionados.Size = new System.Drawing.Size(112, 23);
+            this.rbtn_solucionados.TabIndex = 76;
+            this.rbtn_solucionados.Text = "Solucionados";
+            this.rbtn_solucionados.UseVisualStyleBackColor = true;
+            this.rbtn_solucionados.CheckedChanged += new System.EventHandler(this.rbtn_solucionados_CheckedChanged);
+            // 
+            // grp_tipo_busqueda
+            // 
+            this.grp_tipo_busqueda.Controls.Add(this.rbtn_pendiente);
+            this.grp_tipo_busqueda.Controls.Add(this.rbtn_solucionados);
+            this.grp_tipo_busqueda.Location = new System.Drawing.Point(13, 37);
+            this.grp_tipo_busqueda.Name = "grp_tipo_busqueda";
+            this.grp_tipo_busqueda.Size = new System.Drawing.Size(246, 69);
+            this.grp_tipo_busqueda.TabIndex = 77;
+            this.grp_tipo_busqueda.TabStop = false;
+            this.grp_tipo_busqueda.Text = "TIPO DE BUSQUEDAS";
             // 
             // SeguimientoGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.grp_tipo_busqueda);
             this.Controls.Add(this.dgv_gestion);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -141,6 +182,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gestion)).EndInit();
+            this.grp_tipo_busqueda.ResumeLayout(false);
+            this.grp_tipo_busqueda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +197,8 @@
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label Lbl_asignacionPerfiles;
         private System.Windows.Forms.DataGridView dgv_gestion;
+        private System.Windows.Forms.RadioButton rbtn_pendiente;
+        private System.Windows.Forms.RadioButton rbtn_solucionados;
+        private System.Windows.Forms.GroupBox grp_tipo_busqueda;
     }
 }
